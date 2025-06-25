@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import type { Config } from "tailwindcss";
 
@@ -93,10 +91,7 @@ export default {
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
-=======
-=======
 
->>>>>>> b3ab629 (feat: Implement HealthMOUR website)
 import type { Config } from "tailwindcss";
 
 export default {
@@ -189,4 +184,4 @@ export default {
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
->>>>>>> c368279 (Use tech stack vite_react_shadcn_ts)
+

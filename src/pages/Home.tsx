@@ -54,7 +54,7 @@ const Home = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center animate-fade-in">
             <img
-              src="/logo.jpg"
+              src="/logo hm Final1.jpeg.jpg"
               alt="HealthMOUR Logo"
               className="h-24 w-auto mx-auto mb-6 animate-scale-in"
             />
