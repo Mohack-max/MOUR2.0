@@ -1,9 +1,16 @@
-
 import { ArrowRight, Heart, Users, Target, Eye, Lightbulb } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useAuth } from "@/contexts/AuthContext";
+import { useState } from "react";
+import { AuthModal } from "@/components/AuthModal";
+import { PaymentModal } from "@/components/PaymentModal";
 
 const Home = () => {
+  const { isAuthenticated, user } = useAuth();
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
+
   const interventionAreas = [
     {
       title: "Santé",
@@ -31,6 +38,14 @@ const Home = () => {
     }
   ];
 
+  const handleVolunteerClick = () => {
+    if (isAuthenticated) {
+      alert(`Merci ${user?.firstName} ! Vous êtes maintenant inscrit comme bénévole. Nous vous contacterons bientôt.`);
+    } else {
+      setIsAuthModalOpen(true);
+    }
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -55,6 +70,7 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
+                onClick={handleVolunteerClick}
                 className="bg-secondary hover:bg-secondary/90 text-white font-montserrat text-lg px-8"
               >
                 Devenir Bénévole
@@ -62,15 +78,52 @@ const Home = () => {
               </Button>
               <Button 
                 size="lg" 
+                onClick={() => setIsPaymentModalOpen(true)}
                 variant="outline" 
                 className="border-white text-white hover:bg-white hover:text-primary font-montserrat text-lg px-8"
               >
-                En Savoir Plus
+                Faire un Don
               </Button>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Protected Content - Only visible to authenticated users */}
+      {isAuthenticated && (
+        <section className="py-12 bg-secondary/10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h2 className="font-montserrat font-bold text-2xl text-gray-900 mb-4">
+                Bienvenue, {user?.firstName} !
+              </h2>
+              <p className="font-open-sans text-lg text-gray-600 mb-6">
+                Merci de rejoindre notre mission. Voici des ressources exclusives pour nos bénévoles :
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <Card className="hover:shadow-lg transition-shadow">
+                  <CardContent className="p-6 text-center">
+                    <h3 className="font-montserrat font-semibold text-lg mb-2">Manuel du Bénévole</h3>
+                    <p className="text-gray-600 text-sm">Guide complet pour démarrer votre engagement</p>
+                  </CardContent>
+                </Card>
+                <Card className="hover:shadow-lg transition-shadow">
+                  <CardContent className="p-6 text-center">
+                    <h3 className="font-montserrat font-semibold text-lg mb-2">Formations</h3>
+                    <p className="text-gray-600 text-sm">Accès aux sessions de formation en ligne</p>
+                  </CardContent>
+                </Card>
+                <Card className="hover:shadow-lg transition-shadow">
+                  <CardContent className="p-6 text-center">
+                    <h3 className="font-montserrat font-semibold text-lg mb-2">Communauté</h3>
+                    <p className="text-gray-600 text-sm">Rejoignez notre groupe privé de bénévoles</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Mission, Vision, Values Section */}
       <section className="py-20 bg-gray-50">
@@ -182,6 +235,7 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
+              onClick={handleVolunteerClick}
               variant="outline" 
               className="border-white text-white hover:bg-white hover:text-primary font-montserrat text-lg px-8"
             >
@@ -189,14 +243,25 @@ const Home = () => {
             </Button>
             <Button 
               size="lg" 
+              onClick={() => setIsPaymentModalOpen(true)}
               className="bg-white text-primary hover:bg-gray-100 font-montserrat text-lg px-8"
             >
-              Découvrir Notre Travail
+              Faire un Don
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
         </div>
       </section>
+
+      {/* Modals */}
+      <AuthModal 
+        isOpen={isAuthModalOpen} 
+        onClose={() => setIsAuthModalOpen(false)} 
+      />
+      <PaymentModal 
+        isOpen={isPaymentModalOpen} 
+        onClose={() => setIsPaymentModalOpen(false)} 
+      />
     </div>
   );
 };
