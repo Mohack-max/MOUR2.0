@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, User, LogOut } from "lucide-react";
@@ -44,9 +43,9 @@ export const Navbar = () => {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
-              <img 
-                src="/logo hm Final1.jpeg" 
-                alt="HealthMOUR Logo" 
+              <img
+                src="/logo hm Final1.jpeg.jpg"
+                alt="HealthMOUR Logo"
                 className="h-12 w-auto"
               />
               <span className="font-montserrat font-bold text-xl text-primary">
@@ -60,16 +59,15 @@ export const Navbar = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`font-open-sans font-medium transition-colors duration-200 ${
-                    isActive(item.path)
-                      ? "text-primary border-b-2 border-primary"
-                      : "text-gray-700 hover:text-primary"
-                  }`}
+                  className={`font-open-sans font-medium transition-colors duration-200 ${isActive(item.path)
+                    ? "text-primary border-b-2 border-primary"
+                    : "text-gray-700 hover:text-primary"
+                    }`}
                 >
                   {item.label}
                 </Link>
               ))}
-              
+
               {isAuthenticated ? (
                 <div className="flex items-center space-x-4">
                   <div className="flex items-center space-x-2 text-gray-700">
@@ -98,14 +96,14 @@ export const Navbar = () => {
                 </Button>
               )}
 
-              <Button 
+              <Button
                 onClick={handleVolunteerClick}
-                className="bg-secondary hover:bg-secondary/90 text-white font-montserrat"
+                className="bg-secondary hover:bg-secondary/90 text-primary font-montserrat"
               >
                 Devenir Bénévole
               </Button>
 
-              <Button 
+              <Button
                 onClick={() => setIsPaymentModalOpen(true)}
                 className="bg-primary hover:bg-primary/90 text-white font-montserrat"
               >
@@ -133,17 +131,16 @@ export const Navbar = () => {
                   <Link
                     key={item.path}
                     to={item.path}
-                    className={`font-open-sans font-medium px-4 py-2 rounded transition-colors duration-200 ${
-                      isActive(item.path)
-                        ? "text-primary bg-primary/10"
-                        : "text-gray-700 hover:text-primary hover:bg-gray-50"
-                    }`}
+                    className={`font-open-sans font-medium px-4 py-2 rounded transition-colors duration-200 ${isActive(item.path)
+                      ? "text-primary bg-primary/10"
+                      : "text-gray-700 hover:text-primary hover:bg-gray-50"
+                      }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.label}
                   </Link>
                 ))}
-                
+
                 {isAuthenticated ? (
                   <div className="px-4 space-y-2">
                     <div className="flex items-center space-x-2 text-gray-700 py-2">
@@ -175,17 +172,17 @@ export const Navbar = () => {
                   </Button>
                 )}
 
-                <Button 
+                <Button
                   onClick={() => {
                     handleVolunteerClick();
                     setIsMenuOpen(false);
                   }}
-                  className="mx-4 bg-secondary hover:bg-secondary/90 text-white font-montserrat"
+                  className="mx-4 bg-blue-600 hover:bg-blue-700 text-white font-montserrat"
                 >
                   Devenir Bénévole
                 </Button>
 
-                <Button 
+                <Button
                   onClick={() => {
                     setIsPaymentModalOpen(true);
                     setIsMenuOpen(false);
@@ -201,13 +198,13 @@ export const Navbar = () => {
       </nav>
 
       {/* Modals */}
-      <AuthModal 
-        isOpen={isAuthModalOpen} 
-        onClose={() => setIsAuthModalOpen(false)} 
+      <AuthModal
+        isOpen={isAuthModalOpen}
+        onClose={() => setIsAuthModalOpen(false)}
       />
-      <PaymentModal 
-        isOpen={isPaymentModalOpen} 
-        onClose={() => setIsPaymentModalOpen(false)} 
+      <PaymentModal
+        isOpen={isPaymentModalOpen}
+        onClose={() => setIsPaymentModalOpen(false)}
       />
     </>
   );

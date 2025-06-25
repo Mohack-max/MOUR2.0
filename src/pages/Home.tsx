@@ -53,9 +53,9 @@ const Home = () => {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center animate-fade-in">
-            <img 
-              src="/logo hm Final1.jpeg" 
-              alt="HealthMOUR Logo" 
+            <img
+              src="/logo.jpg"
+              alt="HealthMOUR Logo"
               className="h-24 w-auto mx-auto mb-6 animate-scale-in"
             />
             <h1 className="font-montserrat font-bold text-4xl lg:text-6xl mb-6">
@@ -68,19 +68,19 @@ const Home = () => {
               Surveillance sanitaire, Organisation, Compréhension et Résolution des problèmes de santé dans nos communautés
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 onClick={handleVolunteerClick}
                 className="bg-secondary hover:bg-secondary/90 text-white font-montserrat text-lg px-8"
               >
                 Devenir Bénévole
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 onClick={() => setIsPaymentModalOpen(true)}
-                variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-primary font-montserrat text-lg px-8"
+                variant="outline"
+                className="border-white text-primary hover:bg-white hover:text-primary font-montserrat text-lg px-8"
               >
                 Faire un Don
               </Button>
@@ -200,8 +200,8 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {interventionAreas.map((area, index) => (
-              <Card 
-                key={area.title} 
+              <Card
+                key={area.title}
                 className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-scale-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -229,20 +229,20 @@ const Home = () => {
             Rejoignez Notre Mission
           </h2>
           <p className="font-open-sans text-lg lg:text-xl mb-8 max-w-3xl mx-auto">
-            Ensemble, nous pouvons créer un impact positif durable sur la santé de nos communautés. 
+            Ensemble, nous pouvons créer un impact positif durable sur la santé de nos communautés.
             Votre engagement fait la différence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               onClick={handleVolunteerClick}
-              variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-primary font-montserrat text-lg px-8"
+              variant="outline"
+              className="border-white text-primary hover:bg-white hover:text-primary font-montserrat text-lg px-8"
             >
               Devenir Bénévole
             </Button>
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               onClick={() => setIsPaymentModalOpen(true)}
               className="bg-white text-primary hover:bg-gray-100 font-montserrat text-lg px-8"
             >
@@ -254,13 +254,13 @@ const Home = () => {
       </section>
 
       {/* Modals */}
-      <AuthModal 
-        isOpen={isAuthModalOpen} 
-        onClose={() => setIsAuthModalOpen(false)} 
+      <AuthModal
+        isOpen={isAuthModalOpen}
+        onClose={() => setIsAuthModalOpen(false)}
       />
-      <PaymentModal 
-        isOpen={isPaymentModalOpen} 
-        onClose={() => setIsPaymentModalOpen(false)} 
+      <PaymentModal
+        isOpen={isPaymentModalOpen}
+        onClose={() => setIsPaymentModalOpen(false)}
       />
     </div>
   );

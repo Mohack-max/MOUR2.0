@@ -1,4 +1,3 @@
-
 import { Heart, Mail, MapPin, Phone } from "lucide-react";
 
 export const Footer = () => {
@@ -9,9 +8,9 @@ export const Footer = () => {
           {/* Logo & Mission */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <img 
-                src="/logo hm Final1.jpeg" 
-                alt="HealthMOUR Logo" 
+              <img
+                src="/logo hm Final1.jpeg.jpg"
+                alt="HealthMOUR Logo"
                 className="h-12 w-auto"
               />
               <span className="font-montserrat font-bold text-xl">
@@ -42,13 +41,13 @@ export const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-secondary" />
                 <span className="font-open-sans text-sm text-gray-300">
-                  +33 (0)1 23 45 67 89
+                  +223 76489119
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-4 w-4 text-secondary" />
                 <span className="font-open-sans text-sm text-gray-300">
-                  Paris, France
+                  Mali, Bamako
                 </span>
               </div>
             </div>
@@ -64,7 +63,7 @@ export const Footer = () => {
               <a href="/founders" className="block font-open-sans text-sm text-gray-300 hover:text-secondary transition-colors">
                 Équipe
               </a>
-              <a href="#" className="block font-open-sans text-sm text-gray-300 hover:text-secondary transition-colors">
+              <a href="#" className="block font-open-sans text-sm text-secondary hover:text-primary transition-colors">
                 Devenir Bénévole
               </a>
               <a href="#" className="block font-open-sans text-sm text-gray-300 hover:text-secondary transition-colors">
