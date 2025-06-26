@@ -54,7 +54,7 @@ export const Navbar = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center space-x-6">
               {navItems.map((item) => (
                 <Link
                   key={item.path}
@@ -68,11 +68,15 @@ export const Navbar = () => {
                 </Link>
               ))}
 
+              {/* Profile and Logout section */}
               {isAuthenticated ? (
-                <div className="flex items-center space-x-4">
-                  <div className="flex items-center space-x-2 text-gray-700">
-                    <User className="h-4 w-4" />
-                    <span className="font-open-sans text-sm">
+                <div className="flex items-center space-x-2 min-w-0 max-w-xs">
+                  <div className="flex items-center space-x-2 text-gray-700 truncate">
+                    <User className="h-4 w-4 flex-shrink-0" />
+                    <span
+                      className="font-open-sans text-sm truncate max-w-[180px]"
+                      title={user?.firstName || ''}
+                    >
                       Bonjour, {user?.firstName}
                     </span>
                   </div>
@@ -142,9 +146,9 @@ export const Navbar = () => {
                 ))}
 
                 {isAuthenticated ? (
-                  <div className="px-4 space-y-2">
+                  <div className="px-8 space-y-4">
                     <div className="flex items-center space-x-2 text-gray-700 py-2">
-                      <User className="h-4 w-4" />
+                      <User className="h-8 w-8" />
                       <span className="font-open-sans text-sm">
                         Bonjour, {user?.firstName}
                       </span>

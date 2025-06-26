@@ -1,10 +1,11 @@
-
 import React, { useState } from 'react';
 import { X, Mail, Lock, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useAuth } from '@/contexts/AuthContext';
+import { supabase } from '@/lib/supabaseClient'; // ✅ UPDATED PATH
+
 
 interface AuthModalProps {
   isOpen: boolean;
@@ -22,8 +23,12 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMo
   });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
+  const [signupMessage, setSignupMessage] = useState('');
 
   const { login, signup } = useAuth();
+
+  // ✅ Debugging: Check if Supabase is initialized correctly
+  console.log('✅ Supabase instance:', supabase);
 
   if (!isOpen) return null;
 
@@ -31,22 +36,30 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMo
     e.preventDefault();
     setIsLoading(true);
     setError('');
+    setSignupMessage('');
 
     try {
       let success = false;
       if (mode === 'login') {
         success = await login(formData.email, formData.password);
+        if (success) {
+          onClose();
+          setFormData({ email: '', password: '', firstName: '', lastName: '' });
+        } else {
+          setError('Authentification échouée. Veuillez réessayer.');
+        }
       } else {
-        success = await signup(formData.email, formData.password, formData.firstName, formData.lastName);
-      }
-
-      if (success) {
-        onClose();
-        setFormData({ email: '', password: '', firstName: '', lastName: '' });
-      } else {
-        setError('Authentification échouée. Veuillez réessayer.');
+        // signup
+        const result = await signup(formData.email, formData.password, formData.firstName, formData.lastName);
+        if (result.success) {
+          setSignupMessage(result.message); // Show confirmation message
+          setFormData({ email: '', password: '', firstName: '', lastName: '' });
+        } else {
+          setError(result.message || 'Inscription échouée. Veuillez réessayer.');
+        }
       }
     } catch (err) {
+      console.error('Signup/Login error:', err);
       setError('Une erreur est survenue. Veuillez réessayer.');
     } finally {
       setIsLoading(false);
@@ -75,10 +88,9 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMo
             {mode === 'login' ? 'Connexion' : 'Inscription'}
           </h2>
           <p className="text-gray-600 font-open-sans">
-            {mode === 'login' 
-              ? 'Connectez-vous pour devenir bénévole' 
-              : 'Créez votre compte pour rejoindre notre mission'
-            }
+            {mode === 'login'
+              ? 'Connectez-vous pour devenir bénévole'
+              : 'Créez votre compte pour rejoindre notre mission'}
           </p>
         </div>
 
@@ -165,6 +177,12 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMo
           {error && (
             <div className="text-red-600 text-sm text-center">
               {error}
+            </div>
+          )}
+
+          {signupMessage && (
+            <div className="text-green-600 text-sm text-center mt-2">
+              {signupMessage}
             </div>
           )}
 

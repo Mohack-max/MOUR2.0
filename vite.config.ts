@@ -1,20 +1,18 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
-import path from "path";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc';
+import path from 'path';
 
-
-// https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   server: {
-    host: "::",
-    port: 8080,
+    host: '::',       // IPv6 wildcard — same as 0.0.0.0 for IPv4
+    port: 8080,        // Change if needed
   },
   plugins: [
-    react(),
-  ].filter(Boolean),
+    react(),           // Using SWC for faster builds
+  ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      '@': path.resolve(__dirname, 'src'), // ✅ Enables `@/` alias from project root
     },
   },
-}));
+});

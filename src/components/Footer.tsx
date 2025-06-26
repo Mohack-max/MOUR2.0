@@ -75,7 +75,7 @@ export const Footer = () => {
 
         <div className="border-t border-gray-600 mt-8 pt-8 text-center">
           <p className="font-open-sans text-sm text-gray-300">
-            © 2024 HealthMOUR. Tous droits réservés. | Créé avec ❤️ pour un monde en meilleure santé.
+            © 2024 HealthMOUR.org. Tous droits réservés. | Créé avec ❤️ pour un monde en meilleure santé.
           </p>
         </div>
       </div>
