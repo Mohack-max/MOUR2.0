@@ -5,66 +5,66 @@ import { Button } from "@/components/ui/button";
 const Founders = () => {
   // Placeholder data - replace with actual founder information
   const founder = {
-    name: "Dr. Marie Dubois",
-    title: "Fondatrice & Directrice Générale",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    name: "Dr. Youssouf Keita",
+    title: "Fondateur & Directeur Général",
+    image: "/youssouf.jpeg",
     bio: "Médecin de santé publique avec plus de 15 ans d'expérience dans le développement de programmes de santé communautaire en Afrique et en Europe. Passionnée par l'approche holistique de la santé, elle a créé HealthMOUR pour répondre aux défis sanitaires contemporains par des solutions innovantes et durables.",
-    education: "Doctorat en Santé Publique, Université de la Sorbonne",
+    education: "Doctorat en Santé Publique, Université de POINT G Bamako",
     experience: "15+ années en santé communautaire",
-    email: "marie.dubois@healthmour.org",
+    email: "youssnigga@gmail.com",
     linkedin: "#",
     twitter: "#"
   };
 
   const collaborators = [
     {
-      name: "Dr. Jean-Pierre Martin",
-      role: "Directeur Médical",
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      name: "Dr.Habibatou dite Mah TRAORE",
+      role: "Professionnelle de la communication stratégique organisations,projets, pour le développement et le changement",
+      image: "/habibatou.jpeg",
       speciality: "Épidémiologie",
-      location: "Paris, France"
+      location: "Mali, Bamako"
     },
     {
-      name: "Sarah Johnson",
-      role: "Coordinatrice Programmes",
+      name: "M.Ibrahim TERERA",
+      role: "Coordinateur Programmes",
       image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       speciality: "Gestion de projet",
-      location: "Lyon, France"
+      location: "Mali, Bamako"
     },
     {
-      name: "Dr. Amadou Diallo",
+      name: "Dr Souleymane SAWADOGO",
       role: "Expert Nutrition",
       image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       speciality: "Nutrition communautaire",
-      location: "Dakar, Sénégal"
+      location: "Mali, Bamako"
     },
     {
-      name: "Emma Rodriguez",
-      role: "Responsable WASH",
+      name: "Dr Fadjiné DIARRA",
+      role: "Responsable Technique",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       speciality: "Ingénierie sanitaire",
-      location: "Barcelone, Espagne"
+      location: "Mali, Bamako"
     },
     {
-      name: "Dr. Michael Chen",
+      name: "M. Modibo KEITA",
       role: "Conseiller Stratégique",
       image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       speciality: "Santé digitale",
-      location: "Londres, UK"
+      location: "Mali, Bamako"
     },
     {
-      name: "Fatima Al-Zahra",
+      name: "Mme Fatoumata Dembélé",
       role: "Responsable Formation",
       image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
       speciality: "Éducation sanitaire",
-      location: "Rabat, Maroc"
+      location: "Mali, Bamako"
     }
   ];
 
   const stats = [
     { value: "15+", label: "Années d'Expérience", icon: Award },
-    { value: "6", label: "Experts Internationaux", icon: Users },
-    { value: "5", label: "Pays Représentés", icon: Globe }
+    { value: "DES", label: "Experts Internationaux", icon: Users },
+    { value: "2", label: "Pays Représentés", icon: Globe }
   ];
 
   return (
@@ -110,7 +110,7 @@ const Founders = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-gray-900 mb-4">
-              La Fondatrice
+              Le Fondateur
             </h2>
             <p className="font-open-sans text-lg text-gray-600 max-w-3xl mx-auto">
               Découvrez la vision et l'engagement qui ont donné naissance à HealthMOUR
