@@ -53,19 +53,14 @@ const Home = () => {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center animate-fade-in">
-            <img
-              src="/logo hm Final1.jpeg.jpg"
-              alt="HealthMOUR Logo"
-              className="h-24 w-auto mx-auto mb-6 animate-scale-in"
-            />
             <h1 className="font-montserrat font-bold text-4xl lg:text-6xl mb-6">
               HealthMOUR
             </h1>
             <p className="font-open-sans text-xl lg:text-2xl mb-4 text-blue-100">
-              Health Monitoring, Organization, Understanding, Resolution
+              Health-Monitoring-Organization-Understanding-Resolution
             </p>
             <p className="font-open-sans text-lg lg:text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              Surveillance sanitaire, Organisation, Compréhension et Résolution des problèmes de santé dans nos communautés
+              Surveillance-Organisation-Compréhension-Résolution = Bien Etre 
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button

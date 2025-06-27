@@ -6,11 +6,11 @@ const Founders = () => {
   // Placeholder data - replace with actual founder information
   const founder = {
     name: "Dr. Youssouf Keita",
-    title: "Fondateur & Directeur Général",
+    title: "Cofondateur & President du conseil d'administration",
     image: "/youssouf.jpeg",
     bio: "Médecin de santé publique avec plus de 15 ans d'expérience dans le développement de programmes de santé communautaire en Afrique et en Europe. Passionnée par l'approche holistique de la santé, elle a créé HealthMOUR pour répondre aux défis sanitaires contemporains par des solutions innovantes et durables.",
     education: "Doctorat en Santé Publique, Université de POINT G Bamako",
-    experience: "15+ années en santé communautaire",
+    experience: "15+ années en santé Publique",
     email: "youssnigga@gmail.com",
     linkedin: "#",
     twitter: "#"
@@ -110,61 +110,51 @@ const Founders = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-gray-900 mb-4">
-              Le Fondateur
+              Derrière l'Organisation : le Fondateur & son Équipe
             </h2>
             <p className="font-open-sans text-lg text-gray-600 max-w-3xl mx-auto">
               Découvrez la vision et l'engagement qui ont donné naissance à HealthMOUR
             </p>
           </div>
 
-          <Card className="max-w-4xl mx-auto overflow-hidden shadow-xl animate-scale-in">
-            <div className="md:flex">
-              <div className="md:w-1/3">
-                <img
-                  src={founder.image}
-                  alt={founder.name}
-                  className="w-full h-64 md:h-full object-cover"
-                />
-              </div>
-              <div className="md:w-2/3 p-8">
-                <div className="mb-6">
-                  <h3 className="font-montserrat font-bold text-2xl text-gray-900 mb-2">
-                    {founder.name}
-                  </h3>
-                  <p className="font-open-sans text-lg text-primary mb-4">
-                    {founder.title}
-                  </p>
-                  <div className="flex flex-wrap gap-4 mb-6">
-                    <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-open-sans">
-                      {founder.education}
-                    </span>
-                    <span className="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-open-sans">
-                      {founder.experience}
-                    </span>
-                  </div>
-                </div>
-
-                <p className="font-open-sans text-gray-600 leading-relaxed mb-6">
-                  {founder.bio}
-                </p>
-
-                <div className="flex space-x-4">
-                  <Button size="sm" variant="outline" className="flex items-center space-x-2">
-                    <Mail className="h-4 w-4" />
-                    <span>Contact</span>
-                  </Button>
-                  <Button size="sm" variant="outline" className="flex items-center space-x-2">
-                    <Linkedin className="h-4 w-4" />
-                    <span>LinkedIn</span>
-                  </Button>
-                  <Button size="sm" variant="outline" className="flex items-center space-x-2">
-                    <Twitter className="h-4 w-4" />
-                    <span>Twitter</span>
-                  </Button>
-                </div>
-              </div>
+          <div className="flex flex-col items-center mb-8">
+            <img
+              src={founder.image}
+              alt={founder.name}
+              className="w-40 h-40 object-cover rounded-full border-4 border-primary shadow-lg mb-4"
+            />
+            <h3 className="font-montserrat font-bold text-2xl text-gray-900 mb-2 text-center">
+              {founder.name}
+            </h3>
+            <p className="font-open-sans text-lg text-primary mb-2 text-center">
+              {founder.title}
+            </p>
+            <div className="flex flex-wrap gap-4 mb-4 justify-center">
+              <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-open-sans">
+                {founder.education}
+              </span>
+              <span className="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-open-sans">
+                {founder.experience}
+              </span>
             </div>
-          </Card>
+            <p className="font-open-sans text-gray-600 leading-relaxed mb-4 text-center max-w-xl">
+              {founder.bio}
+            </p>
+            <div className="flex space-x-4 justify-center">
+              <Button size="sm" variant="outline" className="flex items-center space-x-2">
+                <Mail className="h-4 w-4" />
+                <span>Contact</span>
+              </Button>
+              <Button size="sm" variant="outline" className="flex items-center space-x-2">
+                <Linkedin className="h-4 w-4" />
+                <span>LinkedIn</span>
+              </Button>
+              <Button size="sm" variant="outline" className="flex items-center space-x-2">
+                <Twitter className="h-4 w-4" />
+                <span>Twitter</span>
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -181,43 +171,41 @@ const Founders = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-row gap-6 overflow-x-auto pb-4">
             {collaborators.map((collaborator, index) => (
-              <Card
+              <div
                 key={collaborator.name}
-                className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-scale-in"
+                className="group relative flex-shrink-0 w-56 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 animate-scale-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="relative">
-                  <img
-                    src={collaborator.image}
-                    alt={collaborator.name}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <p className="text-white text-sm font-open-sans">
-                        Spécialité: {collaborator.speciality}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <CardContent className="p-6">
-                  <h3 className="font-montserrat font-bold text-lg text-gray-900 mb-2">
+                <img
+                  src={collaborator.image}
+                  alt={collaborator.name}
+                  className="w-40 h-40 object-cover rounded-full mx-auto mt-6 border-4 border-primary group-hover:opacity-80 transition-opacity duration-300"
+                />
+                <div className="text-center mt-4 mb-6 px-4">
+                  <h3 className="font-montserrat font-bold text-lg text-gray-900 mb-1">
                     {collaborator.name}
                   </h3>
-                  <p className="font-open-sans text-primary mb-3">
+                  <p className="font-open-sans text-primary text-sm mb-1">
                     {collaborator.role}
                   </p>
-                  <div className="flex items-center space-x-2 text-gray-600">
-                    <Globe className="h-4 w-4" />
-                    <span className="font-open-sans text-sm">
-                      {collaborator.location}
-                    </span>
+                  <p className="font-open-sans text-gray-600 text-xs mb-1">
+                    {collaborator.speciality}
+                  </p>
+                  <p className="font-open-sans text-gray-500 text-xs mb-2">
+                    {collaborator.location}
+                  </p>
+                  {/* Hidden by default, shown on hover */}
+                  <div className="max-h-0 overflow-hidden group-hover:max-h-40 group-hover:overflow-auto group-hover:mt-2 transition-all duration-300 ease-in-out">
+                    <p className="text-gray-700 text-xs mb-2">
+                      {/* Placeholder biography */}
+                      Biographie à venir...
+                    </p>
+                    <button className="text-primary underline text-xs">Lire plus</button>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             ))}
           </div>
         </div>

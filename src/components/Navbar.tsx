@@ -44,7 +44,7 @@ export const Navbar = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
               <img
-                src="/logo hm Final1.jpeg.jpg"
+                 src="/logo hm Final1.jpeg.jpg"
                 alt="HealthMOUR Logo"
                 className="h-12 w-auto"
               />
