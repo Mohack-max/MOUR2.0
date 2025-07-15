@@ -7,7 +7,8 @@
     "donate": "Donate",
     "logout": "Logout",
     "hello": "Hello, {{name}}",
-    "volunteerSuccess": "Thank you {{name}}! You are now registered as a volunteer. We will contact you soon."
+    "volunteerSuccess": "Thank you {{name}}! You are now registered as a volunteer. We will contact you soon.",
+    "privateDocuments": "Private Documents"
   },
   "footer": {
     "copyright": "All rights reserved.",
@@ -258,5 +259,19 @@
         "location": "Mali, Bamako"
       }
     }
+  },
+  "privateDocs": {
+    "title": "Private Documents",
+    "requestAccess": "Request Access",
+    "requestAccessFor": "Request access for {{title}}",
+    "reason": "Reason for request",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "submitting": "Submitting...",
+    "requestSuccess": "Request submitted! You will be notified upon approval.",
+    "requestError": "Failed to submit request.",
+    "pending": "Request Pending Approval",
+    "denied": "Request Denied",
+    "viewDocument": "View Document"
   }
 } 

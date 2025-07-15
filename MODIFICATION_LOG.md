@@ -42,3 +42,15 @@ Further changes will be logged here as the implementation progresses.
   - `private_documents` table: id, title, description, file_url, created_at
   - `document_access_requests` table: id, user_id, document_id, reason, status (pending/approved/denied), created_at
   - `document_access_permissions` table: id, user_id, document_id, granted_at
+
+---
+
+## [Planned] Professional Admin Dashboard
+
+- Admins log in using Supabase Auth (email/password).
+- Only users with `is_admin` flag in the `profiles` table can access the dashboard.
+- Admin dashboard accessible via a professional button in the Navbar.
+- Admins can upload new private documents (title, description, file upload to Supabase Storage).
+- Admins can view, approve, or deny user requests for document access.
+- Admin dashboard includes logout functionality.
+- All admin actions are protected and only available to authenticated admin users.

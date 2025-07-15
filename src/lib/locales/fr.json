@@ -7,7 +7,8 @@
     "donate": "Faire un don",
     "logout": "Déconnexion",
     "hello": "Bonjour, {{name}}",
-    "volunteerSuccess": "Merci {{name}} ! Vous êtes maintenant inscrit comme bénévole. Nous vous contacterons bientôt."
+    "volunteerSuccess": "Merci {{name}} ! Vous êtes maintenant inscrit comme bénévole. Nous vous contacterons bientôt.",
+    "privateDocuments": "Documents privés"
   },
   "footer": {
     "copyright": "Tous droits réservés.",
@@ -258,5 +259,19 @@
         "location": "Mali, Bamako"
       }
     }
+  },
+  "privateDocs": {
+    "title": "Documents privés",
+    "requestAccess": "Demander l'accès",
+    "requestAccessFor": "Demander l'accès à {{title}}",
+    "reason": "Raison de la demande",
+    "submit": "Soumettre",
+    "cancel": "Annuler",
+    "submitting": "Soumission...",
+    "requestSuccess": "Demande soumise ! Vous serez notifié lors de l'approbation.",
+    "requestError": "Échec de la soumission de la demande.",
+    "pending": "Demande en attente d'approbation",
+    "denied": "Demande refusée",
+    "viewDocument": "Voir le document"
   }
 } 

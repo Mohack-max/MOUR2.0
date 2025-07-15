@@ -10,6 +10,9 @@ import Home from "./pages/Home";
 import OurWork from "./pages/OurWork";
 import Founders from "./pages/Founders";
 import NotFound from "./pages/NotFound";
+import PrivateDocuments from "./pages/PrivateDocuments";
+import AdminDashboard from "./pages/AdminDashboard";
+import ResetPassword from './pages/ResetPassword';
 
 const queryClient = new QueryClient();
 
@@ -27,6 +30,9 @@ const App = () => (
                 <Route path="/" element={<Home />} />
                 <Route path="/our-work" element={<OurWork />} />
                 <Route path="/founders" element={<Founders />} />
+                <Route path="/private-documents" element={<PrivateDocuments />} />
+                <Route path="/admin-dashboard" element={<AdminDashboard />} />
+                <Route path="/auth/reset-password" element={<ResetPassword />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

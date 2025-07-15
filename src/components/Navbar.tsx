@@ -1,24 +1,28 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, User, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/contexts/AuthContext";
 import { AuthModal } from "@/components/AuthModal";
 import { PaymentModal } from "@/components/PaymentModal";
 import { useTranslation } from 'react-i18next';
+import AdminLoginModal from './AdminLoginModal';
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
+  const [isAdminModalOpen, setIsAdminModalOpen] = useState(false);
   const location = useLocation();
   const { user, isAuthenticated, logout } = useAuth();
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
 
   const navItems = [
     { path: "/", label: t('navbar.home') },
     { path: "/our-work", label: t('navbar.ourWork') },
-    { path: "/founders", label: t('navbar.founders') }
+    { path: "/founders", label: t('navbar.founders') },
+    { path: "/private-documents", label: t('navbar.privateDocuments') }
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -104,6 +108,12 @@ export const Navbar = () => {
                 className="ml-2 font-montserrat border-green-600 text-green-700"
               >
                 {i18n.language === 'en' ? 'Français' : 'English'}
+              </Button>
+              <Button
+                onClick={() => setIsAdminModalOpen(true)}
+                className="bg-gradient-to-r from-primary to-accent text-white font-montserrat px-6 shadow-md hover:scale-105 transition-transform"
+              >
+                Admin Panel
               </Button>
             </div>
 
@@ -201,6 +211,14 @@ export const Navbar = () => {
       <PaymentModal
         isOpen={isPaymentModalOpen}
         onClose={() => setIsPaymentModalOpen(false)}
+      />
+      <AdminLoginModal
+        isOpen={isAdminModalOpen}
+        onClose={() => setIsAdminModalOpen(false)}
+        onSuccess={() => {
+          setIsAdminModalOpen(false);
+          navigate('/admin-dashboard');
+        }}
       />
     </>
   );

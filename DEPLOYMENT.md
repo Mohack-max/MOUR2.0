@@ -60,3 +60,50 @@ The production-ready files will be in the `dist/` folder.
 - If images or assets do not load, check that paths start with `/images/` and files exist in `public/images/`.
 - If you see a blank page, make sure you uploaded the contents of `dist/`, not the folder itself.
 - For SPA routing (React Router), ensure your host redirects all routes to `index.html` (S3: set error document to `index.html`).
+
+---
+
+## Supabase SQL Schema for Private Documents Feature
+
+```sql
+-- Table: private_documents
+create table if not exists private_documents (
+  id uuid primary key default gen_random_uuid(),
+  title text not null,
+  description text,
+  file_url text not null,
+  created_at timestamp with time zone default timezone('utc', now())
+);
+
+-- Table: document_access_requests
+create table if not exists document_access_requests (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid references auth.users(id) on delete cascade,
+  document_id uuid references private_documents(id) on delete cascade,
+  reason text,
+  status text check (status in ('pending', 'approved', 'denied')) default 'pending',
+  created_at timestamp with time zone default timezone('utc', now())
+);
+
+-- Table: document_access_permissions
+create table if not exists document_access_permissions (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid references auth.users(id) on delete cascade,
+  document_id uuid references private_documents(id) on delete cascade,
+  granted_at timestamp with time zone default timezone('utc', now())
+);
+```
+
+---
+
+## Supabase SQL for Admin Role Support
+
+```sql
+-- Add is_admin flag to profiles table
+alter table profiles add column if not exists is_admin boolean default false;
+
+-- To create an admin user, sign up via the app, then run:
+update profiles set is_admin = true where email = 'admin@example.com';
+```
+
+- Only users with is_admin = true will be able to access the admin dashboard.
