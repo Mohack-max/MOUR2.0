@@ -2,67 +2,69 @@
 import { Heart, Users, GraduationCap, Droplets, Target, TrendingUp, Globe } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useTranslation } from 'react-i18next';
 
 const OurWork = () => {
+  const { t } = useTranslation();
   const strategicAreas = [
     {
-      title: "Santé Communautaire",
+      title: t('ourWork.areas.communityHealth'),
       icon: Heart,
       color: "text-red-500",
       bgColor: "bg-red-50",
-      description: "Surveillance épidémiologique et amélioration des systèmes de santé locaux",
+      description: t('ourWork.areas.communityHealthDesc'),
       objectives: [
-        "Renforcement des capacités de surveillance sanitaire",
-        "Formation des agents de santé communautaire",
-        "Mise en place de systèmes d'alerte précoce",
-        "Amélioration de l'accès aux soins de base"
+        t('ourWork.areas.communityHealthObj1'),
+        t('ourWork.areas.communityHealthObj2'),
+        t('ourWork.areas.communityHealthObj3'),
+        t('ourWork.areas.communityHealthObj4'),
       ]
     },
     {
-      title: "Nutrition & Sécurité Alimentaire",
+      title: t('ourWork.areas.nutrition'),
       icon: Users,
       color: "text-secondary",
       bgColor: "bg-green-50",
-      description: "Programmes de nutrition et lutte contre la malnutrition",
+      description: t('ourWork.areas.nutritionDesc'),
       objectives: [
-        "Évaluation nutritionnelle des communautés",
-        "Distribution de suppléments nutritionnels",
-        "Formation sur les bonnes pratiques alimentaires",
-        "Développement de jardins communautaires"
+        t('ourWork.areas.nutritionObj1'),
+        t('ourWork.areas.nutritionObj2'),
+        t('ourWork.areas.nutritionObj3'),
+        t('ourWork.areas.nutritionObj4'),
       ]
     },
     {
-      title: "Éducation Sanitaire",
+      title: t('ourWork.areas.education'),
       icon: GraduationCap,
       color: "text-yellow-600",
       bgColor: "bg-yellow-50",
-      description: "Sensibilisation et formation pour la promotion de la santé",
+      description: t('ourWork.areas.educationDesc'),
       objectives: [
-        "Campagnes de sensibilisation ciblées",
-        "Formation des leaders communautaires",
-        "Développement de matériel éducatif adapté",
-        "Programmes d'éducation par les pairs"
+        t('ourWork.areas.educationObj1'),
+        t('ourWork.areas.educationObj2'),
+        t('ourWork.areas.educationObj3'),
+        t('ourWork.areas.educationObj4'),
       ]
     },
     {
-      title: "WASH (Eau, Assainissement, Hygiène)",
+      title: t('ourWork.areas.wash'),
       icon: Droplets,
       color: "text-primary",
       bgColor: "bg-blue-50",
-      description: "Amélioration de l'accès à l'eau potable et aux installations sanitaires",
+      description: t('ourWork.areas.washDesc'),
       objectives: [
-        "Construction de points d'eau potable",
-        "Formation sur l'hygiène et l'assainissement",
-        "Mise en place de systèmes de traitement des eaux",
-        "Sensibilisation aux bonnes pratiques d'hygiène"
+        t('ourWork.areas.washObj1'),
+        t('ourWork.areas.washObj2'),
+        t('ourWork.areas.washObj3'),
+        t('ourWork.areas.washObj4'),
       ]
     }
   ];
 
   const keyMetrics = [
-    { value: "2024-2026", label: "Plan Stratégique", icon: Target },
-    { value: "4", label: "Domaines Prioritaires", icon: Globe },
-    { value: "100%", label: "Approche Communautaire", icon: TrendingUp }
+    { value: "2024-2026", label: t('ourWork.metrics.strategicPlan'), icon: Target },
+    { value: "4", label: t('ourWork.metrics.priorityAreas'), icon: Globe },
+    { value: "100%", label: t('ourWork.metrics.communityApproach'), icon: TrendingUp }
   ];
 
   return (
@@ -72,18 +74,17 @@ const OurWork = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center animate-fade-in">
             <h1 className="font-montserrat font-bold text-4xl lg:text-5xl text-gray-900 mb-6">
-              Notre Travail
+              {t('ourWork.hero.title')}
             </h1>
             <p className="font-open-sans text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Découvrez notre plan stratégique 2024-2026 et nos domaines d'intervention prioritaires 
-              pour transformer la santé communautaire.
+              {t('ourWork.hero.desc')}
             </p>
-            
+
             {/* Key Metrics */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
               {keyMetrics.map((metric, index) => (
-                <div 
-                  key={metric.label} 
+                <div
+                  key={metric.label}
                   className="bg-white rounded-lg p-6 shadow-lg animate-scale-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
@@ -108,23 +109,21 @@ const OurWork = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in">
             <Badge variant="outline" className="mb-4 text-primary border-primary">
-              Plan Stratégique 2024-2026
+              {t('ourWork.planBadge')}
             </Badge>
             <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-gray-900 mb-6">
-              Une Approche Intégrée pour la Santé Communautaire
+              {t('ourWork.planTitle')}
             </h2>
             <p className="font-open-sans text-lg text-gray-600 max-w-4xl mx-auto">
-              Notre plan stratégique s'articule autour de quatre domaines prioritaires, 
-              avec une approche holistique qui reconnaît l'interconnexion entre la santé, 
-              la nutrition, l'éducation et l'environnement.
+              {t('ourWork.planDesc')}
             </p>
           </div>
 
           {/* Strategic Areas */}
           <div className="space-y-12">
             {strategicAreas.map((area, index) => (
-              <Card 
-                key={area.title} 
+              <Card
+                key={area.title}
                 className={`overflow-hidden hover:shadow-xl transition-all duration-300 animate-slide-in-${index % 2 === 0 ? 'left' : 'right'}`}
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
@@ -139,20 +138,20 @@ const OurWork = () => {
                       </h3>
                     </div>
                   </div>
-                  
+
                   <div className="md:w-2/3 p-8">
                     <p className="font-open-sans text-gray-600 mb-6 text-lg">
                       {area.description}
                     </p>
-                    
+
                     <h4 className="font-montserrat font-semibold text-lg text-gray-900 mb-4">
-                      Objectifs Principaux :
+                      {t('ourWork.objectivesTitle')}
                     </h4>
-                    
+
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
                       {area.objectives.map((objective, objIndex) => (
-                        <div 
-                          key={objIndex} 
+                        <div
+                          key={objIndex}
                           className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
                         >
                           <div className={`w-2 h-2 ${area.color} rounded-full mt-2 flex-shrink-0`}></div>
@@ -175,14 +174,12 @@ const OurWork = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center animate-fade-in">
             <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-gray-900 mb-6">
-              Impact et Perspectives d'Avenir
+              {t('ourWork.impactTitle')}
             </h2>
             <p className="font-open-sans text-lg text-gray-600 max-w-4xl mx-auto mb-12">
-              Notre engagement s'inscrit dans une vision à long terme de transformation 
-              durable des systèmes de santé communautaire, avec un focus sur la durabilité 
-              et l'autonomisation des communautés locales.
+              {t('ourWork.impactDesc')}
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               <Card className="p-6 text-center hover:shadow-lg transition-shadow animate-scale-in">
                 <CardContent className="pt-6">
@@ -190,38 +187,38 @@ const OurWork = () => {
                     <Target className="h-8 w-8 text-primary" />
                   </div>
                   <h3 className="font-montserrat font-bold text-lg mb-3">
-                    Durabilité
+                    {t('ourWork.impactDurability')}
                   </h3>
                   <p className="font-open-sans text-gray-600 text-sm">
-                    Solutions pérennes adaptées aux contextes locaux
+                    {t('ourWork.impactDurabilityDesc')}
                   </p>
                 </CardContent>
               </Card>
-              
+
               <Card className="p-6 text-center hover:shadow-lg transition-shadow animate-scale-in">
                 <CardContent className="pt-6">
                   <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Users className="h-8 w-8 text-secondary" />
                   </div>
                   <h3 className="font-montserrat font-bold text-lg mb-3">
-                    Autonomisation
+                    {t('ourWork.impactEmpowerment')}
                   </h3>
                   <p className="font-open-sans text-gray-600 text-sm">
-                    Renforcement des capacités communautaires
+                    {t('ourWork.impactEmpowermentDesc')}
                   </p>
                 </CardContent>
               </Card>
-              
+
               <Card className="p-6 text-center hover:shadow-lg transition-shadow animate-scale-in">
                 <CardContent className="pt-6">
                   <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <TrendingUp className="h-8 w-8 text-accent" />
                   </div>
                   <h3 className="font-montserrat font-bold text-lg mb-3">
-                    Innovation
+                    {t('ourWork.impactInnovation')}
                   </h3>
                   <p className="font-open-sans text-gray-600 text-sm">
-                    Approches créatives et technologiques
+                    {t('ourWork.impactInnovationDesc')}
                   </p>
                 </CardContent>
               </Card>

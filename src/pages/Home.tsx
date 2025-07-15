@@ -5,35 +5,37 @@ import { useAuth } from "@/contexts/AuthContext";
 import { useState } from "react";
 import { AuthModal } from "@/components/AuthModal";
 import { PaymentModal } from "@/components/PaymentModal";
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
   const { isAuthenticated, user } = useAuth();
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
+  const { t } = useTranslation();
 
   const interventionAreas = [
     {
-      title: "Santé",
-      description: "Surveillance et amélioration de la santé communautaire",
-      icon: Heart,
+      title: t('home.areas.health'),
+      description: t('home.areas.healthDesc'),
+      image: '/images/hospital.png', // Example image
       color: "text-red-500"
     },
     {
-      title: "Nutrition",
-      description: "Programmes de nutrition et sécurité alimentaire",
-      icon: Users,
+      title: t('home.areas.nutrition'),
+      description: t('home.areas.nutritionDesc'),
+      image: '/images/nutrition.png', // Example image
       color: "text-secondary"
     },
     {
-      title: "Éducation",
-      description: "Formation et sensibilisation sanitaire",
-      icon: Lightbulb,
+      title: t('home.areas.education'),
+      description: t('home.areas.educationDesc'),
+      image: '/images/education.jpeg', // Example image
       color: "text-yellow-500"
     },
     {
-      title: "WASH",
-      description: "Eau, Assainissement et Hygiène",
-      icon: Target,
+      title: t('home.areas.wash'),
+      description: t('home.areas.washDesc'),
+      image: '/images/wash.png', // Example image
       color: "text-primary"
     }
   ];
@@ -57,10 +59,10 @@ const Home = () => {
               HealthMOUR
             </h1>
             <p className="font-open-sans text-xl lg:text-2xl mb-4 text-blue-100">
-              Health-Monitoring-Organization-Understanding-Resolution
+              {t('home.hero.subtitle')}
             </p>
             <p className="font-open-sans text-lg lg:text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              Surveillance-Organisation-Compréhension-Résolution = Bien Etre 
+              {t('home.hero.equation')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -68,7 +70,7 @@ const Home = () => {
                 onClick={handleVolunteerClick}
                 className="bg-secondary hover:bg-secondary/90 text-white font-montserrat text-lg px-8"
               >
-                Devenir Bénévole
+                {t('home.hero.becomeVolunteer')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button
@@ -77,7 +79,7 @@ const Home = () => {
                 variant="outline"
                 className="border-white text-primary hover:bg-white hover:text-primary font-montserrat text-lg px-8"
               >
-                Faire un Don
+                {t('home.hero.donate')}
               </Button>
             </div>
           </div>
@@ -90,28 +92,28 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h2 className="font-montserrat font-bold text-2xl text-gray-900 mb-4">
-                Bienvenue, {user?.firstName} !
+                {t('home.welcome', { name: user?.firstName })}
               </h2>
               <p className="font-open-sans text-lg text-gray-600 mb-6">
-                Merci de rejoindre notre mission. Voici des ressources exclusives pour nos bénévoles :
+                {t('home.welcomeResources')}
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <Card className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-6 text-center">
-                    <h3 className="font-montserrat font-semibold text-lg mb-2">Manuel du Bénévole</h3>
-                    <p className="text-gray-600 text-sm">Guide complet pour démarrer votre engagement</p>
+                    <h3 className="font-montserrat font-semibold text-lg mb-2">{t('home.resources.manualTitle')}</h3>
+                    <p className="text-gray-600 text-sm">{t('home.resources.manualDesc')}</p>
                   </CardContent>
                 </Card>
                 <Card className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-6 text-center">
-                    <h3 className="font-montserrat font-semibold text-lg mb-2">Formations</h3>
-                    <p className="text-gray-600 text-sm">Accès aux sessions de formation en ligne</p>
+                    <h3 className="font-montserrat font-semibold text-lg mb-2">{t('home.resources.trainingTitle')}</h3>
+                    <p className="text-gray-600 text-sm">{t('home.resources.trainingDesc')}</p>
                   </CardContent>
                 </Card>
                 <Card className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-6 text-center">
-                    <h3 className="font-montserrat font-semibold text-lg mb-2">Communauté</h3>
-                    <p className="text-gray-600 text-sm">Rejoignez notre groupe privé de bénévoles</p>
+                    <h3 className="font-montserrat font-semibold text-lg mb-2">{t('home.resources.communityTitle')}</h3>
+                    <p className="text-gray-600 text-sm">{t('home.resources.communityDesc')}</p>
                   </CardContent>
                 </Card>
               </div>
@@ -125,10 +127,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-gray-900 mb-4">
-              Notre Engagement
+              {t('home.commitment.title')}
             </h2>
             <p className="font-open-sans text-lg text-gray-600 max-w-3xl mx-auto">
-              Découvrez notre mission, notre vision et nos valeurs qui guident notre action quotidienne
+              {t('home.commitment.desc')}
             </p>
           </div>
 
@@ -140,10 +142,10 @@ const Home = () => {
                   <Target className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="font-montserrat font-bold text-xl mb-4 text-primary">
-                  Notre Mission
+                  {t('home.commitment.mission')}
                 </h3>
                 <p className="font-open-sans text-gray-600 leading-relaxed">
-                  Améliorer la santé et le bien-être des communautés en surveillant, organisant, comprenant et résolvant les défis sanitaires par des approches innovantes et collaboratives.
+                  {t('home.commitment.missionDesc')}
                 </p>
               </CardContent>
             </Card>
@@ -155,10 +157,10 @@ const Home = () => {
                   <Eye className="h-8 w-8 text-secondary" />
                 </div>
                 <h3 className="font-montserrat font-bold text-xl mb-4 text-secondary">
-                  Notre Vision
+                  {t('home.commitment.vision')}
                 </h3>
                 <p className="font-open-sans text-gray-600 leading-relaxed">
-                  Un monde où chaque communauté a accès à des soins de santé de qualité, à une nutrition adéquate, à l'éducation sanitaire et à des conditions d'hygiène optimales.
+                  {t('home.commitment.visionDesc')}
                 </p>
               </CardContent>
             </Card>
@@ -170,10 +172,10 @@ const Home = () => {
                   <Heart className="h-8 w-8 text-accent" />
                 </div>
                 <h3 className="font-montserrat font-bold text-xl mb-4 text-accent">
-                  Nos Valeurs
+                  {t('home.commitment.values')}
                 </h3>
                 <p className="font-open-sans text-gray-600 leading-relaxed">
-                  Intégrité, compassion, innovation, transparence et collaboration. Nous croyons en l'importance de l'engagement communautaire et du respect de la dignité humaine.
+                  {t('home.commitment.valuesDesc')}
                 </p>
               </CardContent>
             </Card>
@@ -186,10 +188,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-gray-900 mb-4">
-              Nos Domaines d'Intervention
+              {t('home.areas.title')}
             </h2>
             <p className="font-open-sans text-lg text-gray-600 max-w-3xl mx-auto">
-              Quatre piliers essentiels pour transformer la santé communautaire
+              {t('home.areas.desc')}
             </p>
           </div>
 
@@ -202,7 +204,7 @@ const Home = () => {
               >
                 <CardContent className="p-6 text-center">
                   <div className="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <area.icon className={`h-8 w-8 ${area.color}`} />
+                    <img src={area.image} alt={area.title} className="w-12 h-12 object-contain" />
                   </div>
                   <h3 className="font-montserrat font-bold text-xl mb-3 text-gray-900">
                     {area.title}
@@ -221,11 +223,10 @@ const Home = () => {
       <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
           <h2 className="font-montserrat font-bold text-3xl lg:text-4xl mb-6">
-            Rejoignez Notre Mission
+            {t('home.cta.title')}
           </h2>
           <p className="font-open-sans text-lg lg:text-xl mb-8 max-w-3xl mx-auto">
-            Ensemble, nous pouvons créer un impact positif durable sur la santé de nos communautés.
-            Votre engagement fait la différence.
+            {t('home.cta.desc')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -234,14 +235,14 @@ const Home = () => {
               variant="outline"
               className="border-white text-primary hover:bg-white hover:text-primary font-montserrat text-lg px-8"
             >
-              Devenir Bénévole
+              {t('home.cta.becomeVolunteer')}
             </Button>
             <Button
               size="lg"
               onClick={() => setIsPaymentModalOpen(true)}
               className="bg-white text-primary hover:bg-gray-100 font-montserrat text-lg px-8"
             >
-              Faire un Don
+              {t('home.cta.donate')}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>

@@ -1,16 +1,18 @@
-import { Mail, Linkedin, Twitter, Users, Award, Globe } from "lucide-react";
+import { Mail, Linkedin, Twitter, Users, Award, Globe, Scale } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from 'react-i18next';
 
 const Founders = () => {
+  const { t } = useTranslation();
   // Placeholder data - replace with actual founder information
   const founder = {
     name: "Dr. Youssouf Keita",
-    title: "Cofondateur & President du conseil d'administration",
-    image: "/youssouf.jpeg",
-    bio: "Médecin de santé publique avec plus de 15 ans d'expérience dans le développement de programmes de santé communautaire en Afrique et en Europe. Passionnée par l'approche holistique de la santé, elle a créé HealthMOUR pour répondre aux défis sanitaires contemporains par des solutions innovantes et durables.",
-    education: "Doctorat en Santé Publique, Université de POINT G Bamako",
-    experience: "15+ années en santé Publique",
+    title: t('founders.founderTitle'),
+    image: "/images/youssouf.jpeg",
+    bio: t('founders.founderBio'),
+    education: t('founders.founderEducation'),
+    experience: t('founders.founderExperience'),
     email: "youssnigga@gmail.com",
     linkedin: "#",
     twitter: "#"
@@ -19,45 +21,116 @@ const Founders = () => {
   const collaborators = [
     {
       name: "Dr.Habibatou dite Mah TRAORE",
-      role: "Professionnelle de la communication stratégique organisations,projets, pour le développement et le changement",
-      image: "/habibatou.jpeg",
-      speciality: "Épidémiologie",
-      location: "Mali, Bamako"
+      role: t('founders.collaborators.habibatou.role'),
+      image: "/images/habibatou.jpeg",
+      speciality: t('founders.collaborators.habibatou.speciality'),
+      location: t('founders.collaborators.habibatou.location')
     },
     {
       name: "M.Ibrahim TERERA",
-      role: "Coordinateur Programmes",
-      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      speciality: "Gestion de projet",
-      location: "Mali, Bamako"
+      role: t('founders.collaborators.ibrahim.role'),
+      image: "",
+      speciality: t('founders.collaborators.ibrahim.speciality'),
+      location: t('founders.collaborators.ibrahim.location')
     },
     {
       name: "Dr Souleymane SAWADOGO",
-      role: "Expert Nutrition",
+      role: t('founders.collaborators.souleymane.role'),
       image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      speciality: "Nutrition communautaire",
-      location: "Mali, Bamako"
+      speciality: t('founders.collaborators.souleymane.speciality'),
+      location: t('founders.collaborators.souleymane.location')
     },
     {
       name: "Dr Fadjiné DIARRA",
-      role: "Responsable Technique",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      speciality: "Ingénierie sanitaire",
-      location: "Mali, Bamako"
+      role: t('founders.collaborators.fadjine.role'),
+      image: "/images/fadjine.jpeg",
+      speciality: t('founders.collaborators.fadjine.speciality'),
+      location: t('founders.collaborators.fadjine.location')
     },
     {
       name: "M. Modibo KEITA",
-      role: "Conseiller Stratégique",
+      role: t('founders.collaborators.modibo.role'),
       image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      speciality: "Santé digitale",
-      location: "Mali, Bamako"
+      speciality: t('founders.collaborators.modibo.speciality'),
+      location: t('founders.collaborators.modibo.location')
     },
     {
       name: "Mme Fatoumata Dembélé",
-      role: "Responsable Formation",
-      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      speciality: "Éducation sanitaire",
-      location: "Mali, Bamako"
+      role: t('founders.collaborators.fatoumata.role'),
+      image: "/images/master2.jpeg",
+      speciality: t('founders.collaborators.fatoumata.speciality'),
+      location: t('founders.collaborators.fatoumata.location')
+    },
+    // New collaborators
+    {
+      name: "Dr. Awa Coulibaly",
+      role: t('founders.collaborators.awa.role'),
+      image: "/images/collab1.jpeg",
+      speciality: t('founders.collaborators.awa.speciality'),
+      location: t('founders.collaborators.awa.location')
+    },
+    {
+      name: "M. Mamadou Sidibé",
+      role: t('founders.collaborators.mamadou.role'),
+      image: "/images/download1.jpg",
+      speciality: t('founders.collaborators.mamadou.speciality'),
+      location: t('founders.collaborators.mamadou.location')
+    },
+    {
+      name: "Mme Aminata Traoré",
+      role: t('founders.collaborators.aminata.role'),
+      image: "/images/collab3.jpeg",
+      speciality: t('founders.collaborators.aminata.speciality'),
+      location: t('founders.collaborators.aminata.location')
+    },
+    {
+      name: "Dr. Moussa Konaté",
+      role: t('founders.collaborators.moussa.role'),
+      image: "/images/collab4.jpeg",
+      speciality: t('founders.collaborators.moussa.speciality'),
+      location: t('founders.collaborators.moussa.location')
+    },
+    {
+      name: "Mme Mariam Doumbia",
+      role: t('founders.collaborators.mariam.role'),
+      image: "/images/collab5.jpeg",
+      speciality: t('founders.collaborators.mariam.speciality'),
+      location: t('founders.collaborators.mariam.location')
+    },
+    {
+      name: "M. Adama Diarra",
+      role: t('founders.collaborators.adama.role'),
+      image: "/images/collab6.jpeg",
+      speciality: t('founders.collaborators.adama.speciality'),
+      location: t('founders.collaborators.adama.location')
+    },
+    {
+      name: "Dr. Salif Camara",
+      role: t('founders.collaborators.salif.role'),
+      image: "/images/collab7.jpeg",
+      speciality: t('founders.collaborators.salif.speciality'),
+      location: t('founders.collaborators.salif.location')
+    },
+    {
+      name: "Mme Fanta Sissoko",
+      role: t('founders.collaborators.fanta.role'),
+      image: "/images/collab8.jpeg",
+      speciality: t('founders.collaborators.fanta.speciality'),
+      location: t('founders.collaborators.fanta.location')
+    },
+    {
+      name: "M. Oumar Sangaré",
+      role: t('founders.collaborators.oumar.role'),
+      image: "/images/collab9.jpeg",
+      speciality: t('founders.collaborators.oumar.speciality'),
+      location: t('founders.collaborators.oumar.location')
+    },
+    {
+      name: "Mme Kadidia Cissé",
+      role: t('founders.collaborators.kadidia.role'),
+      image: "/images/collab10.jpeg",
+      speciality: t('founders.collaborators.kadidia.speciality'),
+      location: t('founders.collaborators.kadidia.location')
     }
   ];
 
@@ -74,11 +147,10 @@ const Founders = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center animate-fade-in">
             <h1 className="font-montserrat font-bold text-4xl lg:text-5xl text-gray-900 mb-6">
-              Fondateurs & Collaborateurs
+              {t('founders.heroTitle')}
             </h1>
             <p className="font-open-sans text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-              Rencontrez l'équipe passionnée qui donne vie à la mission HealthMOUR,
-              composée d'experts internationaux unis par une vision commune.
+              {t('founders.heroDesc')}
             </p>
 
             {/* Stats */}
@@ -110,10 +182,10 @@ const Founders = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-gray-900 mb-4">
-              Derrière l'Organisation : le Fondateur & son Équipe
+              {t('founders.behindTitle')}
             </h2>
             <p className="font-open-sans text-lg text-gray-600 max-w-3xl mx-auto">
-              Découvrez la vision et l'engagement qui ont donné naissance à HealthMOUR
+              {t('founders.behindDesc')}
             </p>
           </div>
 
@@ -163,11 +235,10 @@ const Founders = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-gray-900 mb-4">
-              Notre Équipe d'Experts
+              {t('founders.teamTitle')}
             </h2>
             <p className="font-open-sans text-lg text-gray-600 max-w-3xl mx-auto">
-              Une équipe multiculturelle et multidisciplinaire qui apporte expertise
-              et passion à chaque projet HealthMOUR
+              {t('founders.teamDesc')}
             </p>
           </div>
 
@@ -196,12 +267,11 @@ const Founders = () => {
                   <p className="font-open-sans text-gray-500 text-xs mb-2">
                     {collaborator.location}
                   </p>
-                  {/* Hidden by default, shown on hover */}
+                  <div className="flex justify-center space-x-2 mb-2">
+                    {/* Social icons here */}
+                  </div>
                   <div className="max-h-0 overflow-hidden group-hover:max-h-40 group-hover:overflow-auto group-hover:mt-2 transition-all duration-300 ease-in-out">
-                    <p className="text-gray-700 text-xs mb-2">
-                      {/* Placeholder biography */}
-                      Biographie à venir...
-                    </p>
+                    <p className="text-gray-700 text-xs mb-2">{collaborator.speciality || "Biographie à venir..."}</p>
                     <button className="text-primary underline text-xs">Lire plus</button>
                   </div>
                 </div>
@@ -210,16 +280,15 @@ const Founders = () => {
           </div>
         </div>
       </section>
-
+      w
       {/* Join Team CTA */}
       <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
           <h2 className="font-montserrat font-bold text-3xl lg:text-4xl mb-6">
-            Rejoignez Notre Équipe
+            {t('founders.joinTitle')}
           </h2>
           <p className="font-open-sans text-lg lg:text-xl mb-8 max-w-3xl mx-auto">
-            Vous partagez notre passion pour la santé communautaire ?
-            Nous sommes toujours à la recherche de talents engagés pour renforcer notre équipe.
+            {t('founders.joinDesc')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -227,13 +296,13 @@ const Founders = () => {
               variant="outline"
               className="border-white text-primary hover:bg-white hover:text-primary font-montserrat text-lg px-8"
             >
-              Devenir Bénévole
+              {t('founders.joinVolunteer')}
             </Button>
             <Button
               size="lg"
               className="bg-white text-primary hover:bg-gray-100 font-montserrat text-lg px-8"
             >
-              Candidature Spontanée
+              {t('founders.joinApply')}
             </Button>
           </div>
         </div>

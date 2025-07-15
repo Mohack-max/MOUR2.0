@@ -1,0 +1,262 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "ourWork": "Notre travail",
+    "founders": "Equipe technique et conseil d'administration",
+    "becomeMemberVolunteer": "Devenir membre / Devenir bénévole",
+    "donate": "Faire un don",
+    "logout": "Déconnexion",
+    "hello": "Bonjour, {{name}}",
+    "volunteerSuccess": "Merci {{name}} ! Vous êtes maintenant inscrit comme bénévole. Nous vous contacterons bientôt."
+  },
+  "footer": {
+    "copyright": "Tous droits réservés.",
+    "mission": "Surveillance sanitaire, organisation, compréhension et résolution des problèmes de santé dans nos communautés.",
+    "together": "Ensemble pour une meilleure santé communautaire",
+    "quickLinks": {
+      "ourWork": "Notre travail",
+      "team": "Équipe",
+      "volunteer": "Devenir bénévole",
+      "donate": "Faire un don"
+    }
+  },
+  "modals": {
+    "authTitle": "Connexion ou Inscription",
+    "paymentTitle": "Faire un don"
+  },
+  "pages": {
+    "homeTitle": "Bienvenue chez healthMOUR!",
+    "foundersTitle": "Rencontrez notre équipe"
+  },
+  "notFound": {
+    "message": "Oups ! Page non trouvée",
+    "returnHome": "Retour à l'accueil"
+  },
+  "index": {
+    "welcome": "Bienvenue sur votre application vierge",
+    "startBuilding": "Commencez à construire votre projet incroyable ici !"
+  },
+  "auth": {
+    "login": "Connexion",
+    "signup": "Inscription",
+    "loginDesc": "Connectez-vous pour devenir bénévole",
+    "signupDesc": "Créez votre compte pour rejoindre notre mission",
+    "email": "Email",
+    "emailPlaceholder": "votre@email.com",
+    "password": "Mot de passe",
+    "passwordPlaceholder": "••••••••",
+    "loading": "Chargement...",
+    "loginBtn": "Se connecter",
+    "signupBtn": "S'inscrire",
+    "noAccount": "Vous n'avez pas de compte ?",
+    "haveAccount": "Vous avez déjà un compte ?"
+  },
+  "payment": {
+    "thankYou": "Merci pour votre don !",
+    "thankYouDesc": "Votre contribution nous aidera à poursuivre notre mission pour une meilleure santé communautaire.",
+    "title": "Faire un don",
+    "subtitle": "Soutenez notre mission pour une meilleure santé communautaire",
+    "amount": "Montant du don (€)",
+    "amountPlaceholder": "50",
+    "routingNumber": "Code de routage",
+    "routingNumberPlaceholder": "XXXXXXXXX",
+    "message": "Message (optionnel)",
+    "messagePlaceholder": "Un message pour accompagner votre don...",
+    "processing": "Traitement en cours...",
+    "donateBtn": "Faire un don de {{amount}}€",
+    "security": "🔒 Vos informations sont sécurisées et ne seront utilisées que pour traiter votre don."
+  },
+  "home": {
+    "hero": {
+      "subtitle": "Surveillance-organisation-compréhension-résolution",
+      "equation": "Surveillance-organisation-compréhension-résolution = bien-être",
+      "becomeVolunteer": "Devenir bénévole",
+      "donate": "Faire un don"
+    },
+    "welcome": "Bienvenue, {{name}} !",
+    "welcomeResources": "Merci de rejoindre notre mission. Voici des ressources exclusives pour nos bénévoles :",
+    "resources": {
+      "manualTitle": "Manuel du bénévole",
+      "manualDesc": "Guide complet pour démarrer votre engagement",
+      "trainingTitle": "Formations",
+      "trainingDesc": "Accès aux sessions de formation en ligne",
+      "communityTitle": "Communauté",
+      "communityDesc": "Rejoignez notre groupe privé de bénévoles"
+    },
+    "commitment": {
+      "title": "Notre engagement",
+      "desc": "Découvrez notre mission, notre vision et nos valeurs qui guident notre action quotidienne",
+      "mission": "Notre mission",
+      "missionDesc": "Améliorer la santé et le bien-être des communautés en surveillant, organisant, comprenant et résolvant les défis sanitaires par des approches innovantes et collaboratives.",
+      "vision": "Notre vision",
+      "visionDesc": "Un monde où chaque communauté a accès à des soins de santé de qualité, à une nutrition adéquate, à l'éducation sanitaire et à des conditions d'hygiène optimales.",
+      "values": "Nos valeurs",
+      "valuesDesc": "Intégrité, compassion, innovation, transparence et collaboration. Nous croyons en l'importance de l'engagement communautaire et du respect de la dignité humaine."
+    },
+    "areas": {
+      "title": "Nos Domaines d'Intervention",
+      "desc": "Quatre piliers essentiels pour transformer la santé communautaire",
+      "health": "Santé",
+      "healthDesc": "Surveillance et amélioration de la santé communautaire",
+      "nutrition": "Nutrition",
+      "nutritionDesc": "Programmes de nutrition et sécurité alimentaire",
+      "education": "Éducation",
+      "educationDesc": "Formation et sensibilisation sanitaire",
+      "wash": "WASH",
+      "washDesc": "Eau, Assainissement et Hygiène"
+    },
+    "cta": {
+      "title": "Rejoignez Notre mission",
+      "desc": "Ensemble, nous pouvons créer un impact positif durable sur la santé de nos communautés. Votre engagement fait la différence.",
+      "becomeVolunteer": "Devenir bénévole",
+      "donate": "Faire un don"
+    }
+  },
+  "ourWork": {
+    "hero": {
+      "title": "Notre travail",
+      "desc": "Découvrez notre plan stratégique 2024-2026 et nos domaines d'intervention prioritaires pour transformer la santé communautaire."
+    },
+    "planBadge": "Plan stratégique 2024-2026",
+    "planTitle": "Une approche intégrée pour la santé communautaire",
+    "planDesc": "Notre plan stratégique s'articule autour de quatre domaines prioritaires, avec une approche holistique qui reconnaît l'interconnexion entre la santé, la nutrition, l'éducation et l'environnement.",
+    "areas": {
+      "communityHealth": "Santé communautaire",
+      "communityHealthDesc": "Surveillance épidémiologique et amélioration des systèmes de santé locaux",
+      "communityHealthObj1": "Renforcement des capacités de surveillance sanitaire",
+      "communityHealthObj2": "Formation des agents de santé communautaire",
+      "communityHealthObj3": "Mise en place de systèmes d'alerte précoce",
+      "communityHealthObj4": "Amélioration de l'accès aux soins de base",
+      "nutrition": "Nutrition & Sécurité alimentaire",
+      "nutritionDesc": "Programmes de nutrition et lutte contre la malnutrition",
+      "nutritionObj1": "Évaluation nutritionnelle des communautés",
+      "nutritionObj2": "Distribution de suppléments nutritionnels",
+      "nutritionObj3": "Formation sur les bonnes pratiques alimentaires",
+      "nutritionObj4": "Développement de jardins communautaires",
+      "education": "Éducation sanitaire",
+      "educationDesc": "Sensibilisation et formation pour la promotion de la santé",
+      "educationObj1": "Campagnes de sensibilisation ciblées",
+      "educationObj2": "Formation des leaders communautaires",
+      "educationObj3": "Développement de matériel éducatif adapté",
+      "educationObj4": "Programmes d'éducation par les pairs",
+      "wash": "WASH (Eau, Assainissement, Hygiène)",
+      "washDesc": "Amélioration de l'accès à l'eau potable et aux installations sanitaires",
+      "washObj1": "Construction de points d'eau potable",
+      "washObj2": "Formation sur l'hygiène et l'assainissement",
+      "washObj3": "Mise en place de systèmes de traitement des eaux",
+      "washObj4": "Sensibilisation aux bonnes pratiques d'hygiène"
+    },
+    "metrics": {
+      "strategicPlan": "Plan stratégique",
+      "priorityAreas": "Domaines prioritaires",
+      "communityApproach": "Approche communautaire"
+    },
+    "objectivesTitle": "Objectifs principaux :",
+    "impactTitle": "Impact et perspectives d'avenir",
+    "impactDesc": "Notre engagement s'inscrit dans une vision à long terme de transformation durable des systèmes de santé communautaire, avec un focus sur la durabilité et l'autonomisation des communautés locales.",
+    "impactDurability": "Durabilité",
+    "impactDurabilityDesc": "Solutions pérennes adaptées aux contextes locaux",
+    "impactEmpowerment": "Autonomisation",
+    "impactEmpowermentDesc": "Renforcement des capacités communautaires",
+    "impactInnovation": "Innovation",
+    "impactInnovationDesc": "Approches créatives et technologiques"
+  },
+  "founders": {
+    "heroTitle": "Fondateurs & Collaborateurs",
+    "heroDesc": "Rencontrez l'équipe passionnée qui donne vie à la mission healthMOUR, composée d'experts internationaux unis par une vision commune.",
+    "behindTitle": "Derrière healthMOUR",
+    "behindDesc": "Découvrez la vision et l'engagement qui ont donné naissance à healthMOUR",
+    "founderTitle": "Cofondateur & President du conseil d'administration",
+    "founderBio": "Médecin de santé publique avec plus de 15 ans d'expérience dans le développement de programmes de santé communautaire en Afrique et en Europe. Passionnée par l'approche holistique de la santé, il a créé HealthMOUR pour répondre aux défis sanitaires contemporains par des solutions innovantes et durables.",
+    "founderEducation": "Doctorat en Santé Publique, Université de POINT G Bamako",
+    "founderExperience": "15+ années en santé Publique",
+    "teamTitle": "Notre Équipe d'Experts",
+    "teamDesc": "Une équipe multiculturelle et multidisciplinaire qui apporte expertise et passion à chaque projet healthMOUR",
+    "joinTitle": "Rejoignez Notre Équipe",
+    "joinDesc": "Vous partagez notre passion pour la santé communautaire ? Nous sommes toujours à la recherche de talents engagés pour renforcer notre équipe.",
+    "joinVolunteer": "Devenir Bénévole",
+    "joinApply": "Candidature Spontanée",
+    "collaborators": {
+      "habibatou": {
+        "role": "Professionnelle de la communication stratégique organisations, projets, pour le développement et le changement",
+        "speciality": "Épidémiologie",
+        "location": "Mali, Bamako"
+      },
+      "ibrahim": {
+        "role": "Coordinateur programmes",
+        "speciality": "Gestion de projet",
+        "location": "Mali, Bamako"
+      },
+      "souleymane": {
+        "role": "Expert Nutrition",
+        "speciality": "Nutrition communautaire",
+        "location": "Mali, Bamako"
+      },
+      "fadjine": {
+        "role": "Responsable Technique",
+        "speciality": "Santé publique, Nutrition",
+        "location": "Mali, Bamako"
+      },
+      "modibo": {
+        "role": "Conseiller Stratégique",
+        "speciality": "Santé digitale",
+        "location": "Mali, Bamako"
+      },
+      "fatoumata": {
+        "role": "Responsable Formation",
+        "speciality": "Médecin de formation, je suis titulaire d’un Master 2 en Santé publique avec une spécialisation en nutrition. Depuis 2023, j’évolue au sein de CHAI (Clinton Health Access Initiative), d’abord en tant que stagiaire, puis comme assistante de programme à partir d’août 2024. Depuis avril 2025, j’occupe également le poste de coordinatrice chez Large and Long-lasting Impact Seekers at Scale and Company (Llissco. SAS), où je supervise l’assistance technique apportée à l’ANAES dans le cadre des visites d’accréditation des centres de santé communautaire (CSCom).",
+        "location": "Mali, Bamako"
+      },
+      "awa": {
+        "role": "Spécialiste Santé Maternelle",
+        "speciality": "Santé maternelle et infantile",
+        "location": "Mali, Sikasso"
+      },
+      "mamadou": {
+        "role": "Analyste Données Santé",
+        "speciality": "",
+        "location": "Mali, Kayes"
+      },
+      "aminata": {
+        "role": "Coordinatrice Logistique",
+        "speciality": "Logistique médicale",
+        "location": "Mali, Mopti"
+      },
+      "moussa": {
+        "role": "Consultant Vaccination",
+        "speciality": "Vaccination et prévention",
+        "location": "Mali, Ségou"
+      },
+      "mariam": {
+        "role": "Responsable Communication",
+        "speciality": "Communication santé",
+        "location": "Mali, Koulikoro"
+      },
+      "adama": {
+        "role": "Expert Financement Santé",
+        "speciality": "Financement de la santé",
+        "location": "Mali, Bamako"
+      },
+      "salif": {
+        "role": "Médecin de Terrain",
+        "speciality": "Médecine communautaire",
+        "location": "Mali, Tombouctou"
+      },
+      "fanta": {
+        "role": "Chargée de Suivi & Évaluation",
+        "speciality": "Suivi et évaluation",
+        "location": "Mali, Gao"
+      },
+      "oumar": {
+        "role": "Technicien Informatique Santé",
+        "speciality": "Informatique médicale",
+        "location": "Mali, Bamako"
+      },
+      "kadidia": {
+        "role": "Assistante Administrative",
+        "speciality": "Administration santé",
+        "location": "Mali, Bamako"
+      }
+    }
+  }
+} 

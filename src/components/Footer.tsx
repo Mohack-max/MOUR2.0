@@ -1,6 +1,8 @@
 import { Heart, Mail, MapPin, Phone } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 export const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="bg-accent text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -9,7 +11,7 @@ export const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <img
-                src="/logo hm Final1.jpeg.jpg"
+                src="/images/logo hm Final1.jpeg.jpg"
                 alt="HealthMOUR Logo"
                 className="h-12 w-auto"
               />
@@ -18,12 +20,12 @@ export const Footer = () => {
               </span>
             </div>
             <p className="font-open-sans text-gray-300 mb-4 max-w-md">
-              Surveillance sanitaire, Organisation, Compréhension et Résolution des problèmes de santé dans nos communautés.
+              {t('footer.mission')}
             </p>
             <div className="flex items-center space-x-2 text-secondary">
               <Heart className="h-4 w-4" />
               <span className="font-open-sans text-sm">
-                Ensemble pour une meilleure santé communautaire
+                {t('footer.together')}
               </span>
             </div>
           </div>
@@ -35,7 +37,7 @@ export const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-secondary" />
                 <span className="font-open-sans text-sm text-gray-300">
-                  contact@healthmour.org
+                  HealthMour@healthmour.org
                 </span>
               </div>
               <div className="flex items-center space-x-3">
@@ -58,16 +60,16 @@ export const Footer = () => {
             <h3 className="font-montserrat font-semibold text-lg mb-4">Liens Rapides</h3>
             <div className="space-y-2">
               <a href="/our-work" className="block font-open-sans text-sm text-gray-300 hover:text-secondary transition-colors">
-                Notre Travail
+                {t('footer.quickLinks.ourWork')}
               </a>
               <a href="/founders" className="block font-open-sans text-sm text-gray-300 hover:text-secondary transition-colors">
-                Équipe
+                {t('footer.quickLinks.team')}
               </a>
               <a href="#" className="block font-open-sans text-sm text-secondary hover:text-primary transition-colors">
-                Devenir Bénévole
+                {t('footer.quickLinks.volunteer')}
               </a>
               <a href="#" className="block font-open-sans text-sm text-gray-300 hover:text-secondary transition-colors">
-                Faire un Don
+                {t('footer.quickLinks.donate')}
               </a>
             </div>
           </div>

@@ -4,6 +4,7 @@ import { X, CreditCard, Building, User, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { useTranslation } from 'react-i18next';
 
 interface PaymentModalProps {
   isOpen: boolean;
@@ -13,15 +14,16 @@ interface PaymentModalProps {
 export const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
     amount: '',
-    donorName: '',
-    donorEmail: '',
-    bankName: '',
-    accountNumber: '',
-    routingNumber: '',
-    message: ''
+    name: '',
+    email: '',
+    message: '',
+    iban: '',
+    bic: '',
+    routingNumber: ''
   });
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const { t } = useTranslation();
 
   if (!isOpen) return null;
 
@@ -33,7 +35,7 @@ export const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose }) =
     setTimeout(() => {
       setIsLoading(false);
       setIsSuccess(true);
-      
+
       // Reset form and close modal after success message
       setTimeout(() => {
         setIsSuccess(false);
@@ -68,10 +70,10 @@ export const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose }) =
             </svg>
           </div>
           <h3 className="font-montserrat font-bold text-xl text-gray-900 mb-2">
-            Merci pour votre don !
+            {t('payment.thankYou')}
           </h3>
           <p className="text-gray-600 font-open-sans">
-            Votre contribution nous aidera à poursuivre notre mission pour une meilleure santé communautaire.
+            {t('payment.thankYouDesc')}
           </p>
         </div>
       </div>
@@ -90,17 +92,17 @@ export const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose }) =
 
         <div className="text-center mb-6">
           <h2 className="font-montserrat font-bold text-2xl text-gray-900 mb-2">
-            Faire un Don
+            {t('payment.title')}
           </h2>
           <p className="text-gray-600 font-open-sans">
-            Soutenez notre mission pour une meilleure santé communautaire
+            {t('payment.subtitle')}
           </p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <Label htmlFor="amount" className="text-sm font-medium text-gray-700">
-              Montant du don (€)
+              {t('payment.amount')}
             </Label>
             <Input
               id="amount"
@@ -110,7 +112,7 @@ export const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose }) =
               min="1"
               value={formData.amount}
               onChange={handleInputChange}
-              placeholder="50"
+              placeholder={t('payment.amountPlaceholder')}
             />
           </div>
 
@@ -158,7 +160,7 @@ export const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose }) =
             <h3 className="font-montserrat font-semibold text-lg text-gray-900 mb-3">
               Informations Bancaires
             </h3>
-            
+
             <div className="space-y-4">
               <div>
                 <Label htmlFor="bankName" className="text-sm font-medium text-gray-700">
@@ -200,7 +202,7 @@ export const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose }) =
 
               <div>
                 <Label htmlFor="routingNumber" className="text-sm font-medium text-gray-700">
-                  Code de routage
+                  {t('payment.routingNumber')}
                 </Label>
                 <Input
                   id="routingNumber"
@@ -209,7 +211,7 @@ export const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose }) =
                   required
                   value={formData.routingNumber}
                   onChange={handleInputChange}
-                  placeholder="XXXXXXXXX"
+                  placeholder={t('payment.routingNumberPlaceholder')}
                 />
               </div>
             </div>
@@ -217,7 +219,7 @@ export const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose }) =
 
           <div>
             <Label htmlFor="message" className="text-sm font-medium text-gray-700">
-              Message (optionnel)
+              {t('payment.message')}
             </Label>
             <textarea
               id="message"
@@ -226,7 +228,7 @@ export const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose }) =
               value={formData.message}
               onChange={handleInputChange}
               className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-              placeholder="Un message pour accompagner votre don..."
+              placeholder={t('payment.messagePlaceholder')}
             />
           </div>
 
@@ -235,13 +237,13 @@ export const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose }) =
             disabled={isLoading}
             className="w-full bg-primary hover:bg-primary/90 text-white"
           >
-            {isLoading ? 'Traitement en cours...' : `Faire un don de ${formData.amount || '0'}€`}
+            {isLoading ? t('payment.processing') : t('payment.donateBtn', { amount: formData.amount || '0' })}
           </Button>
         </form>
 
         <div className="mt-4 text-xs text-gray-500 text-center">
           <p>
-            🔒 Vos informations sont sécurisées et ne seront utilisées que pour traiter votre don.
+            {t('payment.security')}
           </p>
         </div>
       </div>

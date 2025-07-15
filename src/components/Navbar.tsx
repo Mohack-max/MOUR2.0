@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useAuth } from "@/contexts/AuthContext";
 import { AuthModal } from "@/components/AuthModal";
 import { PaymentModal } from "@/components/PaymentModal";
+import { useTranslation } from 'react-i18next';
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,11 +13,12 @@ export const Navbar = () => {
   const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
   const location = useLocation();
   const { user, isAuthenticated, logout } = useAuth();
+  const { t, i18n } = useTranslation();
 
   const navItems = [
-    { path: "/", label: "Accueil" },
-    { path: "/our-work", label: "Notre Travail" },
-    { path: "/founders", label: "Fondateurs & Collaborateurs" },
+    { path: "/", label: t('navbar.home') },
+    { path: "/our-work", label: t('navbar.ourWork') },
+    { path: "/founders", label: t('navbar.founders') }
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -24,7 +26,7 @@ export const Navbar = () => {
   const handleVolunteerClick = () => {
     if (isAuthenticated) {
       // User is authenticated, show volunteer dashboard or success message
-      alert(`Merci ${user?.firstName} ! Vous êtes maintenant inscrit comme bénévole. Nous vous contacterons bientôt.`);
+      alert(t('navbar.volunteerSuccess', { name: user?.firstName }));
     } else {
       // User needs to authenticate
       setIsAuthModalOpen(true);
@@ -36,30 +38,34 @@ export const Navbar = () => {
     setIsMenuOpen(false);
   };
 
+  const handleLanguageSwitch = () => {
+    i18n.changeLanguage(i18n.language === 'en' ? 'fr' : 'en');
+  };
+
   return (
     <>
       <nav className="bg-white shadow-lg sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            {/* Logo */}
-            <Link to="/" className="flex items-center space-x-3">
+          <div className="flex items-center justify-between h-16 w-full">
+            {/* Logo (left) */}
+            <Link to="/" className="flex items-center space-x-3 flex-shrink-0">
               <img
-                 src="/logo hm Final1.jpeg.jpg"
+                src="/images/logo hm Final1.jpeg.jpg"
                 alt="HealthMOUR Logo"
-                className="h-12 w-auto"
+                className="h-12 w-auto flex-shrink-0"
               />
-              <span className="font-montserrat font-bold text-xl text-primary">
+              <span className="font-montserrat font-bold text-xl text-primary truncate max-w-[120px] sm:max-w-[180px] md:max-w-none">
                 HealthMOUR
               </span>
             </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-6">
-              {navItems.map((item) => (
+            {/* Navigation and actions (right) */}
+            <div className="hidden md:flex items-center space-x-6 flex-shrink-0">
+              {navItems.map((item, idx) => (
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`font-open-sans font-medium transition-colors duration-200 ${isActive(item.path)
+                  className={`font-open-sans font-medium transition-colors duration-200 px-4 ${idx === 0 ? 'ml-6' : ''} ${isActive(item.path)
                     ? "text-primary border-b-2 border-primary"
                     : "text-gray-700 hover:text-primary"
                     }`}
@@ -67,51 +73,37 @@ export const Navbar = () => {
                   {item.label}
                 </Link>
               ))}
-
-              {/* Profile and Logout section */}
               {isAuthenticated ? (
-                <div className="flex items-center space-x-2 min-w-0 max-w-xs">
-                  <div className="flex items-center space-x-2 text-gray-700 truncate">
-                    <User className="h-4 w-4 flex-shrink-0" />
-                    <span
-                      className="font-open-sans text-sm truncate max-w-[180px]"
-                      title={user?.firstName || ''}
-                    >
-                      Bonjour, {user?.firstName}
-                    </span>
-                  </div>
-                  <Button
-                    onClick={handleLogout}
-                    variant="outline"
-                    size="sm"
-                    className="flex items-center space-x-2"
-                  >
-                    <LogOut className="h-4 w-4" />
-                    <span>Déconnexion</span>
-                  </Button>
-                </div>
+                <Button
+                  onClick={handleLogout}
+                  variant="outline"
+                  size="sm"
+                  className="flex items-center space-x-2"
+                >
+                  <LogOut className="h-4 w-4" />
+                  <span>{t('navbar.logout')}</span>
+                </Button>
               ) : (
                 <Button
                   onClick={() => setIsAuthModalOpen(true)}
                   variant="outline"
-                  className="font-montserrat"
+                  className="font-montserrat bg-green-600 hover:bg-green-700 text-white"
                 >
-                  Connexion
+                  {t('navbar.becomeMemberVolunteer')}
                 </Button>
               )}
-
-              <Button
-                onClick={handleVolunteerClick}
-                className="bg-secondary hover:bg-secondary/90 text-primary font-montserrat"
-              >
-                Devenir Bénévole
-              </Button>
-
               <Button
                 onClick={() => setIsPaymentModalOpen(true)}
-                className="bg-primary hover:bg-primary/90 text-white font-montserrat"
+                className="bg-primary hover:bg-primary/90 text-white font-montserrat px-6"
               >
-                Faire un Don
+                {t('navbar.donate')}
+              </Button>
+              <Button
+                onClick={handleLanguageSwitch}
+                variant="outline"
+                className="ml-2 font-montserrat border-green-600 text-green-700"
+              >
+                {i18n.language === 'en' ? 'Français' : 'English'}
               </Button>
             </div>
 
@@ -150,7 +142,7 @@ export const Navbar = () => {
                     <div className="flex items-center space-x-2 text-gray-700 py-2">
                       <User className="h-8 w-8" />
                       <span className="font-open-sans text-sm">
-                        Bonjour, {user?.firstName}
+                        {t('navbar.hello', { name: user?.firstName })}
                       </span>
                     </div>
                     <Button
@@ -160,7 +152,7 @@ export const Navbar = () => {
                       className="w-full flex items-center justify-center space-x-2"
                     >
                       <LogOut className="h-4 w-4" />
-                      <span>Déconnexion</span>
+                      <span>{t('navbar.logout')}</span>
                     </Button>
                   </div>
                 ) : (
@@ -170,9 +162,9 @@ export const Navbar = () => {
                       setIsMenuOpen(false);
                     }}
                     variant="outline"
-                    className="mx-4 font-montserrat"
+                    className="mx-4 font-montserrat bg-green-600 hover:bg-green-700 text-white"
                   >
-                    Connexion
+                    {t('navbar.becomeMemberVolunteer')}
                   </Button>
                 )}
 
@@ -183,7 +175,7 @@ export const Navbar = () => {
                   }}
                   className="mx-4 bg-blue-600 hover:bg-blue-700 text-white font-montserrat"
                 >
-                  Devenir Bénévole
+                  {t('navbar.becomeMemberVolunteer')}
                 </Button>
 
                 <Button
@@ -193,7 +185,7 @@ export const Navbar = () => {
                   }}
                   className="mx-4 bg-primary hover:bg-primary/90 text-white font-montserrat"
                 >
-                  Faire un Don
+                  {t('navbar.donate')}
                 </Button>
               </div>
             </div>

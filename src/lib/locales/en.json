@@ -1,0 +1,262 @@
+{
+  "navbar": {
+    "home": "Home",
+    "ourWork": "Our Work",
+    "founders": "Technical Team and Board of Directors",
+    "becomeMemberVolunteer": "Become Member / Become Volunteer",
+    "donate": "Donate",
+    "logout": "Logout",
+    "hello": "Hello, {{name}}",
+    "volunteerSuccess": "Thank you {{name}}! You are now registered as a volunteer. We will contact you soon."
+  },
+  "footer": {
+    "copyright": "All rights reserved.",
+    "mission": "Health monitoring, organization, understanding, and resolution of health issues in our communities.",
+    "together": "Together for better community health",
+    "quickLinks": {
+      "ourWork": "Our Work",
+      "team": "Team",
+      "volunteer": "Become Volunteer",
+      "donate": "Donate"
+    }
+  },
+  "modals": {
+    "authTitle": "Sign In or Register",
+    "paymentTitle": "Make a Donation"
+  },
+  "pages": {
+    "homeTitle": "Welcome to HealthMOUR!",
+    "foundersTitle": "Meet Our Team"
+  },
+  "notFound": {
+    "message": "Oops! Page not found",
+    "returnHome": "Return to Home"
+  },
+  "index": {
+    "welcome": "Welcome to Your Blank App",
+    "startBuilding": "Start building your amazing project here!"
+  },
+  "auth": {
+    "login": "Login",
+    "signup": "Sign Up",
+    "loginDesc": "Sign in to become a volunteer",
+    "signupDesc": "Create your account to join our mission",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "password": "Password",
+    "passwordPlaceholder": "••••••••",
+    "loading": "Loading...",
+    "loginBtn": "Login",
+    "signupBtn": "Sign Up",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?"
+  },
+  "payment": {
+    "thankYou": "Thank you for your donation!",
+    "thankYouDesc": "Your contribution will help us continue our mission for better community health.",
+    "title": "Make a Donation",
+    "subtitle": "Support our mission for better community health",
+    "amount": "Donation Amount (€)",
+    "amountPlaceholder": "50",
+    "routingNumber": "Routing Number",
+    "routingNumberPlaceholder": "XXXXXXXXX",
+    "message": "Message (optional)",
+    "messagePlaceholder": "A message to accompany your donation...",
+    "processing": "Processing...",
+    "donateBtn": "Donate {{amount}}€",
+    "security": "🔒 Your information is secure and will only be used to process your donation."
+  },
+  "home": {
+    "hero": {
+      "subtitle": "Health-monitoring-organization-understanding-resolution",
+      "equation": "Monitoring-organization-understanding-resolution = well-being",
+      "becomeVolunteer": "Become Volunteer",
+      "donate": "Donate"
+    },
+    "welcome": "Welcome, {{name}}!",
+    "welcomeResources": "Thank you for joining our mission. Here are exclusive resources for our volunteers:",
+    "resources": {
+      "manualTitle": "Volunteer Handbook",
+      "manualDesc": "Comprehensive guide to start your engagement",
+      "trainingTitle": "Trainings",
+      "trainingDesc": "Access to online training sessions",
+      "communityTitle": "Community",
+      "communityDesc": "Join our private volunteer group"
+    },
+    "commitment": {
+      "title": "Our Commitment",
+      "desc": "Discover our mission, vision, and values that guide our daily actions",
+      "mission": "Our Mission",
+      "missionDesc": "Improve the health and well-being of communities by monitoring, organizing, understanding, and solving health challenges through innovative and collaborative approaches.",
+      "vision": "Our Vision",
+      "visionDesc": "A world where every community has access to quality healthcare, adequate nutrition, health education, and optimal hygiene conditions.",
+      "values": "Our Values",
+      "valuesDesc": "Integrity, compassion, innovation, transparency, and collaboration. We believe in the importance of community engagement and respect for human dignity."
+    },
+    "areas": {
+      "title": "Our Areas of Intervention",
+      "desc": "Four essential pillars to transform community health",
+      "health": "Health",
+      "healthDesc": "Community health monitoring and improvement",
+      "nutrition": "Nutrition",
+      "nutritionDesc": "Nutrition programs and food security",
+      "education": "Education",
+      "educationDesc": "Health training and awareness",
+      "wash": "WASH",
+      "washDesc": "Water, Sanitation, and Hygiene"
+    },
+    "cta": {
+      "title": "Join Our Mission",
+      "desc": "Together, we can create a lasting positive impact on the health of our communities. Your commitment makes a difference.",
+      "becomeVolunteer": "Become Volunteer",
+      "donate": "Donate"
+    }
+  },
+  "ourWork": {
+    "hero": {
+      "title": "Our Work",
+      "desc": "Discover our 2024-2026 strategic plan and our priority intervention areas to transform community health."
+    },
+    "planBadge": "Strategic Plan 2024-2026",
+    "planTitle": "An Integrated Approach to Community Health",
+    "planDesc": "Our strategic plan is built around four priority areas, with a holistic approach that recognizes the interconnection between health, nutrition, education, and the environment.",
+    "areas": {
+      "communityHealth": "Community Health",
+      "communityHealthDesc": "Epidemiological monitoring and improvement of local health systems",
+      "communityHealthObj1": "Strengthening health surveillance capacity",
+      "communityHealthObj2": "Training community health workers",
+      "communityHealthObj3": "Setting up early warning systems",
+      "communityHealthObj4": "Improving access to basic care",
+      "nutrition": "Nutrition & Food Security",
+      "nutritionDesc": "Nutrition programs and fight against malnutrition",
+      "nutritionObj1": "Community nutrition assessment",
+      "nutritionObj2": "Distribution of nutritional supplements",
+      "nutritionObj3": "Training on good dietary practices",
+      "nutritionObj4": "Development of community gardens",
+      "education": "Health Education",
+      "educationDesc": "Awareness and training for health promotion",
+      "educationObj1": "Targeted awareness campaigns",
+      "educationObj2": "Training community leaders",
+      "educationObj3": "Development of adapted educational materials",
+      "educationObj4": "Peer education programs",
+      "wash": "WASH (Water, Sanitation, Hygiene)",
+      "washDesc": "Improving access to drinking water and sanitation facilities",
+      "washObj1": "Construction of drinking water points",
+      "washObj2": "Training on hygiene and sanitation",
+      "washObj3": "Setting up water treatment systems",
+      "washObj4": "Awareness of good hygiene practices"
+    },
+    "metrics": {
+      "strategicPlan": "Strategic Plan",
+      "priorityAreas": "Priority Areas",
+      "communityApproach": "Community Approach"
+    },
+    "objectivesTitle": "Main Objectives:",
+    "impactTitle": "Impact & Future Outlook",
+    "impactDesc": "Our commitment is part of a long-term vision of sustainable transformation of community health systems, with a focus on sustainability and community empowerment.",
+    "impactDurability": "Durability",
+    "impactDurabilityDesc": "Sustainable solutions adapted to local contexts",
+    "impactEmpowerment": "Empowerment",
+    "impactEmpowermentDesc": "Strengthening community capacities",
+    "impactInnovation": "Innovation",
+    "impactInnovationDesc": "Creative and technological approaches"
+  },
+  "founders": {
+    "heroTitle": "Founders & Collaborators",
+    "heroDesc": "Meet the passionate team bringing the HealthMOUR mission to life, composed of international experts united by a common vision.",
+    "behindTitle": "Behind HealthMOUR",
+    "behindDesc": "Discover the vision and commitment that gave birth to HealthMOUR",
+    "founderTitle": "Co-founder & President of the Board",
+    "founderBio": "Public health physician with over 15 years of experience in developing community health programs in Africa and Europe. Passionate about the holistic approach to health, he created HealthMOUR to address contemporary health challenges through innovative and sustainable solutions.",
+    "founderEducation": "Doctorate in Public Health, University of POINT G Bamako",
+    "founderExperience": "15+ years in Public Health",
+    "teamTitle": "Our Team of Experts",
+    "teamDesc": "A multicultural and multidisciplinary team bringing expertise and passion to every HealthMOUR project",
+    "joinTitle": "Join Our Team",
+    "joinDesc": "Do you share our passion for community health? We are always looking for committed talent to strengthen our team.",
+    "joinVolunteer": "Become Volunteer",
+    "joinApply": "Spontaneous Application",
+    "collaborators": {
+      "habibatou": {
+        "role": "Strategic Communication Professional for Organizations, Projects, Development and Change",
+        "speciality": "Epidemiology",
+        "location": "Mali, Bamako"
+      },
+      "ibrahim": {
+        "role": "Program Coordinator",
+        "speciality": "Project Management",
+        "location": "Mali, Bamako"
+      },
+      "souleymane": {
+        "role": "Nutrition Expert",
+        "speciality": "Community Nutrition",
+        "location": "Mali, Bamako"
+      },
+      "fadjine": {
+        "role": "Technical Manager",
+        "speciality": "Public Health, Nutrition",
+        "location": "Mali, Bamako"
+      },
+      "modibo": {
+        "role": "Strategic Advisor",
+        "speciality": "Digital Health",
+        "location": "Mali, Bamako"
+      },
+      "fatoumata": {
+        "role": "Training Manager",
+        "speciality": "Medical doctor with a Master 2 in Public Health specializing in nutrition. Since 2023, I have been with CHAI (Clinton Health Access Initiative), first as an intern, then as a program assistant from August 2024. Since April 2025, I have also been a coordinator at Large and Long-lasting Impact Seekers at Scale and Company (Llissco. SAS), where I supervise technical assistance to ANAES for the accreditation visits of community health centers (CSCom).",
+        "location": "Mali, Bamako"
+      },
+      "awa": {
+        "role": "Maternal Health Specialist",
+        "speciality": "Maternal and Child Health",
+        "location": "Mali, Sikasso"
+      },
+      "mamadou": {
+        "role": "Health Data Analyst",
+        "speciality": "",
+        "location": "Mali, Kayes"
+      },
+      "aminata": {
+        "role": "Logistics Coordinator",
+        "speciality": "Medical Logistics",
+        "location": "Mali, Mopti"
+      },
+      "moussa": {
+        "role": "Vaccination Consultant",
+        "speciality": "Vaccination and Prevention",
+        "location": "Mali, Ségou"
+      },
+      "mariam": {
+        "role": "Communication Manager",
+        "speciality": "Health Communication",
+        "location": "Mali, Koulikoro"
+      },
+      "adama": {
+        "role": "Health Financing Expert",
+        "speciality": "Health Financing",
+        "location": "Mali, Bamako"
+      },
+      "salif": {
+        "role": "Field Doctor",
+        "speciality": "Community Medicine",
+        "location": "Mali, Tombouctou"
+      },
+      "fanta": {
+        "role": "Monitoring & Evaluation Officer",
+        "speciality": "Monitoring and Evaluation",
+        "location": "Mali, Gao"
+      },
+      "oumar": {
+        "role": "Health IT Technician",
+        "speciality": "Medical IT",
+        "location": "Mali, Bamako"
+      },
+      "kadidia": {
+        "role": "Administrative Assistant",
+        "speciality": "Health Administration",
+        "location": "Mali, Bamako"
+      }
+    }
+  }
+} 

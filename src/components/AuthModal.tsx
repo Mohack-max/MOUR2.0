@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/lib/supabaseClient'; // ✅ UPDATED PATH
+import { useTranslation } from 'react-i18next';
 
 
 interface AuthModalProps {
@@ -24,8 +25,8 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMo
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const [signupMessage, setSignupMessage] = useState('');
-
   const { login, signup } = useAuth();
+  const { t } = useTranslation();
 
   // ✅ Debugging: Check if Supabase is initialized correctly
   console.log('✅ Supabase instance:', supabase);
@@ -85,12 +86,12 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMo
 
         <div className="text-center mb-6">
           <h2 className="font-montserrat font-bold text-2xl text-gray-900 mb-2">
-            {mode === 'login' ? 'Connexion' : 'Inscription'}
+            {mode === 'login' ? t('auth.login') : t('auth.signup')}
           </h2>
           <p className="text-gray-600 font-open-sans">
             {mode === 'login'
-              ? 'Connectez-vous pour devenir bénévole'
-              : 'Créez votre compte pour rejoindre notre mission'}
+              ? t('auth.loginDesc')
+              : t('auth.signupDesc')}
           </p>
         </div>
 
@@ -138,7 +139,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMo
 
           <div>
             <Label htmlFor="email" className="text-sm font-medium text-gray-700">
-              Email
+              {t('auth.email')}
             </Label>
             <div className="relative">
               <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
@@ -150,14 +151,14 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMo
                 value={formData.email}
                 onChange={handleInputChange}
                 className="pl-10"
-                placeholder="votre@email.com"
+                placeholder={t('auth.emailPlaceholder')}
               />
             </div>
           </div>
 
           <div>
             <Label htmlFor="password" className="text-sm font-medium text-gray-700">
-              Mot de passe
+              {t('auth.password')}
             </Label>
             <div className="relative">
               <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
@@ -169,7 +170,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMo
                 value={formData.password}
                 onChange={handleInputChange}
                 className="pl-10"
-                placeholder="••••••••"
+                placeholder={t('auth.passwordPlaceholder')}
               />
             </div>
           </div>
@@ -191,18 +192,18 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMo
             disabled={isLoading}
             className="w-full bg-secondary hover:bg-secondary/90 text-white"
           >
-            {isLoading ? 'Chargement...' : (mode === 'login' ? 'Se connecter' : "S'inscrire")}
+            {isLoading ? t('auth.loading') : (mode === 'login' ? t('auth.loginBtn') : t('auth.signupBtn'))}
           </Button>
         </form>
 
         <div className="mt-6 text-center">
           <p className="text-sm text-gray-600">
-            {mode === 'login' ? "Vous n'avez pas de compte ?" : 'Vous avez déjà un compte ?'}
+            {mode === 'login' ? t('auth.noAccount') : t('auth.haveAccount')}
             <button
               onClick={() => setMode(mode === 'login' ? 'signup' : 'login')}
               className="ml-1 text-primary hover:underline font-medium"
             >
-              {mode === 'login' ? "S'inscrire" : 'Se connecter'}
+              {mode === 'login' ? t('auth.signupBtn') : t('auth.loginBtn')}
             </button>
           </p>
         </div>
