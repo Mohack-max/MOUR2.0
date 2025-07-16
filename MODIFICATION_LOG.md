@@ -54,3 +54,27 @@ Further changes will be logged here as the implementation progresses.
 - Admins can view, approve, or deny user requests for document access.
 - Admin dashboard includes logout functionality.
 - All admin actions are protected and only available to authenticated admin users.
+
+---
+
+## [Date: 2024-06-09] Admin Authentication Update for Dashboard Access
+
+- Replaced Supabase-based admin authentication in `AdminDashboard.tsx` with a localStorage session check.
+- Now, only users who have logged in via `AdminLogin.tsx` (using the hardcoded password) can access the admin dashboard.
+- If the session is missing or expired, users are redirected to the homepage.
+- This is a temporary solution until Supabase Auth is fully integrated for admin access.
+
+## [2024-05-31] Switched Admin Session to Supabase Auth
+
+- Admin login and dashboard now use Supabase Auth session instead of localStorage.
+- Only the pre-approved admin email (admin@example.com) can access the admin panel.
+- All localStorage session logic removed from admin login and dashboard.
+
+## [2024-05-31] Centered Navbar Contents
+
+- Centered all contents of the Navbar (logo, navigation links, buttons) horizontally in the middle of the page for both desktop and mobile layouts.
+- Adjusted flex and container classes in `src/components/Navbar.tsx` to remove right-shifting and ensure proper centering.
+
+## [2024-05-31] Renamed Supabase Storage Bucket
+
+- Changed all references of the Supabase Storage bucket from `private_documents` to `privatedocuments` (removed underscore) throughout the codebase to match the new bucket name.

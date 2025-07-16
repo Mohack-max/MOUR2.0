@@ -9,7 +9,7 @@ const OurWork = () => {
   const strategicAreas = [
     {
       title: t('ourWork.areas.communityHealth'),
-      icon: Heart,
+      image: '/images/hospital.png',
       color: "text-red-500",
       bgColor: "bg-red-50",
       description: t('ourWork.areas.communityHealthDesc'),
@@ -22,7 +22,7 @@ const OurWork = () => {
     },
     {
       title: t('ourWork.areas.nutrition'),
-      icon: Users,
+      image: '/images/nutrition.png',
       color: "text-secondary",
       bgColor: "bg-green-50",
       description: t('ourWork.areas.nutritionDesc'),
@@ -35,7 +35,7 @@ const OurWork = () => {
     },
     {
       title: t('ourWork.areas.education'),
-      icon: GraduationCap,
+      image: '/images/education.jpeg',
       color: "text-yellow-600",
       bgColor: "bg-yellow-50",
       description: t('ourWork.areas.educationDesc'),
@@ -48,7 +48,7 @@ const OurWork = () => {
     },
     {
       title: t('ourWork.areas.wash'),
-      icon: Droplets,
+      image: '/images/wash.png',
       color: "text-primary",
       bgColor: "bg-blue-50",
       description: t('ourWork.areas.washDesc'),
@@ -131,7 +131,7 @@ const OurWork = () => {
                   <div className={`md:w-1/3 ${area.bgColor} flex items-center justify-center p-8`}>
                     <div className="text-center">
                       <div className={`w-20 h-20 ${area.bgColor} rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-white shadow-lg`}>
-                        <area.icon className={`h-10 w-10 ${area.color}`} />
+                        <img src={area.image} alt={area.title} className="h-10 w-10 object-contain" />
                       </div>
                       <h3 className="font-montserrat font-bold text-xl text-gray-900">
                         {area.title}

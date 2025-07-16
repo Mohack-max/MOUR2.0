@@ -1,7 +1,7 @@
 {
   "navbar": {
     "home": "Home",
-    "ourWork": "Our Work",
+    "ourWork": "Our work",
     "founders": "Technical Team and Board of Directors",
     "becomeMemberVolunteer": "Become Member / Become Volunteer",
     "donate": "Donate",
@@ -15,7 +15,7 @@
     "mission": "Health monitoring, organization, understanding, and resolution of health issues in our communities.",
     "together": "Together for better community health",
     "quickLinks": {
-      "ourWork": "Our Work",
+      "ourWork": "Our work",
       "team": "Team",
       "volunteer": "Become Volunteer",
       "donate": "Donate"
@@ -26,7 +26,7 @@
     "paymentTitle": "Make a Donation"
   },
   "pages": {
-    "homeTitle": "Welcome to HealthMOUR!",
+    "homeTitle": "Welcome to healthMOUR!",
     "foundersTitle": "Meet Our Team"
   },
   "notFound": {
@@ -55,11 +55,11 @@
   "payment": {
     "thankYou": "Thank you for your donation!",
     "thankYouDesc": "Your contribution will help us continue our mission for better community health.",
-    "title": "Make a Donation",
+    "title": "Make a donation",
     "subtitle": "Support our mission for better community health",
-    "amount": "Donation Amount (€)",
+    "amount": "Donation amount (€)",
     "amountPlaceholder": "50",
-    "routingNumber": "Routing Number",
+    "routingNumber": "Routing number",
     "routingNumberPlaceholder": "XXXXXXXXX",
     "message": "Message (optional)",
     "messagePlaceholder": "A message to accompany your donation...",
@@ -71,7 +71,7 @@
     "hero": {
       "subtitle": "Health-monitoring-organization-understanding-resolution",
       "equation": "Monitoring-organization-understanding-resolution = well-being",
-      "becomeVolunteer": "Become Volunteer",
+      "becomeVolunteer": "Become volunteer",
       "donate": "Donate"
     },
     "welcome": "Welcome, {{name}}!",
@@ -85,7 +85,7 @@
       "communityDesc": "Join our private volunteer group"
     },
     "commitment": {
-      "title": "Our Commitment",
+      "title": "Our commitment",
       "desc": "Discover our mission, vision, and values that guide our daily actions",
       "mission": "Our Mission",
       "missionDesc": "Improve the health and well-being of communities by monitoring, organizing, understanding, and solving health challenges through innovative and collaborative approaches.",
@@ -95,7 +95,7 @@
       "valuesDesc": "Integrity, compassion, innovation, transparency, and collaboration. We believe in the importance of community engagement and respect for human dignity."
     },
     "areas": {
-      "title": "Our Areas of Intervention",
+      "title": "Our areas of intervention",
       "desc": "Four essential pillars to transform community health",
       "health": "Health",
       "healthDesc": "Community health monitoring and improvement",
@@ -104,22 +104,22 @@
       "education": "Education",
       "educationDesc": "Health training and awareness",
       "wash": "WASH",
-      "washDesc": "Water, Sanitation, and Hygiene"
+      "washDesc": "Water, sanitation, and hygiene"
     },
     "cta": {
       "title": "Join Our Mission",
       "desc": "Together, we can create a lasting positive impact on the health of our communities. Your commitment makes a difference.",
-      "becomeVolunteer": "Become Volunteer",
+      "becomeVolunteer": "Become volunteer",
       "donate": "Donate"
     }
   },
   "ourWork": {
     "hero": {
-      "title": "Our Work",
+      "title": "Our work",
       "desc": "Discover our 2024-2026 strategic plan and our priority intervention areas to transform community health."
     },
-    "planBadge": "Strategic Plan 2024-2026",
-    "planTitle": "An Integrated Approach to Community Health",
+    "planBadge": "Strategic plan 2024-2026",
+    "planTitle": "An integrated approach to community health",
     "planDesc": "Our strategic plan is built around four priority areas, with a holistic approach that recognizes the interconnection between health, nutrition, education, and the environment.",
     "areas": {
       "communityHealth": "Community Health",
@@ -148,11 +148,11 @@
       "washObj4": "Awareness of good hygiene practices"
     },
     "metrics": {
-      "strategicPlan": "Strategic Plan",
+      "strategicPlan": "Strategic plan",
       "priorityAreas": "Priority Areas",
       "communityApproach": "Community Approach"
     },
-    "objectivesTitle": "Main Objectives:",
+    "objectivesTitle": "Main objectives:",
     "impactTitle": "Impact & Future Outlook",
     "impactDesc": "Our commitment is part of a long-term vision of sustainable transformation of community health systems, with a focus on sustainability and community empowerment.",
     "impactDurability": "Durability",
@@ -164,43 +164,43 @@
   },
   "founders": {
     "heroTitle": "Founders & Collaborators",
-    "heroDesc": "Meet the passionate team bringing the HealthMOUR mission to life, composed of international experts united by a common vision.",
-    "behindTitle": "Behind HealthMOUR",
-    "behindDesc": "Discover the vision and commitment that gave birth to HealthMOUR",
-    "founderTitle": "Co-founder & President of the Board",
-    "founderBio": "Public health physician with over 15 years of experience in developing community health programs in Africa and Europe. Passionate about the holistic approach to health, he created HealthMOUR to address contemporary health challenges through innovative and sustainable solutions.",
-    "founderEducation": "Doctorate in Public Health, University of POINT G Bamako",
+    "heroDesc": "Meet the passionate team bringing the healthMOUR mission to life, composed of international experts united by a common vision.",
+    "behindTitle": "Behind healthMOUR",
+    "behindDesc": "Discover the vision and commitment that gave birth to healthMOUR",
+    "founderTitle": "Co-founder & President of the board",
+    "founderBio": "Public health physician with over 15 years of experience in developing community health programs in Africa and Europe. Passionate about the holistic approach to health, he created healthMOUR to address contemporary health challenges through innovative and sustainable solutions.",
+    "founderEducation": "Doctorate in public health, University of POINT G Bamako",
     "founderExperience": "15+ years in Public Health",
-    "teamTitle": "Our Team of Experts",
-    "teamDesc": "A multicultural and multidisciplinary team bringing expertise and passion to every HealthMOUR project",
-    "joinTitle": "Join Our Team",
+    "teamTitle": "Our team of experts",
+    "teamDesc": "A multicultural and multidisciplinary team bringing expertise and passion to every healthMOUR project",
+    "joinTitle": "Join our team",
     "joinDesc": "Do you share our passion for community health? We are always looking for committed talent to strengthen our team.",
-    "joinVolunteer": "Become Volunteer",
-    "joinApply": "Spontaneous Application",
+    "joinVolunteer": "Become volunteer",
+    "joinApply": "Spontaneous application",
     "collaborators": {
       "habibatou": {
-        "role": "Strategic Communication Professional for Organizations, Projects, Development and Change",
+        "role": "Strategic communication professional for oganizations, pojects, dvelopment and change",
         "speciality": "Epidemiology",
         "location": "Mali, Bamako"
       },
       "ibrahim": {
-        "role": "Program Coordinator",
+        "role": "Program coordinator",
         "speciality": "Project Management",
         "location": "Mali, Bamako"
       },
       "souleymane": {
-        "role": "Nutrition Expert",
-        "speciality": "Community Nutrition",
+        "role": "Nutrition expert",
+        "speciality": "Community nutrition",
         "location": "Mali, Bamako"
       },
       "fadjine": {
-        "role": "Technical Manager",
+        "role": "Technical manager",
         "speciality": "Public Health, Nutrition",
         "location": "Mali, Bamako"
       },
       "modibo": {
-        "role": "Strategic Advisor",
-        "speciality": "Digital Health",
+        "role": "Strategic advisor",
+        "speciality": "Digital health",
         "location": "Mali, Bamako"
       },
       "fatoumata": {

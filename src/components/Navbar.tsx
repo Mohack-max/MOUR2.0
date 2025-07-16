@@ -29,10 +29,8 @@ export const Navbar = () => {
 
   const handleVolunteerClick = () => {
     if (isAuthenticated) {
-      // User is authenticated, show volunteer dashboard or success message
       alert(t('navbar.volunteerSuccess', { name: user?.firstName }));
     } else {
-      // User needs to authenticate
       setIsAuthModalOpen(true);
     }
   };
@@ -49,8 +47,8 @@ export const Navbar = () => {
   return (
     <>
       <nav className="bg-white shadow-lg sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 w-full">
+        <div className="w-full max-w-7xl mx-auto flex justify-center px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-center h-16 w-full gap-8">
             {/* Logo (left) */}
             <Link to="/" className="flex items-center space-x-3 flex-shrink-0">
               <img
@@ -59,17 +57,17 @@ export const Navbar = () => {
                 className="h-12 w-auto flex-shrink-0"
               />
               <span className="font-montserrat font-bold text-xl text-primary truncate max-w-[120px] sm:max-w-[180px] md:max-w-none">
-                HealthMOUR
+                healthMOUR
               </span>
             </Link>
 
-            {/* Navigation and actions (right) */}
-            <div className="hidden md:flex items-center space-x-6 flex-shrink-0">
+            {/* Navigation and actions (centered) */}
+            <div className="flex items-center space-x-6 flex-shrink-0">
               {navItems.map((item, idx) => (
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`font-open-sans font-medium transition-colors duration-200 px-4 ${idx === 0 ? 'ml-6' : ''} ${isActive(item.path)
+                  className={`font-open-sans font-medium transition-colors duration-200 px-4 ${isActive(item.path)
                     ? "text-primary border-b-2 border-primary"
                     : "text-gray-700 hover:text-primary"
                     }`}
@@ -109,12 +107,13 @@ export const Navbar = () => {
               >
                 {i18n.language === 'en' ? 'Français' : 'English'}
               </Button>
-              <Button
-                onClick={() => setIsAdminModalOpen(true)}
-                className="bg-gradient-to-r from-primary to-accent text-white font-montserrat px-6 shadow-md hover:scale-105 transition-transform"
-              >
-                Admin Panel
-              </Button>
+              <Link to="/adminlogin">
+                <Button
+                  className="bg-gradient-to-r from-primary to-accent text-white font-montserrat px-6 shadow-md hover:scale-105 transition-transform"
+                >
+                  Admin Panel
+                </Button>
+              </Link>
             </div>
 
             {/* Mobile menu button */}
@@ -132,7 +131,7 @@ export const Navbar = () => {
           {/* Mobile Navigation */}
           {isMenuOpen && (
             <div className="md:hidden py-4 border-t">
-              <div className="flex flex-col space-y-4">
+              <div className="flex flex-col space-y-4 items-center">
                 {navItems.map((item) => (
                   <Link
                     key={item.path}

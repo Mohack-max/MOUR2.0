@@ -21,6 +21,8 @@ interface Request {
   user_email?: string;
 }
 
+const ADMIN_EMAIL = 'mohamedyoussoufkeita4@gmail.com';
+
 const AdminDashboard = () => {
   const [tab, setTab] = useState<'documents' | 'requests'>('documents');
   const [documents, setDocuments] = useState<PrivateDocument[]>([]);
@@ -33,25 +35,16 @@ const AdminDashboard = () => {
   const [file, setFile] = useState<File | null>(null);
   const navigate = useNavigate();
 
-  // Auth check
+  // Auth check using Supabase Auth
   useEffect(() => {
-    const checkAdmin = async () => {
+    const checkSession = async () => {
       const { data: { session } } = await supabase.auth.getSession();
-      if (!session) {
-        navigate('/');
-        return;
-      }
-      const { data: profile, error: profileError } = await supabase
-        .from('profiles')
-        .select('is_admin')
-        .eq('id', session.user.id)
-        .maybeSingle();
-      if (profileError || !profile || !profile.is_admin) {
-        navigate('/');
-        return;
+      if (!session || session.user.email !== ADMIN_EMAIL) {
+        await supabase.auth.signOut();
+        navigate('/adminlogin');
       }
     };
-    checkAdmin();
+    checkSession();
   }, [navigate]);
 
   // Fetch documents and requests
@@ -65,7 +58,7 @@ const AdminDashboard = () => {
         .order('created_at', { ascending: false });
       const { data: reqs, error: reqError } = await supabase
         .from('document_access_requests')
-        .select('id, user_id, document_id, reason, status, created_at, private_documents(title), auth.users(email)')
+        .select('id, user_id, document_id, reason, status, created_at, private_documents(title)')
         .order('created_at', { ascending: false });
       if (docError || reqError) {
         setError('Failed to fetch data.');
@@ -94,20 +87,20 @@ const AdminDashboard = () => {
     const fileExt = file.name.split('.').pop();
     const fileName = `${Date.now()}.${fileExt}`;
     const { data: storageData, error: storageError } = await supabase.storage
-      .from('private-documents')
+      .from('privatedocuments')
       .upload(fileName, file);
     if (storageError) {
-      setError('File upload failed.');
+      setError(`File upload failed: ${storageError.message}`);
       setUploading(false);
       return;
     }
-    const file_url = supabase.storage.from('private-documents').getPublicUrl(fileName).data.publicUrl;
+    const file_url = fileName; // Store only the file name
     // Insert metadata into private_documents
     const { error: insertError } = await supabase
       .from('private_documents')
       .insert({ title, description, file_url });
     if (insertError) {
-      setError('Failed to save document metadata.');
+      setError(`Failed to save document metadata: ${insertError.message}`);
       setUploading(false);
       return;
     }
@@ -128,7 +121,7 @@ const AdminDashboard = () => {
     setLoading(true);
     // Remove from storage
     const path = file_url.split('/').pop();
-    await supabase.storage.from('private-documents').remove([path]);
+    await supabase.storage.from('privatedocuments').remove([path]);
     // Remove from table
     await supabase.from('private_documents').delete().eq('id', id);
     setDocuments(docs => docs.filter(d => d.id !== id));
@@ -149,7 +142,7 @@ const AdminDashboard = () => {
   // Logout
   const handleLogout = async () => {
     await supabase.auth.signOut();
-    navigate('/');
+    navigate('/adminlogin');
   };
 
   return (
@@ -231,7 +224,7 @@ const AdminDashboard = () => {
                     <td className="px-4 py-2">{doc.title}</td>
                     <td className="px-4 py-2">{doc.description}</td>
                     <td className="px-4 py-2">
-                      <a href={doc.file_url} target="_blank" rel="noopener noreferrer" className="text-primary underline">View</a>
+                      <a href={`https://ihbnexfweticxyoqckrw.supabase.co/storage/v1/object/public/privatedocuments/${doc.file_url}`} target="_blank" rel="noopener noreferrer" className="text-primary underline">View</a>
                     </td>
                     <td className="px-4 py-2">
                       <button

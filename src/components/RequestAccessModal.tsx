@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 interface RequestAccessModalProps {
   document: { id: string; title: string };
-  onClose: () => void;
+  onClose: (success?: boolean) => void;
 }
 
 const RequestAccessModal = ({ document, onClose }: RequestAccessModalProps) => {
@@ -30,7 +30,7 @@ const RequestAccessModal = ({ document, onClose }: RequestAccessModalProps) => {
     if (error) {
       setMessage(t('privateDocs.requestError', 'Failed to submit request.'));
     } else {
-      setMessage(t('privateDocs.requestSuccess', 'Request submitted! You will be notified upon approval.'));
+      onClose(true); // Close the modal and indicate success
     }
   };
 
@@ -51,7 +51,7 @@ const RequestAccessModal = ({ document, onClose }: RequestAccessModalProps) => {
             <Button type="submit" disabled={loading}>
               {loading ? t('privateDocs.submitting', 'Submitting...') : t('privateDocs.submit', 'Submit')}
             </Button>
-            <Button type="button" variant="outline" onClick={onClose}>
+            <Button type="button" variant="outline" onClick={() => onClose()}>
               {t('privateDocs.cancel', 'Cancel')}
             </Button>
           </div>

@@ -6,12 +6,13 @@ import { supabase } from '@/lib/supabaseClient';
 import { AuthModal } from '@/components/AuthModal';
 import { useTranslation } from 'react-i18next';
 import RequestAccessModal from '@/components/RequestAccessModal';
+import { useToast } from '@/components/ui/use-toast';
 
 interface PrivateDocument {
   id: string;
   title: string;
   description: string;
-  file_url?: string;
+  file_url?: string; // This should be just the file name, e.g., '1752689889466.pdf'
 }
 
 interface AccessRequest {
@@ -28,13 +29,16 @@ const PrivateDocuments = () => {
   const [selectedDoc, setSelectedDoc] = useState<PrivateDocument | null>(null);
   const [accessRequests, setAccessRequests] = useState<AccessRequest[]>([]);
   const { t } = useTranslation();
+  const { toast } = useToast();
 
   useEffect(() => {
     const fetchDocuments = async () => {
       const { data, error } = await supabase
         .from('private_documents')
         .select('id, title, description, file_url');
-      if (!error && data) setDocuments(data);
+      if (!error && data) {
+        setDocuments(data);
+      }
     };
     fetchDocuments();
   }, []);
@@ -67,6 +71,15 @@ const PrivateDocuments = () => {
     return accessRequests.find(r => r.document_id === docId)?.status;
   };
 
+  const handleRequestModalClose = (success?: boolean) => {
+    setShowRequestModal(false);
+    if (success) {
+      toast({
+        title: t('privateDocs.requestSuccess', 'Request submitted! You will be notified upon approval.'),
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen py-16 max-w-4xl mx-auto px-4">
       <h1 className="font-montserrat font-bold text-3xl mb-8 text-center">
@@ -74,7 +87,9 @@ const PrivateDocuments = () => {
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {documents.map(doc => {
+          console.log('Rendering document URL:', doc.file_url);
           const status = getRequestStatus(doc.id);
+          console.log('status for doc', doc.id, ':', status);
           return (
             <Card key={doc.id} className="h-full">
               <CardContent className="p-6">
@@ -82,7 +97,7 @@ const PrivateDocuments = () => {
                 <p className="text-gray-600 mb-4">{doc.description}</p>
                 {status === 'approved' && doc.file_url ? (
                   <a
-                    href={doc.file_url}
+                    href={`https://ihbnexfweticxyoqckrw.supabase.co/storage/v1/object/public/privatedocuments/${doc.file_url}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block mb-2 text-primary underline"
@@ -111,11 +126,11 @@ const PrivateDocuments = () => {
       {showRequestModal && selectedDoc && (
         <RequestAccessModal
           document={selectedDoc}
-          onClose={() => setShowRequestModal(false)}
+          onClose={(success) => handleRequestModalClose(success)}
         />
       )}
     </div>
   );
 };
 
-export default PrivateDocuments; 
+export default PrivateDocuments;  

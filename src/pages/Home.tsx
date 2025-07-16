@@ -56,7 +56,7 @@ const Home = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center animate-fade-in">
             <h1 className="font-montserrat font-bold text-4xl lg:text-6xl mb-6">
-              HealthMOUR
+              healthMOUR
             </h1>
             <p className="font-open-sans text-xl lg:text-2xl mb-4 text-blue-100">
               {t('home.hero.subtitle')}
@@ -71,7 +71,6 @@ const Home = () => {
                 className="bg-secondary hover:bg-secondary/90 text-white font-montserrat text-lg px-8"
               >
                 {t('home.hero.becomeVolunteer')}
-                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button
                 size="lg"
@@ -243,7 +242,6 @@ const Home = () => {
               className="bg-white text-primary hover:bg-gray-100 font-montserrat text-lg px-8"
             >
               {t('home.cta.donate')}
-              <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
         </div>

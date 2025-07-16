@@ -1,13 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { supabase } from '@/lib/supabaseClient';
 
-const ENV_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD;
-const ADMIN_PASSWORD = ENV_PASSWORD || 'admin123';
-const SESSION_DURATION_MS = 60 * 60 * 1000; // 1 hour
-const MAX_ATTEMPTS = 5;
-const LOCKOUT_DURATION_MS = 60 * 1000; // 1 minute
+const ADMIN_EMAIL = 'mohamedyoussoufkeita4@gmail.com'; // <-- Set your admin email here
 
 const AdminLogin = () => {
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [attempts, setAttempts] = useState(0);
@@ -15,15 +13,16 @@ const AdminLogin = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Check for existing session and expiry
-    const session = localStorage.getItem('admin_authenticated');
-    const expiry = localStorage.getItem('admin_session_expiry');
-    if (session === 'true' && expiry && Date.now() < Number(expiry)) {
-      navigate('/admin/dashboard');
-    } else {
-      localStorage.removeItem('admin_authenticated');
-      localStorage.removeItem('admin_session_expiry');
-    }
+    // Check for existing Supabase Auth session
+    const checkSession = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session && session.user.email === ADMIN_EMAIL) {
+        navigate('/admin-dashboard');
+      } else {
+        await supabase.auth.signOut();
+      }
+    };
+    checkSession();
   }, [navigate]);
 
   useEffect(() => {
@@ -31,34 +30,53 @@ const AdminLogin = () => {
       const timer = setTimeout(() => {
         setLocked(false);
         setAttempts(0);
-      }, LOCKOUT_DURATION_MS);
+      }, 60000);
       return () => clearTimeout(timer);
     }
   }, [locked]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (locked) return;
-    if (password === ADMIN_PASSWORD) {
-      localStorage.setItem('admin_authenticated', 'true');
-      localStorage.setItem('admin_session_expiry', String(Date.now() + SESSION_DURATION_MS));
-      setError('');
-      setAttempts(0);
-      navigate('/admin/dashboard');
-    } else {
+    setError('');
+    // Use Supabase Auth for login
+    const { data, error: signInError } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
+    if (signInError || !data.session) {
       setAttempts(a => a + 1);
-      setError('Incorrect password.');
-      if (attempts + 1 >= MAX_ATTEMPTS) {
+      setError(signInError?.message || 'Incorrect email or password.');
+      if (attempts + 1 >= 5) {
         setLocked(true);
         setError('Too many failed attempts. Please try again in 1 minute.');
       }
+      return;
     }
+    // Check if the logged-in user is the admin
+    if (data.session.user.email !== ADMIN_EMAIL) {
+      await supabase.auth.signOut();
+      setError('You are not authorized to access the admin panel.');
+      return;
+    }
+    setError('');
+    setAttempts(0);
+    navigate('/admin-dashboard');
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <form onSubmit={handleSubmit} className="bg-white p-8 rounded shadow-md w-full max-w-sm">
         <h1 className="text-2xl font-bold mb-4 text-center">Admin Login</h1>
+        <input
+          type="email"
+          placeholder="Enter admin email"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          className="w-full border rounded p-2 mb-4"
+          required
+          disabled={locked}
+        />
         <input
           type="password"
           placeholder="Enter admin password"
