@@ -81,39 +81,37 @@ const PrivateDocuments = () => {
   };
 
   return (
-    <div className="min-h-screen py-16 max-w-4xl mx-auto px-4">
-      <h1 className="font-montserrat font-bold text-3xl mb-8 text-center">
+    <div className="min-h-screen py-8 sm:py-12 md:py-16 w-full max-w-4xl 2xl:max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-32">
+      <h1 className="font-montserrat font-bold text-2xl sm:text-3xl mb-4 sm:mb-8 text-center">
         {t('privateDocs.title', 'Private Documents')}
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
         {documents.map(doc => {
-          console.log('Rendering document URL:', doc.file_url);
           const status = getRequestStatus(doc.id);
-          console.log('status for doc', doc.id, ':', status);
           return (
             <Card key={doc.id} className="h-full">
-              <CardContent className="p-6">
-                <h2 className="font-bold text-xl mb-2">{doc.title}</h2>
-                <p className="text-gray-600 mb-4">{doc.description}</p>
+              <CardContent className="p-4 sm:p-6">
+                <h2 className="font-bold text-lg sm:text-xl mb-1 sm:mb-2">{doc.title}</h2>
+                <p className="text-gray-600 text-sm sm:text-base mb-2 sm:mb-4">{doc.description}</p>
                 {status === 'approved' && doc.file_url ? (
                   <a
                     href={`https://ihbnexfweticxyoqckrw.supabase.co/storage/v1/object/public/privatedocuments/${doc.file_url}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block mb-2 text-primary underline"
+                    className="inline-block mb-2 text-primary underline text-xs sm:text-sm"
                   >
                     {t('privateDocs.viewDocument', 'View Document')}
                   </a>
                 ) : status === 'pending' ? (
-                  <div className="mb-2 text-yellow-600 font-semibold">
+                  <div className="mb-2 text-yellow-600 font-semibold text-xs sm:text-sm">
                     {t('privateDocs.pending', 'Request Pending Approval')}
                   </div>
                 ) : status === 'denied' ? (
-                  <div className="mb-2 text-red-600 font-semibold">
+                  <div className="mb-2 text-red-600 font-semibold text-xs sm:text-sm">
                     {t('privateDocs.denied', 'Request Denied')}
                   </div>
                 ) : (
-                  <Button onClick={() => handleRequestAccess(doc)}>
+                  <Button onClick={() => handleRequestAccess(doc)} className="text-xs sm:text-sm">
                     {t('privateDocs.requestAccess', 'Request Access')}
                   </Button>
                 )}

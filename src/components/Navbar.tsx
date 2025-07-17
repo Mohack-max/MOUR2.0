@@ -47,7 +47,7 @@ export const Navbar = () => {
   return (
     <>
       <nav className="bg-white shadow-lg sticky top-0 z-50">
-        <div className="w-full max-w-7xl mx-auto flex justify-center px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto flex justify-between px-2 sm:px-4 md:px-6 lg:px-8">
           <div className="flex items-center justify-center h-16 w-full gap-8">
             {/* Logo (left) */}
             <Link to="/" className="flex items-center space-x-3 flex-shrink-0">
@@ -56,13 +56,13 @@ export const Navbar = () => {
                 alt="HealthMOUR Logo"
                 className="h-12 w-auto flex-shrink-0"
               />
-              <span className="font-montserrat font-bold text-xl text-primary truncate max-w-[120px] sm:max-w-[180px] md:max-w-none">
+              <span className="font-montserrat font-bold text-base sm:text-lg md:text-xl lg:text-2xl text-primary truncate max-w-[80px] sm:max-w-[120px] md:max-w-[180px] lg:max-w-none">
                 healthMOUR
               </span>
             </Link>
 
             {/* Navigation and actions (centered) */}
-            <div className="flex items-center space-x-6 flex-shrink-0">
+            <div className="hidden md:flex items-center space-x-4 md:space-x-6 lg:space-x-8 xl:space-x-12 flex-shrink-0">
               {navItems.map((item, idx) => (
                 <Link
                   key={item.path}

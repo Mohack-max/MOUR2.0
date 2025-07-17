@@ -8,7 +8,7 @@
     "logout": "Logout",
     "hello": "Hello, {{name}}",
     "volunteerSuccess": "Thank you {{name}}! You are now registered as a volunteer. We will contact you soon.",
-    "privateDocuments": "Private Documents"
+    "privateDocuments": "Strategic documents"
   },
   "footer": {
     "copyright": "All rights reserved.",

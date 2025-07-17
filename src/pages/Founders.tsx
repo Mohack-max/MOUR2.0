@@ -135,39 +135,38 @@ const Founders = () => {
   ];
 
   const stats = [
-    { value: "15+", label: "Années d'Expérience", icon: Award },
-    { value: "DES", label: "Experts Internationaux", icon: Users },
-    { value: "2", label: "Pays Représentés", icon: Globe }
+    { value: "15+", label: "Années d'expérience", icon: Award },
+    { value: "Des", label: "experts internationaux", icon: Users },
+    { value: "2", label: "pays représentés", icon: Globe }
   ];
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-accent/10 via-primary/10 to-secondary/10 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-br from-accent/10 via-primary/10 to-secondary/10 py-10 sm:py-16 md:py-20">
+        <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-32">
           <div className="text-center animate-fade-in">
-            <h1 className="font-montserrat font-bold text-4xl lg:text-5xl text-gray-900 mb-6">
+            <h1 className="font-montserrat font-bold text-2xl sm:text-4xl lg:text-5xl text-gray-900 mb-4 sm:mb-6">
               {t('founders.heroTitle')}
             </h1>
-            <p className="font-open-sans text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+            <p className="font-open-sans text-base sm:text-xl text-gray-600 max-w-2xl sm:max-w-3xl mx-auto mb-4 sm:mb-12">
               {t('founders.heroDesc')}
             </p>
-
             {/* Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
               {stats.map((stat, index) => (
                 <div
                   key={stat.label}
-                  className="bg-white rounded-lg p-6 shadow-lg animate-scale-in"
+                  className="bg-white rounded-lg p-4 sm:p-6 shadow-lg animate-scale-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="flex items-center justify-center mb-3">
-                    <stat.icon className="h-8 w-8 text-primary" />
+                  <div className="flex items-center justify-center mb-2 sm:mb-3">
+                    <stat.icon className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
                   </div>
-                  <div className="font-montserrat font-bold text-2xl text-primary mb-1">
+                  <div className="font-montserrat font-bold text-xl sm:text-2xl text-primary mb-1">
                     {stat.value}
                   </div>
-                  <div className="font-open-sans text-gray-600 text-sm">
+                  <div className="font-open-sans text-gray-600 text-xs sm:text-sm">
                     {stat.label}
                   </div>
                 </div>
@@ -178,41 +177,40 @@ const Founders = () => {
       </section>
 
       {/* Founder Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-gray-900 mb-4">
+      <section className="py-10 sm:py-16 md:py-20">
+        <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-32">
+          <div className="text-center mb-8 sm:mb-16 animate-fade-in">
+            <h2 className="font-montserrat font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 mb-2 sm:mb-4">
               {t('founders.behindTitle')}
             </h2>
-            <p className="font-open-sans text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="font-open-sans text-base sm:text-lg text-gray-600 max-w-2xl sm:max-w-3xl mx-auto">
               {t('founders.behindDesc')}
             </p>
           </div>
-
-          <div className="flex flex-col items-center mb-8">
+          <div className="flex flex-col items-center mb-6 sm:mb-8">
             <img
               src={founder.image}
               alt={founder.name}
-              className="w-40 h-40 object-cover rounded-full border-4 border-primary shadow-lg mb-4"
+              className="w-28 h-28 sm:w-40 sm:h-40 object-cover rounded-full border-4 border-primary shadow-lg mb-2 sm:mb-4"
             />
-            <h3 className="font-montserrat font-bold text-2xl text-gray-900 mb-2 text-center">
+            <h3 className="font-montserrat font-bold text-xl sm:text-2xl text-gray-900 mb-1 sm:mb-2 text-center">
               {founder.name}
             </h3>
-            <p className="font-open-sans text-lg text-primary mb-2 text-center">
+            <p className="font-open-sans text-base sm:text-lg text-primary mb-1 sm:mb-2 text-center">
               {founder.title}
             </p>
-            <div className="flex flex-wrap gap-4 mb-4 justify-center">
-              <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-open-sans">
+            <div className="flex flex-wrap gap-2 sm:gap-4 mb-2 sm:mb-4 justify-center">
+              <span className="bg-primary/10 text-primary px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-open-sans">
                 {founder.education}
               </span>
-              <span className="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-open-sans">
+              <span className="bg-secondary/10 text-secondary px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-open-sans">
                 {founder.experience}
               </span>
             </div>
-            <p className="font-open-sans text-gray-600 leading-relaxed mb-4 text-center max-w-xl">
+            <p className="font-open-sans text-gray-600 leading-relaxed mb-2 sm:mb-4 text-center max-w-xs sm:max-w-xl">
               {founder.bio}
             </p>
-            <div className="flex space-x-4 justify-center">
+            <div className="flex space-x-2 sm:space-x-4 justify-center">
               <Button size="sm" variant="outline" className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
                 <span>Contact</span>
@@ -231,76 +229,68 @@ const Founders = () => {
       </section>
 
       {/* Collaborators Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-gray-900 mb-4">
+      <section className="py-10 sm:py-16 md:py-20 bg-gray-50">
+        <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-32">
+          <div className="text-center mb-8 sm:mb-16 animate-fade-in">
+            <h2 className="font-montserrat font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 mb-2 sm:mb-4">
               {t('founders.teamTitle')}
             </h2>
-            <p className="font-open-sans text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="font-open-sans text-base sm:text-lg text-gray-600 max-w-2xl sm:max-w-3xl mx-auto">
               {t('founders.teamDesc')}
             </p>
           </div>
-
-          <div className="flex flex-row gap-6 overflow-x-auto pb-4">
+          <div className="flex flex-row flex-wrap gap-4 sm:gap-6 justify-center pb-4">
             {collaborators.map((collaborator, index) => (
               <div
                 key={collaborator.name}
-                className="group relative flex-shrink-0 w-56 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 animate-scale-in"
+                className="group relative flex-shrink-0 w-44 sm:w-56 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 animate-scale-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <img
                   src={collaborator.image}
                   alt={collaborator.name}
-                  className="w-40 h-40 object-cover rounded-full mx-auto mt-6 border-4 border-primary group-hover:opacity-80 transition-opacity duration-300"
+                  className="w-28 h-28 sm:w-40 sm:h-40 object-cover rounded-full mx-auto mt-4 sm:mt-6 border-4 border-primary group-hover:opacity-80 transition-opacity duration-300"
                 />
-                <div className="text-center mt-4 mb-6 px-4">
-                  <h3 className="font-montserrat font-bold text-lg text-gray-900 mb-1">
+                <div className="p-2 sm:p-4 text-center">
+                  <h4 className="font-montserrat font-bold text-base sm:text-lg mb-1 sm:mb-2 text-gray-900">
                     {collaborator.name}
-                  </h3>
-                  <p className="font-open-sans text-primary text-sm mb-1">
+                  </h4>
+                  <p className="font-open-sans text-xs sm:text-sm text-primary mb-1 sm:mb-2">
                     {collaborator.role}
                   </p>
-                  <p className="font-open-sans text-gray-600 text-xs mb-1">
+                  <p className="font-open-sans text-xs sm:text-sm text-gray-600 mb-1 sm:mb-2">
                     {collaborator.speciality}
                   </p>
-                  <p className="font-open-sans text-gray-500 text-xs mb-2">
+                  <p className="font-open-sans text-xs sm:text-sm text-gray-500">
                     {collaborator.location}
                   </p>
-                  <div className="flex justify-center space-x-2 mb-2">
-                    {/* Social icons here */}
-                  </div>
-                  <div className="max-h-0 overflow-hidden group-hover:max-h-40 group-hover:overflow-auto group-hover:mt-2 transition-all duration-300 ease-in-out">
-                    <p className="text-gray-700 text-xs mb-2">{collaborator.speciality || "Biographie à venir..."}</p>
-                    <button className="text-primary underline text-xs">Lire plus</button>
-                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-      w
-      {/* Join Team CTA */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
-          <h2 className="font-montserrat font-bold text-3xl lg:text-4xl mb-6">
+
+      {/* Join Section */}
+      <section className="py-10 sm:py-16 md:py-20 bg-gradient-to-r from-primary to-secondary text-white">
+        <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-32 text-center animate-fade-in">
+          <h2 className="font-montserrat font-bold text-2xl sm:text-3xl lg:text-4xl mb-2 sm:mb-6">
             {t('founders.joinTitle')}
           </h2>
-          <p className="font-open-sans text-lg lg:text-xl mb-8 max-w-3xl mx-auto">
+          <p className="font-open-sans text-base sm:text-lg lg:text-xl mb-4 sm:mb-8 max-w-2xl sm:max-w-3xl mx-auto">
             {t('founders.joinDesc')}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center">
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-primary hover:bg-white hover:text-primary font-montserrat text-lg px-8"
+              className="border-white text-primary hover:bg-white hover:text-primary font-montserrat text-base sm:text-lg px-4 sm:px-8"
             >
               {t('founders.joinVolunteer')}
             </Button>
             <Button
               size="lg"
-              className="bg-white text-primary hover:bg-gray-100 font-montserrat text-lg px-8"
+              className="bg-white text-primary hover:bg-gray-100 font-montserrat text-base sm:text-lg px-4 sm:px-8"
             >
               {t('founders.joinApply')}
             </Button>

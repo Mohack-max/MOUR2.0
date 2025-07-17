@@ -8,7 +8,7 @@
     "logout": "Déconnexion",
     "hello": "Bonjour, {{name}}",
     "volunteerSuccess": "Merci {{name}} ! Vous êtes maintenant inscrit comme bénévole. Nous vous contacterons bientôt.",
-    "privateDocuments": "Documents privés"
+    "privateDocuments": "Documents stratégiques"
   },
   "footer": {
     "copyright": "Tous droits réservés.",
