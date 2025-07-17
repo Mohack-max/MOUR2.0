@@ -37,19 +37,21 @@ export const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-secondary" />
                 <span className="font-open-sans text-sm text-gray-300">
-                  HealthMour@healthmour.org
+                 healthmour@healthmour.org 
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-secondary" />
                 <span className="font-open-sans text-sm text-gray-300">
-                  +223 76489119
+                  +223 73 06 66 06
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-4 w-4 text-secondary" />
                 <span className="font-open-sans text-sm text-gray-300">
-                  Mali, Bamako
+                Adresse : Cité Me Filifin DEMBLE
+                Diatoula Extension - Bamako, Mali
+
                 </span>
               </div>
             </div>

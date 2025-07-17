@@ -239,11 +239,11 @@ const Founders = () => {
               {t('founders.teamDesc')}
             </p>
           </div>
-          <div className="flex flex-row flex-wrap gap-4 sm:gap-6 justify-center pb-4">
+          <div className="flex flex-row flex-wrap gap-4 sm:gap-6 justify-center pb-4 overflow-x-auto">
             {collaborators.map((collaborator, index) => (
               <div
                 key={collaborator.name}
-                className="group relative flex-shrink-0 w-44 sm:w-56 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 animate-scale-in"
+                className="group relative flex-shrink-0 w-full sm:w-44 sm:w-56 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 animate-scale-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <img

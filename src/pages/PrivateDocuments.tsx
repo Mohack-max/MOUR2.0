@@ -89,10 +89,10 @@ const PrivateDocuments = () => {
         {documents.map(doc => {
           const status = getRequestStatus(doc.id);
           return (
-            <Card key={doc.id} className="h-full">
-              <CardContent className="p-4 sm:p-6">
-                <h2 className="font-bold text-lg sm:text-xl mb-1 sm:mb-2">{doc.title}</h2>
-                <p className="text-gray-600 text-sm sm:text-base mb-2 sm:mb-4">{doc.description}</p>
+            <Card key={doc.id} className="h-full w-full min-w-0">
+              <CardContent className="p-2 sm:p-4 md:p-6">
+                <h2 className="font-bold text-lg sm:text-xl mb-1 sm:mb-2 truncate">{doc.title}</h2>
+                <p className="text-gray-600 text-sm sm:text-base mb-2 sm:mb-4 truncate">{doc.description}</p>
                 {status === 'approved' && doc.file_url ? (
                   <a
                     href={`https://ihbnexfweticxyoqckrw.supabase.co/storage/v1/object/public/privatedocuments/${doc.file_url}`}

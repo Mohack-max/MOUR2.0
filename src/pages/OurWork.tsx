@@ -114,9 +114,27 @@ const OurWork = () => {
             <h2 className="font-montserrat font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 mb-2 sm:mb-6">
               {t('ourWork.planTitle')}
             </h2>
-            <p className="font-open-sans text-base sm:text-lg text-gray-600 max-w-2xl sm:max-w-4xl mx-auto">
-              {t('ourWork.planDesc')}
-            </p>
+            {(() => {
+              const planDesc = t('ourWork.planDesc');
+              const lines = planDesc.split('\n');
+              return (
+                <div className="font-open-sans text-base sm:text-lg text-gray-600 max-w-2xl sm:max-w-4xl mx-auto">
+                  {lines.map((line, idx) => {
+                    if (/^—/.test(line.trim())) {
+                      return (
+                        <ul className="list-disc list-inside my-0 text-left" key={idx}>
+                          <li>{line.replace(/^—\s*/, '')}</li>
+                        </ul>
+                      );
+                    } else if (line.trim() !== '') {
+                      return <p key={idx}>{line}</p>;
+                    } else {
+                      return null;
+                    }
+                  })}
+                </div>
+              );
+            })()}
           </div>
 
           {/* Strategic Areas */}
@@ -131,7 +149,7 @@ const OurWork = () => {
                   <div className={`w-full md:w-1/3 ${area.bgColor} flex items-center justify-center p-4 sm:p-8`}>
                     <div className="text-center">
                       <div className={`w-14 h-14 sm:w-20 sm:h-20 ${area.bgColor} rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-4 border-2 border-white shadow-lg`}>
-                        <img src={area.image} alt={area.title} className="h-8 w-8 sm:h-10 sm:w-10 object-contain" />
+                        <img src={area.image} alt={area.title} className="max-w-full h-auto" />
                       </div>
                       <h3 className="font-montserrat font-bold text-base sm:text-xl text-gray-900">
                         {area.title}
