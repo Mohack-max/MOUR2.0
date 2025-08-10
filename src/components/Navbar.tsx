@@ -56,9 +56,12 @@ export const Navbar = () => {
                 alt="HealthMOUR Logo"
                 className="h-12 w-auto flex-shrink-0"
               />
-              <span className="font-montserrat font-bold text-xl text-primary truncate max-w-[120px] sm:max-w-[180px] md:max-w-none">
-                healthMOUR
-              </span>
+    <span className="font-montserrat font-bold text-xl truncate max-w-[120px] sm:max-w-[180px] md:max-w-none">
+  <span style={{ color: "#0076A8" }}>Health</span>
+  <span style={{ color: "rgb(141, 198, 63)" }}>mour</span>
+</span>
+
+
             </Link>
 
             {/* Navigation and actions (centered) */}

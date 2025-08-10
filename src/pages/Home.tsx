@@ -35,7 +35,7 @@ const Home = () => {
     {
       title: t('home.areas.wash'),
       description: t('home.areas.washDesc'),
-      image: '/images/wash.png', // Example image
+      image: '/images/wash1.jpeg', // Example image
       color: "text-primary"
     }
   ];
@@ -55,15 +55,13 @@ const Home = () => {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center animate-fade-in">
-            <h1 className="font-montserrat font-bold text-4xl lg:text-6xl mb-6">
-              healthMOUR
-            </h1>
-            <p className="font-open-sans text-xl lg:text-2xl mb-4 text-blue-100">
-              {t('home.hero.subtitle')}
-            </p>
-            <p className="font-open-sans text-lg lg:text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              {t('home.hero.equation')}
-            </p>
+            <div className="flex flex-col items-center mb-8">
+              <img
+                src="/images/logo2.jpg"
+                alt="HealthMOUR Logo"
+                className="h-32 w-auto mb-6 lg:h-40"
+              />
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"

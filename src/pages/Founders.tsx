@@ -1,11 +1,11 @@
-import { Mail, Linkedin, Twitter, Users, Award, Globe, Scale } from "lucide-react";
+import { Mail, Linkedin, Twitter } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from 'react-i18next';
 
 const Founders = () => {
   const { t } = useTranslation();
-  // Placeholder data - replace with actual founder information
+
   const founder = {
     name: "Dr. Youssouf Keita",
     title: t('founders.founderTitle'),
@@ -36,7 +36,7 @@ const Founders = () => {
     {
       name: "Dr Souleymane SAWADOGO",
       role: t('founders.collaborators.souleymane.role'),
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      image: "",
       speciality: t('founders.collaborators.souleymane.speciality'),
       location: t('founders.collaborators.souleymane.location')
     },
@@ -50,136 +50,109 @@ const Founders = () => {
     {
       name: "M. Modibo KEITA",
       role: t('founders.collaborators.modibo.role'),
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      image: "",
       speciality: t('founders.collaborators.modibo.speciality'),
       location: t('founders.collaborators.modibo.location')
     },
     {
-      name: "Mme Fatoumata Dembélé",
+      name: "Unknown",
       role: t('founders.collaborators.fatoumata.role'),
-      image: "/images/master2.jpeg",
+      image: "",
       speciality: t('founders.collaborators.fatoumata.speciality'),
       location: t('founders.collaborators.fatoumata.location')
     },
-    // New collaborators
     {
-      name: "Dr. Awa Coulibaly",
+      name: "Masseni TRAORE",
       role: t('founders.collaborators.awa.role'),
-      image: "/images/collab1.jpeg",
+      image: "",
       speciality: t('founders.collaborators.awa.speciality'),
       location: t('founders.collaborators.awa.location')
     },
     {
-      name: "M. Mamadou Sidibé",
+      name: "Mr.Sekouli TRAORE",
       role: t('founders.collaborators.mamadou.role'),
-      image: "/images/download1.jpg",
+      image: "",
       speciality: t('founders.collaborators.mamadou.speciality'),
       location: t('founders.collaborators.mamadou.location')
     },
     {
-      name: "Mme Aminata Traoré",
+      name: "DR Diallo Kadiatou NDIAYE",
       role: t('founders.collaborators.aminata.role'),
-      image: "/images/collab3.jpeg",
+      image: "",
       speciality: t('founders.collaborators.aminata.speciality'),
       location: t('founders.collaborators.aminata.location')
     },
     {
-      name: "Dr. Moussa Konaté",
+      name: "Dr. Kancou CISSOKO",
       role: t('founders.collaborators.moussa.role'),
-      image: "/images/collab4.jpeg",
+      image: "",
       speciality: t('founders.collaborators.moussa.speciality'),
       location: t('founders.collaborators.moussa.location')
     },
     {
-      name: "Mme Mariam Doumbia",
+      name: "Dr Hamed DIALLO",
       role: t('founders.collaborators.mariam.role'),
-      image: "/images/collab5.jpeg",
+      image: "",
       speciality: t('founders.collaborators.mariam.speciality'),
       location: t('founders.collaborators.mariam.location')
     },
     {
-      name: "M. Adama Diarra",
+      name: "Mr. Adama TRAORE",
       role: t('founders.collaborators.adama.role'),
-      image: "/images/collab6.jpeg",
+      image: "",
       speciality: t('founders.collaborators.adama.speciality'),
       location: t('founders.collaborators.adama.location')
     },
     {
-      name: "Dr. Salif Camara",
+      name: "Dr. Nene KONIPO",
       role: t('founders.collaborators.salif.role'),
-      image: "/images/collab7.jpeg",
+      image: "",
       speciality: t('founders.collaborators.salif.speciality'),
       location: t('founders.collaborators.salif.location')
     },
     {
-      name: "Mme Fanta Sissoko",
+      name: "Mr. Ibrahim MANE",
       role: t('founders.collaborators.fanta.role'),
-      image: "/images/collab8.jpeg",
+      image: "",
       speciality: t('founders.collaborators.fanta.speciality'),
       location: t('founders.collaborators.fanta.location')
     },
     {
-      name: "M. Oumar Sangaré",
+      name: "M. Barke CISSE",
       role: t('founders.collaborators.oumar.role'),
-      image: "/images/collab9.jpeg",
+      image: "",
       speciality: t('founders.collaborators.oumar.speciality'),
       location: t('founders.collaborators.oumar.location')
     },
     {
-      name: "Mme Kadidia Cissé",
+      name: "Mr. Teilo DIAL",
       role: t('founders.collaborators.kadidia.role'),
-      image: "/images/collab10.jpeg",
+      image: "",
       speciality: t('founders.collaborators.kadidia.speciality'),
       location: t('founders.collaborators.kadidia.location')
     }
   ];
 
-  const stats = [
-    { value: "15+", label: "Années d'expérience", icon: Award },
-    { value: "Des", label: "experts internationaux", icon: Users },
-    { value: "2", label: "pays représentés", icon: Globe }
-  ];
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-accent/10 via-primary/10 to-secondary/10 py-10 sm:py-16 md:py-20">
+      <section className="bg-gradient-to-br from-accent/10 via-primary/10 to-secondary/10 py-10 sm:py-14 md:py-16">
         <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-32">
           <div className="text-center animate-fade-in">
-            <h1 className="font-montserrat font-bold text-2xl sm:text-4xl lg:text-5xl text-gray-900 mb-4 sm:mb-6">
+            <h1 className="font-montserrat font-bold text-2xl sm:text-4xl lg:text-5xl text-gray-900 mb-4 sm:mb-5">
               {t('founders.heroTitle')}
             </h1>
-            <p className="font-open-sans text-base sm:text-xl text-gray-600 max-w-2xl sm:max-w-3xl mx-auto mb-4 sm:mb-12">
+            <p className="font-open-sans text-base sm:text-xl text-gray-600 max-w-2xl sm:max-w-3xl mx-auto mb-4 sm:mb-8">
               {t('founders.heroDesc')}
             </p>
-            {/* Stats */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
-              {stats.map((stat, index) => (
-                <div
-                  key={stat.label}
-                  className="bg-white rounded-lg p-4 sm:p-6 shadow-lg animate-scale-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="flex items-center justify-center mb-2 sm:mb-3">
-                    <stat.icon className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
-                  </div>
-                  <div className="font-montserrat font-bold text-xl sm:text-2xl text-primary mb-1">
-                    {stat.value}
-                  </div>
-                  <div className="font-open-sans text-gray-600 text-xs sm:text-sm">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
 
       {/* Founder Section */}
-      <section className="py-10 sm:py-16 md:py-20">
+      <section className="py-10 sm:py-14 md:py-16">
         <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-32">
-          <div className="text-center mb-8 sm:mb-16 animate-fade-in">
+          <div className="text-center mb-8 sm:mb-12 animate-fade-in">
             <h2 className="font-montserrat font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 mb-2 sm:mb-4">
               {t('founders.behindTitle')}
             </h2>
@@ -207,9 +180,10 @@ const Founders = () => {
                 {founder.experience}
               </span>
             </div>
-            <p className="font-open-sans text-gray-600 leading-relaxed mb-2 sm:mb-4 text-center max-w-xs sm:max-w-xl">
+            <p className="font-open-sans text-sm text-gray-600 leading-relaxed mb-2 sm:mb-4 text-center max-w-xs sm:max-w-xl">
               {founder.bio}
             </p>
+
             <div className="flex space-x-2 sm:space-x-4 justify-center">
               <Button size="sm" variant="outline" className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
@@ -229,9 +203,9 @@ const Founders = () => {
       </section>
 
       {/* Collaborators Section */}
-      <section className="py-10 sm:py-16 md:py-20 bg-gray-50">
+      <section className="py-10 sm:py-14 md:py-16 bg-gray-50">
         <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-32">
-          <div className="text-center mb-8 sm:mb-16 animate-fade-in">
+          <div className="text-center mb-8 sm:mb-12 animate-fade-in">
             <h2 className="font-montserrat font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 mb-2 sm:mb-4">
               {t('founders.teamTitle')}
             </h2>
@@ -240,39 +214,48 @@ const Founders = () => {
             </p>
           </div>
           <div className="flex flex-row flex-wrap gap-4 sm:gap-6 justify-center pb-4 overflow-x-auto">
-            {collaborators.map((collaborator, index) => (
-              <div
-                key={collaborator.name}
-                className="group relative flex-shrink-0 w-full sm:w-44 sm:w-56 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 animate-scale-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <img
-                  src={collaborator.image}
-                  alt={collaborator.name}
-                  className="w-28 h-28 sm:w-40 sm:h-40 object-cover rounded-full mx-auto mt-4 sm:mt-6 border-4 border-primary group-hover:opacity-80 transition-opacity duration-300"
-                />
-                <div className="p-2 sm:p-4 text-center">
-                  <h4 className="font-montserrat font-bold text-base sm:text-lg mb-1 sm:mb-2 text-gray-900">
-                    {collaborator.name}
-                  </h4>
-                  <p className="font-open-sans text-xs sm:text-sm text-primary mb-1 sm:mb-2">
-                    {collaborator.role}
-                  </p>
-                  <p className="font-open-sans text-xs sm:text-sm text-gray-600 mb-1 sm:mb-2">
-                    {collaborator.speciality}
-                  </p>
-                  <p className="font-open-sans text-xs sm:text-sm text-gray-500">
-                    {collaborator.location}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+  {collaborators.map((collaborator, index) => (
+    <div
+      key={collaborator.name}
+      className="group relative flex-shrink-0 w-full sm:w-44 sm:w-56 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 animate-scale-in"
+      style={{ animationDelay: `${index * 0.1}s` }}
+    >
+      {collaborator.image ? (
+        <img
+          src={collaborator.image}
+          alt={collaborator.name}
+          className="w-28 h-28 sm:w-40 sm:h-40 object-cover rounded-full mx-auto mt-4 sm:mt-6 border-4 border-primary group-hover:opacity-80 transition-opacity duration-300"
+        />
+      ) : (
+        <div className="w-28 h-28 sm:w-40 sm:h-40 rounded-full mx-auto mt-4 sm:mt-6 border-4 border-primary bg-gray-200 flex items-center justify-center">
+          <span className="font-montserrat font-bold text-gray-600 text-sm sm:text-base">
+            {collaborator.name.charAt(0)}
+          </span>
+        </div>
+      )}
+      <div className="p-2 sm:p-4 text-center">
+        <h4 className="font-montserrat font-bold text-base sm:text-lg mb-1 sm:mb-2 text-gray-900">
+          {collaborator.name}
+        </h4>
+        <p className="font-open-sans text-xs sm:text-sm text-primary mb-1 sm:mb-2">
+          {collaborator.role}
+        </p>
+        <p className="font-open-sans text-xs sm:text-sm text-gray-600 mb-1 sm:mb-2">
+          {collaborator.speciality}
+        </p>
+        <p className="font-open-sans text-xs sm:text-sm text-gray-500">
+          {collaborator.location}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
+
         </div>
       </section>
 
       {/* Join Section */}
-      <section className="py-10 sm:py-16 md:py-20 bg-gradient-to-r from-primary to-secondary text-white">
+      <section className="py-10 sm:py-14 md:py-16 bg-gradient-to-r from-primary to-secondary text-white">
         <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-32 text-center animate-fade-in">
           <h2 className="font-montserrat font-bold text-2xl sm:text-3xl lg:text-4xl mb-2 sm:mb-6">
             {t('founders.joinTitle')}

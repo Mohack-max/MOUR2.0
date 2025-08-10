@@ -26,7 +26,7 @@
     "paymentTitle": "Make a Donation"
   },
   "pages": {
-    "homeTitle": "Welcome to healthMOUR!",
+    "homeTitle": "Welcome to Healthmour!",
     "foundersTitle": "Meet Our Team"
   },
   "notFound": {
@@ -120,7 +120,7 @@
     },
     "planBadge": "Strategic plan 2024-2026",
     "planTitle": "An integrated approach to community health",
-    "planDesc": "HealthMour: Together for well-being in a healthy and prosperous environment!\nHealthMour works through co-constructed projects and initiatives in health, nutrition, education, and water-hygiene-sanitation, focused on the priorities of local communities.\nOur main pillars are:\n— Production of reliable data for informed decision-making;\n— Strengthening the capacities of communities and professionals to be effective and resilient;\n— Strategic planning based on evidence for impactful activities, projects, and programs.\nHealthMour is committed to creating a positive and lasting impact. Joining HealthMour means choosing actions by communities, for communities.\nTogether, let's make collective well-being our everyday reality!",
+    "planDesc": "Healthmour for well-being in a healthy and prosperous environment!\nHealthmour through co-constructed projects and initiatives in health, nutrition, education, and water-hygiene-sanitation, focused on the priorities of local communities.\nOur main pillars are:\n— Production of reliable data for informed decision-making;\n— Strengthening the capacities of communities and professionals to be effective and resilient;\n— Strategic planning based on evidence for impactful activities, projects, and programs.\nHealthMour is committed to creating a positive and lasting impact. Joining HealthMour means choosing actions by communities, for communities.\nTogether, let's make collective well-being our everyday reality!",
     "areas": {
       "communityHealth": "Community Health",
       "communityHealthDesc": "Epidemiological monitoring and improvement of local health systems",
@@ -164,15 +164,15 @@
   },
   "founders": {
     "heroTitle": "Founders & Collaborators",
-    "heroDesc": "Meet the passionate team bringing the healthMOUR mission to life, composed of international experts united by a common vision.",
-    "behindTitle": "Behind healthMOUR",
-    "behindDesc": "Discover the vision and commitment that gave birth to healthMOUR",
-    "founderTitle": "Co-founder\n,team member and chairman of the board of directors",
+    "heroDesc": "Meet the passionate team bringing the Healthmour to life, composed of international experts united by a common vision.",
+    "behindTitle": "Behind Healthmour",
+    "behindDesc": "Discover the vision and commitment that gave birth to Healthmour",
+    "founderTitle": "Co-founder,\nteam member and chairman of the board of directors",
     "founderBio": "Dr. Keita is a physician specialized in public health, with a particular focus on statistics and nutrition, and has over 15 years of experience in the field, both in the public and private sectors. He has strong expertise in designing and evaluating large-scale strategic plans in maternal, neonatal, child health, and nutrition (MNCH&N) at national, regional, and international levels. This experience gives him recognized mastery of methodologies focused on evaluating the impact of health and nutrition interventions.\nIn Mali, Dr. Keita has led several initiatives aimed at strengthening strategic planning and improving community health services. His achievements include developing an evaluation tool for Community Health Centers (CSCom) for their accreditation, as well as in-depth analysis of bottlenecks in governance and financial management of CSCom.\nA proponent of evidence-based decision-making, he teaches the use of the “Lives Saved Tool” (LiST) and conducts introductory evaluation courses as part of the Master of Public Health program at the Department of Public Health Studies and Research at the University of Sciences, Techniques, and Technologies of Bamako. He has also contributed to the impact evaluation of numerous national and international strategic plans related to MNCH&N, proposing high-impact alternative scenarios.\nAuthor and co-author of numerous scientific articles related to the planning and evaluation of health programs, Dr. Youssouf Keita is also co-founder, active member, and Chairman of the Board of the NGO Healthmour.",
-    "founderEducation": "Doctorate in public health, University of POINT G Bamako",
+    "founderEducation": "Medical doctor",
     "founderExperience": "15+ years in Public Health",
     "teamTitle": "Our team of experts",
-    "teamDesc": "A multicultural and multidisciplinary team bringing expertise and passion to every healthMOUR project",
+    "teamDesc": "A multicultural and multidisciplinary team bringing expertise and passion to every Healthmour",
     "joinTitle": "Join our team",
     "joinDesc": "Do you share our passion for community health? We are always looking for committed talent to strengthen our team.",
     "joinVolunteer": "Become volunteer",

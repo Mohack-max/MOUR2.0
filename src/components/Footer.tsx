@@ -12,11 +12,11 @@ export const Footer = () => {
             <div className="flex items-center space-x-3 mb-4">
               <img
                 src="/images/logo hm Final1.jpeg.jpg"
-                alt="HealthMOUR Logo"
+                alt="HealthMOUR"
                 className="h-12 w-auto"
               />
               <span className="font-montserrat font-bold text-xl">
-                healthMOUR
+                Healthmour
               </span>
             </div>
             <p className="font-open-sans text-gray-300 mb-4 max-w-md">
@@ -79,7 +79,7 @@ export const Footer = () => {
 
         <div className="border-t border-gray-600 mt-8 pt-8 text-center">
           <p className="font-open-sans text-sm text-gray-300">
-            © 2024 healthMOUR.org. Tous droits réservés. | Créé avec ❤️ pour un monde en meilleure santé.
+            © 2024 Healthmour.org. Tous droits réservés. | Créé avec ❤️ pour un monde en meilleure santé.
           </p>
         </div>
       </div>

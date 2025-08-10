@@ -48,7 +48,7 @@ const OurWork = () => {
     },
     {
       title: t('ourWork.areas.wash'),
-      image: '/images/wash.png',
+      image: '/images/wash1.jpeg',
       color: "text-primary",
       bgColor: "bg-blue-50",
       description: t('ourWork.areas.washDesc'),
