@@ -20,8 +20,8 @@ export const Navbar = () => {
 
   const navItems = [
     { path: "/", label: t('navbar.home') },
-    { path: "/our-work", label: t('navbar.ourWork') },
     { path: "/founders", label: t('navbar.founders') },
+    { path: "/our-work", label: t('navbar.ourWork') },
     { path: "/private-documents", label: t('navbar.privateDocuments') }
   ];
 
@@ -51,17 +51,15 @@ export const Navbar = () => {
           <div className="flex items-center justify-center h-16 w-full gap-8">
             {/* Logo (left) */}
             <Link to="/" className="flex items-center space-x-3 flex-shrink-0">
-              <img
-                src="/images/logo hm Final1.jpeg.jpg"
+              {/* <img
+                src="/images/logo_transparent.png"
                 alt="HealthMOUR Logo"
                 className="h-12 w-auto flex-shrink-0"
-              />
-    <span className="font-montserrat font-bold text-xl truncate max-w-[120px] sm:max-w-[180px] md:max-w-none">
-  <span style={{ color: "#0076A8" }}>Health</span>
-  <span style={{ color: "rgb(141, 198, 63)" }}>mour</span>
-</span>
-
-
+              /> */}
+              <span className="font-montserrat font-bold text-xl truncate max-w-[120px] sm:max-w-[180px] md:max-w-none">
+                <span style={{ color: "#0076A8" }}>Health</span>
+                <span style={{ color: "rgb(141, 198, 63)" }}>mour</span>
+              </span>
             </Link>
 
             {/* Navigation and actions (centered) */}
@@ -114,7 +112,7 @@ export const Navbar = () => {
                 <Button
                   className="bg-gradient-to-r from-primary to-accent text-white font-montserrat px-6 shadow-md hover:scale-105 transition-transform"
                 >
-                  Admin Panel
+                  {t('navbar.adminPanel')}
                 </Button>
               </Link>
             </div>
@@ -179,16 +177,6 @@ export const Navbar = () => {
                     {t('navbar.becomeMemberVolunteer')}
                   </Button>
                 )}
-
-                <Button
-                  onClick={() => {
-                    handleVolunteerClick();
-                    setIsMenuOpen(false);
-                  }}
-                  className="mx-4 bg-blue-600 hover:bg-blue-700 text-white font-montserrat"
-                >
-                  {t('navbar.becomeMemberVolunteer')}
-                </Button>
 
                 <Button
                   onClick={() => {

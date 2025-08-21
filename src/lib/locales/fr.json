@@ -2,18 +2,24 @@
   "navbar": {
     "home": "Accueil",
     "ourWork": "Notre travail",
-    "founders": "Equipe technique et conseil d'administration",
-    "becomeMemberVolunteer": "Devenir membre / Devenir bénévole",
+    "founders": "Équipe technique et conseil d'administration",
+    "becomeMemberVolunteer": "Devenir bénévole",
     "donate": "Faire un don",
     "logout": "Déconnexion",
     "hello": "Bonjour, {{name}}",
     "volunteerSuccess": "Merci {{name}} ! Vous êtes maintenant inscrit comme bénévole. Nous vous contacterons bientôt.",
-    "privateDocuments": "Documents stratégiques"
+    "privateDocuments": "Documents stratégiques",
+    "adminPanel": "Panneau d'administration",
+    "contact": "Contact",
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter"
   },
   "footer": {
     "copyright": "Tous droits réservés.",
     "mission": "Surveillance sanitaire, organisation, compréhension et résolution des problèmes de santé dans nos communautés.",
     "together": "Ensemble pour une meilleure santé communautaire",
+    "contact": "Contact",
+    "quickLinks": "Liens Rapides",
     "quickLinks": {
       "ourWork": "Notre travail",
       "team": "Équipe",
@@ -22,11 +28,11 @@
     }
   },
   "modals": {
-    "authTitle": "Connexion ou Inscription",
+    "authTitle": "Connexion ou inscription",
     "paymentTitle": "Faire un don"
   },
   "pages": {
-    "homeTitle": "Bienvenue chez healthMOUR!",
+    "homeTitle": "Bienvenue chez HealthMOUR !",
     "foundersTitle": "Rencontrez notre équipe"
   },
   "notFound": {
@@ -88,11 +94,11 @@
       "title": "Notre engagement",
       "desc": "Découvrez notre mission, notre vision et nos valeurs qui guident notre action quotidienne",
       "mission": "Notre mission",
-      "missionDesc": "Healthmour fournit des informations fiables et développe les compétences des individus et des organisations afin d’optimiser les actions de promotion et de prévention dans les zones où elle intervient.",
+      "missionDesc": "HealthMOUR fournit des informations fiables et développe les compétences des individus et des organisations afin d'optimiser les actions de promotion et de prévention dans les zones où elle intervient.",
       "vision": "Notre vision",
       "visionDesc": "Un monde où chaque communauté a accès à des soins de santé de qualité, à une nutrition adéquate, à l'éducation sanitaire et à des conditions d'hygiène optimales.",
       "values": "Nos valeurs",
-      "valuesDesc": "Intégrité\n,Crédibilité\n,Innovation\n,Inclusion\nDiversité\n,Équité"
+      "valuesDesc": "Intégrité, Crédibilité, Innovation, Inclusion, Diversité, Équité"
     },
     "areas": {
       "title": "Nos domaines d'intervention",
@@ -104,10 +110,10 @@
       "education": "Éducation",
       "educationDesc": "Formation et sensibilisation sanitaire",
       "wash": "WASH",
-      "washDesc": "Eau, Assainissement et Hygiène"
+      "washDesc": "Eau, assainissement et hygiène"
     },
     "cta": {
-      "title": "Rejoignez Notre mission",
+      "title": "Rejoignez notre mission",
       "desc": "Ensemble, nous pouvons créer un impact positif durable sur la santé de nos communautés. Votre engagement fait la différence.",
       "becomeVolunteer": "Devenir bénévole",
       "donate": "Faire un don"
@@ -120,7 +126,7 @@
     },
     "planBadge": "Plan stratégique 2024-2026",
     "planTitle": "Une approche intégrée pour la santé communautaire",
-    "planDesc": "healthMour : Ensemble pour le bien-être dans un environnement sain et prospère !\nhealthMour œuvre à travers des projets et initiatives coconstruits en santé, nutrition, éducation, et eau-hygiène-assainissement, centrés sur les priorités des communautés locales.\nNos principaux axes sont :\n— la Production de données fiables pour des décisions éclairées ;\n— le Renforcement des capacités des communautés et professionnels efficaces et résilients ;\n— la Planification stratégique basée sur des données probantes pour des activités, projets et programmes impactant.\nHealthMour s'engage à créer un impact positif et durable . Rejoindre HealthMour, c'est choisir des actions par les communautés, pour les communautés.\nEnsemble, faisons du bien-être collectif notre quotidien !",
+    "planDesc": "HealthMOUR : ensemble pour le bien-être dans un environnement sain et prospère !\nHealthMOUR œuvre à travers des projets et initiatives coconstruits en santé, nutrition, éducation, et eau-hygiène-assainissement, centrés sur les priorités des communautés locales.\nNos principaux axes sont :\n— La production de données fiables pour des décisions éclairées ;\n— Le renforcement des capacités des communautés et professionnels pour être efficaces et résilients ;\n— La planification stratégique basée sur des données probantes pour des activités, projets et programmes impactants.\nHealthMOUR s'engage à créer un impact positif et durable. Rejoindre HealthMOUR, c'est choisir des actions par les communautés, pour les communautés.\nEnsemble, faisons du bien-être collectif notre quotidien !",
     "areas": {
       "communityHealth": "Santé communautaire",
       "communityHealthDesc": "Surveillance épidémiologique et amélioration des systèmes de santé locaux",
@@ -128,7 +134,7 @@
       "communityHealthObj2": "Formation des agents de santé communautaire",
       "communityHealthObj3": "Mise en place de systèmes d'alerte précoce",
       "communityHealthObj4": "Amélioration de l'accès aux soins de base",
-      "nutrition": "Nutrition & Sécurité alimentaire",
+      "nutrition": "Nutrition & sécurité alimentaire",
       "nutritionDesc": "Programmes de nutrition et lutte contre la malnutrition",
       "nutritionObj1": "Évaluation nutritionnelle des communautés",
       "nutritionObj2": "Distribution de suppléments nutritionnels",
@@ -163,98 +169,98 @@
     "impactInnovationDesc": "Approches créatives et technologiques"
   },
   "founders": {
-    "heroTitle": "Fondateurs & Collaborateurs",
-    "heroDesc": "Rencontrez l'équipe passionnée qui donne vie à la mission healthMOUR, composée d'experts internationaux unis par une vision commune.",
-    "behindTitle": "Derrière healthMOUR",
-    "behindDesc": "Découvrez la vision et l'engagement qui ont donné naissance à healthMOUR",
-    "founderTitle": "Co-fondateur,\nmembre de l’équipe et Président du conseil d’administration",
-    "founderBio": "Dr. Keita est un médecin spécialisé en santé publique, avec une orientation particulière vers la statistique et la nutrition, et possède plus de 15 ans d’expérience dans le domaine aussi bien au sein du secteur public que privé. Il dispose d’une expertise solide dans la conception et l’évaluation de plans stratégiques d’envergure en santé maternelle, néonatale, infantile et nutrition (SMNI&N) aux niveaux national, régional et international. Cette expérience lui confère une maîtrise reconnue des méthodologies axées sur l’évaluation de l’impact des interventions en santé et en nutrition.\nAu Mali, Dr. Keita a dirigé plusieurs initiatives visant à renforcer la planification stratégique et à améliorer les services de santé communautaires. Parmi ses réalisations figurent le développement d’un outil d’évaluation des Centres de Santé Communautaires (CSCom) pour leur accréditation, ainsi que l’analyse approfondie des goulots à la gouvernance et à la gestion financière des CSCom.\nPartisan de la prise de décision fondée sur des données probantes, il enseigne l’utilisation de l’outil « Lives Saved Tool » (LiST) et anime des cours d’introduction à l’évaluation dans le cadre du Master en santé publique du Département d’Étude et Recherche en Santé Publique de l’Université des Sciences, des Techniques et des Technologies de Bamako. Il a également contribué à l’évaluation de l’impact de nombreux plans stratégiques nationaux et internationaux relatifs à la SMNI&N, proposant des scénarios alternatifs à fort impact.\nAuteur et coauteur de nombreux articles scientifiques relatifs à la planification et à l’évaluation des programmes de santé, Dr. Youssouf Keita est également co-fondateur, membre actif et Président du Conseil d’Administration de l’ONG Healthmour.",
-    "founderEducation": "Doctorat en médecine",
-    "founderExperience": "15+ années en santé Publique",
+    "heroTitle": "Fondateurs & collaborateurs",
+    "heroDesc": "Rencontrez l'équipe passionnée qui donne vie à la mission HealthMOUR, composée d'experts internationaux unis par une vision commune.",
+    "behindTitle": "Derrière HealthMOUR",
+    "behindDesc": "Découvrez la vision et l'engagement qui ont donné naissance à HealthMOUR",
+    "founderTitle": "Co-fondateur, membre de l'équipe et président du conseil d'administration",
+    "founderBio": "Dr. Keita est un médecin spécialisé en santé publique, avec une orientation particulière vers la statistique et la nutrition, et possède plus de 15 ans d'expérience dans le domaine aussi bien au sein du secteur public que privé. Il dispose d'une expertise solide dans la conception et l'évaluation de plans stratégiques d'envergure en santé maternelle, néonatale, infantile et nutrition (SMNI&N) aux niveaux national, régional et international. Cette expérience lui confère une maîtrise reconnue des méthodologies axées sur l'évaluation de l'impact des interventions en santé et en nutrition.\nAu Mali, Dr. Keita a dirigé plusieurs initiatives visant à renforcer la planification stratégique et à améliorer les services de santé communautaires. Parmi ses réalisations figurent le développement d'un outil d'évaluation des Centres de Santé Communautaires (CSCom) pour leur accréditation, ainsi que l'analyse approfondie des goulots d'étranglement à la gouvernance et à la gestion financière des CSCom.\nPartisan de la prise de décision fondée sur des données probantes, il enseigne l'utilisation de l'outil « Lives Saved Tool » (LiST) et anime des cours d'introduction à l'évaluation dans le cadre du Master en santé publique du Département d'Étude et Recherche en Santé Publique de l'Université des Sciences, des Techniques et des Technologies de Bamako. Il a également contribué à l'évaluation de l'impact de nombreux plans stratégiques nationaux et internationaux relatifs à la SMNI&N, proposant des scénarios alternatifs à fort impact.\nAuteur et coauteur de nombreux articles scientifiques relatifs à la planification et à l'évaluation des programmes de santé, Dr. Youssouf Keita est également co-fondateur, membre actif et Président du Conseil d'Administration de l'ONG HealthMOUR.",
+    "founderEducation": "Docteur en médecine",
+    "founderExperience": "15+ années en santé publique",
     "teamTitle": "Notre équipe d'experts",
-    "teamDesc": "Une équipe multiculturelle et multidisciplinaire qui apporte expertise et passion à chaque projet healthMOUR",
-    "joinTitle": "Rejoignez Notre Équipe",
+    "teamDesc": "Une équipe multiculturelle et multidisciplinaire qui apporte expertise et passion à chaque projet HealthMOUR",
+    "joinTitle": "Rejoignez notre équipe",
     "joinDesc": "Vous partagez notre passion pour la santé communautaire ? Nous sommes toujours à la recherche de talents engagés pour renforcer notre équipe.",
-    "joinVolunteer": "Devenir Bénévole",
-    "joinApply": "Candidature Spontanée",
+    "joinVolunteer": "Devenir bénévole",
+    "joinApply": "Candidature spontanée",
     "collaborators": {
       "habibatou": {
-        "role": "Professionnelle de la communication stratégique organisations, projets, pour le développement et le changement",
+        "role": "Professionnelle de la communication stratégique pour organisations, projets, développement et changement",
         "speciality": "Épidémiologie",
         "location": "Mali, Bamako"
       },
       "ibrahim": {
-        "role": "Coordinateur programmes",
+        "role": "Coordinateur de programmes",
         "speciality": "Gestion de projet",
         "location": "Mali, Bamako"
       },
       "souleymane": {
-        "role": "Expert Nutrition",
+        "role": "Expert en nutrition",
         "speciality": "Nutrition communautaire",
         "location": "Mali, Bamako"
       },
       "fadjine": {
-        "role": "Responsable Technique",
-        "speciality": "Santé publique, Nutrition",
+        "role": "Responsable technique",
+        "speciality": "Santé publique, nutrition",
         "location": "Mali, Bamako"
       },
       "modibo": {
-        "role": "Conseiller Stratégique",
+        "role": "Conseiller stratégique",
         "speciality": "Santé digitale",
         "location": "Mali, Bamako"
       },
       "fatoumata": {
-        "role": "Responsable Formation",
-        "speciality": "Médecin de formation, je suis titulaire d’un Master 2 en Santé publique avec une spécialisation en nutrition. Depuis 2023, j’évolue au sein de CHAI (Clinton Health Access Initiative), d’abord en tant que stagiaire, puis comme assistante de programme à partir d’août 2024. Depuis avril 2025, j’occupe également le poste de coordinatrice chez Large and Long-lasting Impact Seekers at Scale and Company (Llissco. SAS), où je supervise l’assistance technique apportée à l’ANAES dans le cadre des visites d’accréditation des centres de santé communautaire (CSCom).",
+        "role": "Responsable formation",
+        "speciality": "Médecin de formation, je suis titulaire d'un Master 2 en Santé publique avec une spécialisation en nutrition. Depuis 2023, j'évolue au sein de CHAI (Clinton Health Access Initiative), d'abord en tant que stagiaire, puis comme assistante de programme à partir d'août 2024. Depuis avril 2025, j'occupe également le poste de coordinatrice chez Large and Long-lasting Impact Seekers at Scale and Company (Llissco. SAS), où je supervise l'assistance technique apportée à l'ANAES dans le cadre des visites d'accréditation des centres de santé communautaire (CSCom).",
         "location": "Mali, Bamako"
       },
       "awa": {
-        "role": "Spécialiste Santé Maternelle",
+        "role": "Spécialiste santé maternelle",
         "speciality": "Santé maternelle et infantile",
         "location": "Mali, Sikasso"
       },
       "mamadou": {
-        "role": "Analyste Données Santé",
+        "role": "Analyste de données santé",
         "speciality": "",
         "location": "Mali, Kayes"
       },
       "aminata": {
-        "role": "Coordinatrice Logistique",
+        "role": "Coordinatrice logistique",
         "speciality": "Logistique médicale",
         "location": "Mali, Mopti"
       },
       "moussa": {
-        "role": "Consultant Vaccination",
+        "role": "Consultant vaccination",
         "speciality": "Vaccination et prévention",
         "location": "Mali, Ségou"
       },
       "mariam": {
-        "role": "Responsable Communication",
+        "role": "Responsable communication",
         "speciality": "Communication santé",
         "location": "Mali, Koulikoro"
       },
       "adama": {
-        "role": "Expert Financement Santé",
+        "role": "Expert financement santé",
         "speciality": "Financement de la santé",
         "location": "Mali, Bamako"
       },
       "salif": {
-        "role": "Médecin de Terrain",
+        "role": "Médecin de terrain",
         "speciality": "Médecine communautaire",
         "location": "Mali, Tombouctou"
       },
       "fanta": {
-        "role": "Chargée de Suivi & Évaluation",
+        "role": "Chargée de suivi & évaluation",
         "speciality": "Suivi et évaluation",
         "location": "Mali, Gao"
       },
       "oumar": {
-        "role": "Technicien Informatique Santé",
+        "role": "Technicien informatique santé",
         "speciality": "Informatique médicale",
         "location": "Mali, Bamako"
       },
       "kadidia": {
-        "role": "Assistante Administrative",
+        "role": "Assistante administrative",
         "speciality": "Administration santé",
         "location": "Mali, Bamako"
       }

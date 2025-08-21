@@ -2,44 +2,50 @@
   "navbar": {
     "home": "Home",
     "ourWork": "Our work",
-    "founders": "Technical Team and Board of Directors",
-    "becomeMemberVolunteer": "Become Member / Become Volunteer",
+    "founders": "Technical team and board of directors",
+    "becomeMemberVolunteer": "Become a volunteer",
     "donate": "Donate",
     "logout": "Logout",
     "hello": "Hello, {{name}}",
     "volunteerSuccess": "Thank you {{name}}! You are now registered as a volunteer. We will contact you soon.",
-    "privateDocuments": "Strategic documents"
+    "privateDocuments": "Strategic documents",
+    "adminPanel": "Admin Panel",
+    "contact": "Contact",
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter"
   },
   "footer": {
     "copyright": "All rights reserved.",
     "mission": "Health monitoring, organization, understanding, and resolution of health issues in our communities.",
     "together": "Together for better community health",
+    "contact": "Contact",
+    "quickLinks": "Quick Links",
     "quickLinks": {
       "ourWork": "Our work",
       "team": "Team",
-      "volunteer": "Become Volunteer",
+      "volunteer": "Become a volunteer",
       "donate": "Donate"
     }
   },
   "modals": {
-    "authTitle": "Sign In or Register",
-    "paymentTitle": "Make a Donation"
+    "authTitle": "Sign in or register",
+    "paymentTitle": "Make a donation"
   },
   "pages": {
-    "homeTitle": "Welcome to Healthmour!",
-    "foundersTitle": "Meet Our Team"
+    "homeTitle": "Welcome to HealthMOUR!",
+    "foundersTitle": "Meet our team"
   },
   "notFound": {
     "message": "Oops! Page not found",
-    "returnHome": "Return to Home"
+    "returnHome": "Return to home"
   },
   "index": {
-    "welcome": "Welcome to Your Blank App",
+    "welcome": "Welcome to your blank app",
     "startBuilding": "Start building your amazing project here!"
   },
   "auth": {
     "login": "Login",
-    "signup": "Sign Up",
+    "signup": "Sign up",
     "loginDesc": "Sign in to become a volunteer",
     "signupDesc": "Create your account to join our mission",
     "email": "Email",
@@ -48,7 +54,7 @@
     "passwordPlaceholder": "••••••••",
     "loading": "Loading...",
     "loginBtn": "Login",
-    "signupBtn": "Sign Up",
+    "signupBtn": "Sign up",
     "noAccount": "Don't have an account?",
     "haveAccount": "Already have an account?"
   },
@@ -71,15 +77,15 @@
     "hero": {
       "subtitle": "Health-monitoring-organization-understanding-resolution",
       "equation": "Monitoring-organization-understanding-resolution = well-being",
-      "becomeVolunteer": "Become volunteer",
+      "becomeVolunteer": "Become a volunteer",
       "donate": "Donate"
     },
     "welcome": "Welcome, {{name}}!",
     "welcomeResources": "Thank you for joining our mission. Here are exclusive resources for our volunteers:",
     "resources": {
-      "manualTitle": "Volunteer Handbook",
+      "manualTitle": "Volunteer handbook",
       "manualDesc": "Comprehensive guide to start your engagement",
-      "trainingTitle": "Trainings",
+      "trainingTitle": "Training",
       "trainingDesc": "Access to online training sessions",
       "communityTitle": "Community",
       "communityDesc": "Join our private volunteer group"
@@ -87,12 +93,12 @@
     "commitment": {
       "title": "Our commitment",
       "desc": "Discover our mission, vision, and values that guide our daily actions",
-      "mission": "Our Mission",
-      "missionDesc": "Healthmour provides reliable information and develops the skills of individuals and organizations to optimize promotion and prevention actions in the areas where it operates.",
-      "vision": "Our Vision",
+      "mission": "Our mission",
+      "missionDesc": "HealthMOUR provides reliable information and develops the skills of individuals and organizations to optimize promotion and prevention actions in the areas where it operates.",
+      "vision": "Our vision",
       "visionDesc": "A world where every community has access to quality healthcare, adequate nutrition, health education, and optimal hygiene conditions.",
-      "values": "Our Values",
-      "valuesDesc": "Integrity\n,Credibility\n,Innovation\n,Inclusion,\nDiversity\n,Equity"
+      "values": "Our values",
+      "valuesDesc": "Integrity, Credibility, Innovation, Inclusion, Diversity, Equity"
     },
     "areas": {
       "title": "Our areas of intervention",
@@ -107,9 +113,9 @@
       "washDesc": "Water, sanitation, and hygiene"
     },
     "cta": {
-      "title": "Join Our Mission",
+      "title": "Join our mission",
       "desc": "Together, we can create a lasting positive impact on the health of our communities. Your commitment makes a difference.",
-      "becomeVolunteer": "Become volunteer",
+      "becomeVolunteer": "Become a volunteer",
       "donate": "Donate"
     }
   },
@@ -120,21 +126,21 @@
     },
     "planBadge": "Strategic plan 2024-2026",
     "planTitle": "An integrated approach to community health",
-    "planDesc": "Healthmour for well-being in a healthy and prosperous environment!\nHealthmour through co-constructed projects and initiatives in health, nutrition, education, and water-hygiene-sanitation, focused on the priorities of local communities.\nOur main pillars are:\n— Production of reliable data for informed decision-making;\n— Strengthening the capacities of communities and professionals to be effective and resilient;\n— Strategic planning based on evidence for impactful activities, projects, and programs.\nHealthMour is committed to creating a positive and lasting impact. Joining HealthMour means choosing actions by communities, for communities.\nTogether, let's make collective well-being our everyday reality!",
+    "planDesc": "HealthMOUR for well-being in a healthy and prosperous environment!\nHealthMOUR through co-constructed projects and initiatives in health, nutrition, education, and water-hygiene-sanitation, focused on the priorities of local communities.\nOur main pillars are:\n— Production of reliable data for informed decision-making;\n— Strengthening the capacities of communities and professionals to be effective and resilient;\n— Strategic planning based on evidence for impactful activities, projects, and programs.\nHealthMOUR is committed to creating a positive and lasting impact. Joining HealthMOUR means choosing actions by communities, for communities.\nTogether, let's make collective well-being our everyday reality!",
     "areas": {
-      "communityHealth": "Community Health",
+      "communityHealth": "Community health",
       "communityHealthDesc": "Epidemiological monitoring and improvement of local health systems",
       "communityHealthObj1": "Strengthening health surveillance capacity",
       "communityHealthObj2": "Training community health workers",
       "communityHealthObj3": "Setting up early warning systems",
       "communityHealthObj4": "Improving access to basic care",
-      "nutrition": "Nutrition & Food Security",
+      "nutrition": "Nutrition & food security",
       "nutritionDesc": "Nutrition programs and fight against malnutrition",
       "nutritionObj1": "Community nutrition assessment",
       "nutritionObj2": "Distribution of nutritional supplements",
       "nutritionObj3": "Training on good dietary practices",
       "nutritionObj4": "Development of community gardens",
-      "education": "Health Education",
+      "education": "Health education",
       "educationDesc": "Awareness and training for health promotion",
       "educationObj1": "Targeted awareness campaigns",
       "educationObj2": "Training community leaders",
@@ -149,11 +155,11 @@
     },
     "metrics": {
       "strategicPlan": "Strategic plan",
-      "priorityAreas": "Priority Areas",
-      "communityApproach": "Community Approach"
+      "priorityAreas": "Priority areas",
+      "communityApproach": "Community approach"
     },
     "objectivesTitle": "Main objectives:",
-    "impactTitle": "Impact & Future Outlook",
+    "impactTitle": "Impact & future outlook",
     "impactDesc": "Our commitment is part of a long-term vision of sustainable transformation of community health systems, with a focus on sustainability and community empowerment.",
     "impactDurability": "Durability",
     "impactDurabilityDesc": "Sustainable solutions adapted to local contexts",
@@ -163,29 +169,29 @@
     "impactInnovationDesc": "Creative and technological approaches"
   },
   "founders": {
-    "heroTitle": "Founders & Collaborators",
-    "heroDesc": "Meet the passionate team bringing the Healthmour to life, composed of international experts united by a common vision.",
+    "heroTitle": "Founders & collaborators",
+    "heroDesc": "Meet the passionate team bringing HealthMOUR to life, composed of international experts united by a common vision.",
     "behindTitle": "Behind Healthmour",
-    "behindDesc": "Discover the vision and commitment that gave birth to Healthmour",
-    "founderTitle": "Co-founder,\nteam member and chairman of the board of directors",
-    "founderBio": "Dr. Keita is a physician specialized in public health, with a particular focus on statistics and nutrition, and has over 15 years of experience in the field, both in the public and private sectors. He has strong expertise in designing and evaluating large-scale strategic plans in maternal, neonatal, child health, and nutrition (MNCH&N) at national, regional, and international levels. This experience gives him recognized mastery of methodologies focused on evaluating the impact of health and nutrition interventions.\nIn Mali, Dr. Keita has led several initiatives aimed at strengthening strategic planning and improving community health services. His achievements include developing an evaluation tool for Community Health Centers (CSCom) for their accreditation, as well as in-depth analysis of bottlenecks in governance and financial management of CSCom.\nA proponent of evidence-based decision-making, he teaches the use of the “Lives Saved Tool” (LiST) and conducts introductory evaluation courses as part of the Master of Public Health program at the Department of Public Health Studies and Research at the University of Sciences, Techniques, and Technologies of Bamako. He has also contributed to the impact evaluation of numerous national and international strategic plans related to MNCH&N, proposing high-impact alternative scenarios.\nAuthor and co-author of numerous scientific articles related to the planning and evaluation of health programs, Dr. Youssouf Keita is also co-founder, active member, and Chairman of the Board of the NGO Healthmour.",
+    "behindDesc": "Discover the vision and commitment that gave birth to HealthMOUR",
+    "founderTitle": "Co-founder, team member and chairman of the board of directors",
+    "founderBio": "Dr. Keita is a physician specialized in public health, with a particular focus on statistics and nutrition, and has over 15 years of experience in the field, both in the public and private sectors. He has strong expertise in designing and evaluating large-scale strategic plans in maternal, neonatal, child health, and nutrition (MNCH&N) at national, regional, and international levels. This experience gives him recognized mastery of methodologies focused on evaluating the impact of health and nutrition interventions.\nIn Mali, Dr. Keita has led several initiatives aimed at strengthening strategic planning and improving community health services. His achievements include developing an evaluation tool for Community Health Centers (CSCom) for their accreditation, as well as in-depth analysis of bottlenecks in governance and financial management of CSCom.\nA proponent of evidence-based decision-making, he teaches the use of the \"Lives Saved Tool\" (LiST) and conducts introductory evaluation courses as part of the Master of Public Health program at the Department of Public Health Studies and Research at the University of Sciences, Techniques, and Technologies of Bamako. He has also contributed to the impact evaluation of numerous national and international strategic plans related to MNCH&N, proposing high-impact alternative scenarios.\nAuthor and co-author of numerous scientific articles related to the planning and evaluation of health programs, Dr. Youssouf Keita is also co-founder, active member, and Chairman of the Board of the NGO HealthMOUR.",
     "founderEducation": "Medical doctor",
-    "founderExperience": "15+ years in Public Health",
+    "founderExperience": "15+ years in public health",
     "teamTitle": "Our team of experts",
-    "teamDesc": "A multicultural and multidisciplinary team bringing expertise and passion to every Healthmour",
+    "teamDesc": "A multicultural and multidisciplinary team bringing expertise and passion to every HealthMOUR project",
     "joinTitle": "Join our team",
     "joinDesc": "Do you share our passion for community health? We are always looking for committed talent to strengthen our team.",
-    "joinVolunteer": "Become volunteer",
+    "joinVolunteer": "Become a volunteer",
     "joinApply": "Spontaneous application",
     "collaborators": {
       "habibatou": {
-        "role": "Strategic communication professional for oganizations, pojects, dvelopment and change",
+        "role": "Strategic communication professional for organizations, projects, development and change",
         "speciality": "Epidemiology",
         "location": "Mali, Bamako"
       },
       "ibrahim": {
         "role": "Program coordinator",
-        "speciality": "Project Management",
+        "speciality": "Project management",
         "location": "Mali, Bamako"
       },
       "souleymane": {
@@ -195,7 +201,7 @@
       },
       "fadjine": {
         "role": "Technical manager",
-        "speciality": "Public Health, Nutrition",
+        "speciality": "Public health, nutrition",
         "location": "Mali, Bamako"
       },
       "modibo": {
@@ -204,42 +210,42 @@
         "location": "Mali, Bamako"
       },
       "fatoumata": {
-        "role": "Training Manager",
+        "role": "Training manager",
         "speciality": "Medical doctor with a Master 2 in Public Health specializing in nutrition. Since 2023, I have been with CHAI (Clinton Health Access Initiative), first as an intern, then as a program assistant from August 2024. Since April 2025, I have also been a coordinator at Large and Long-lasting Impact Seekers at Scale and Company (Llissco. SAS), where I supervise technical assistance to ANAES for the accreditation visits of community health centers (CSCom).",
         "location": "Mali, Bamako"
       },
       "awa": {
-        "role": "Maternal Health Specialist",
-        "speciality": "Maternal and Child Health",
+        "role": "Maternal health specialist",
+        "speciality": "Maternal and child health",
         "location": "Mali, Sikasso"
       },
       "mamadou": {
-        "role": "Health Data Analyst",
+        "role": "Health data analyst",
         "speciality": "",
         "location": "Mali, Kayes"
       },
       "aminata": {
-        "role": "Logistics Coordinator",
-        "speciality": "Medical Logistics",
+        "role": "Logistics coordinator",
+        "speciality": "Medical logistics",
         "location": "Mali, Mopti"
       },
       "moussa": {
-        "role": "Vaccination Consultant",
-        "speciality": "Vaccination and Prevention",
+        "role": "Vaccination consultant",
+        "speciality": "Vaccination and prevention",
         "location": "Mali, Ségou"
       },
       "mariam": {
-        "role": "Communication Manager",
-        "speciality": "Health Communication",
+        "role": "Communication manager",
+        "speciality": "Health communication",
         "location": "Mali, Koulikoro"
       },
       "adama": {
-        "role": "Health Financing Expert",
-        "speciality": "Health Financing",
+        "role": "Health financing expert",
+        "speciality": "Health financing",
         "location": "Mali, Bamako"
       },
       "salif": {
-        "role": "Field Doctor",
+        "role": "Field doctor",
         "speciality": "Community medicine",
         "location": "Mali, Tombouctou"
       },
@@ -254,15 +260,15 @@
         "location": "Mali, Bamako"
       },
       "kadidia": {
-        "role": "Administrative Assistant",
-        "speciality": "Health Administration",
+        "role": "Administrative assistant",
+        "speciality": "Health administration",
         "location": "Mali, Bamako"
       }
     }
   },
   "privateDocs": {
-    "title": "Private Documents",
-    "requestAccess": "Request Access",
+    "title": "Private documents",
+    "requestAccess": "Request access",
     "requestAccessFor": "Request access for {{title}}",
     "reason": "Reason for request",
     "submit": "Submit",
@@ -270,8 +276,8 @@
     "submitting": "Submitting...",
     "requestSuccess": "Request submitted! You will be notified upon approval.",
     "requestError": "Failed to submit request.",
-    "pending": "Request Pending Approval",
-    "denied": "Request Denied",
-    "viewDocument": "View Document"
+    "pending": "Request pending approval",
+    "denied": "Request denied",
+    "viewDocument": "View document"
   }
 } 

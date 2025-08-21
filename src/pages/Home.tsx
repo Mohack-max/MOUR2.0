@@ -13,6 +13,8 @@ const Home = () => {
   const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
   const { t } = useTranslation();
 
+  // Removed handleVolunteerClick since buttons are now only in Navbar
+
   const interventionAreas = [
     {
       title: t('home.areas.health'),
@@ -40,14 +42,6 @@ const Home = () => {
     }
   ];
 
-  const handleVolunteerClick = () => {
-    if (isAuthenticated) {
-      alert(`Merci ${user?.firstName} ! Vous êtes maintenant inscrit comme bénévole. Nous vous contacterons bientôt.`);
-    } else {
-      setIsAuthModalOpen(true);
-    }
-  };
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -57,28 +51,12 @@ const Home = () => {
           <div className="text-center animate-fade-in">
             <div className="flex flex-col items-center mb-8">
               <img
-                src="/images/logo2.jpg"
+                src="/images/logo_transparent.png"
                 alt="HealthMOUR Logo"
-                className="h-32 w-auto mb-6 lg:h-40"
+                className="h-96 w-auto mb-6 lg:h-112"
               />
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                onClick={handleVolunteerClick}
-                className="bg-secondary hover:bg-secondary/90 text-white font-montserrat text-lg px-8"
-              >
-                {t('home.hero.becomeVolunteer')}
-              </Button>
-              <Button
-                size="lg"
-                onClick={() => setIsPaymentModalOpen(true)}
-                variant="outline"
-                className="border-white text-primary hover:bg-white hover:text-primary font-montserrat text-lg px-8"
-              >
-                {t('home.hero.donate')}
-              </Button>
-            </div>
+            {/* Removed redundant buttons - they already exist in the Navbar */}
           </div>
         </div>
       </section>
@@ -206,9 +184,9 @@ const Home = () => {
                   <h3 className="font-montserrat font-bold text-xl mb-3 text-gray-900">
                     {area.title}
                   </h3>
-                  <p className="font-open-sans text-gray-600 text-sm leading-relaxed truncate">
+                  {/* <p className="font-open-sans text-gray-600 text-sm leading-relaxed truncate">
                     {area.description}
-                  </p>
+                  </p> */}
                 </CardContent>
               </Card>
             ))}
@@ -225,23 +203,7 @@ const Home = () => {
           <p className="font-open-sans text-lg lg:text-xl mb-8 max-w-3xl mx-auto">
             {t('home.cta.desc')}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              onClick={handleVolunteerClick}
-              variant="outline"
-              className="border-white text-primary hover:bg-white hover:text-primary font-montserrat text-lg px-8"
-            >
-              {t('home.cta.becomeVolunteer')}
-            </Button>
-            <Button
-              size="lg"
-              onClick={() => setIsPaymentModalOpen(true)}
-              className="bg-white text-primary hover:bg-gray-100 font-montserrat text-lg px-8"
-            >
-              {t('home.cta.donate')}
-            </Button>
-          </div>
+          {/* Removed redundant buttons - they already exist in the Hero section */}
         </div>
       </section>
 

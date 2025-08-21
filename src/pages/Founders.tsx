@@ -180,22 +180,22 @@ const Founders = () => {
                 {founder.experience}
               </span>
             </div>
-            <p className="font-open-sans text-sm text-gray-600 leading-relaxed mb-2 sm:mb-4 text-center max-w-xs sm:max-w-xl">
+            <p className="font-open-sans text-xs text-gray-600 leading-relaxed mb-2 sm:mb-4 text-center max-w-xs sm:max-w-xl">
               {founder.bio}
             </p>
 
             <div className="flex space-x-2 sm:space-x-4 justify-center">
               <Button size="sm" variant="outline" className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span>Contact</span>
+                <span>{t('navbar.contact')}</span>
               </Button>
               <Button size="sm" variant="outline" className="flex items-center space-x-2">
                 <Linkedin className="h-4 w-4" />
-                <span>LinkedIn</span>
+                <span>{t('navbar.linkedin')}</span>
               </Button>
               <Button size="sm" variant="outline" className="flex items-center space-x-2">
                 <Twitter className="h-4 w-4" />
-                <span>Twitter</span>
+                <span>{t('navbar.twitter')}</span>
               </Button>
             </div>
           </div>
@@ -214,42 +214,54 @@ const Founders = () => {
             </p>
           </div>
           <div className="flex flex-row flex-wrap gap-4 sm:gap-6 justify-center pb-4 overflow-x-auto">
-  {collaborators.map((collaborator, index) => (
-    <div
-      key={collaborator.name}
-      className="group relative flex-shrink-0 w-full sm:w-44 sm:w-56 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 animate-scale-in"
-      style={{ animationDelay: `${index * 0.1}s` }}
-    >
-      {collaborator.image ? (
-        <img
-          src={collaborator.image}
-          alt={collaborator.name}
-          className="w-28 h-28 sm:w-40 sm:h-40 object-cover rounded-full mx-auto mt-4 sm:mt-6 border-4 border-primary group-hover:opacity-80 transition-opacity duration-300"
-        />
-      ) : (
-        <div className="w-28 h-28 sm:w-40 sm:h-40 rounded-full mx-auto mt-4 sm:mt-6 border-4 border-primary bg-gray-200 flex items-center justify-center">
-          <span className="font-montserrat font-bold text-gray-600 text-sm sm:text-base">
-            {collaborator.name.charAt(0)}
-          </span>
-        </div>
-      )}
-      <div className="p-2 sm:p-4 text-center">
-        <h4 className="font-montserrat font-bold text-base sm:text-lg mb-1 sm:mb-2 text-gray-900">
-          {collaborator.name}
-        </h4>
-        <p className="font-open-sans text-xs sm:text-sm text-primary mb-1 sm:mb-2">
-          {collaborator.role}
-        </p>
-        <p className="font-open-sans text-xs sm:text-sm text-gray-600 mb-1 sm:mb-2">
-          {collaborator.speciality}
-        </p>
-        <p className="font-open-sans text-xs sm:text-sm text-gray-500">
-          {collaborator.location}
-        </p>
-      </div>
-    </div>
-  ))}
-</div>
+            {collaborators.map((collaborator, index) => (
+              <div
+                key={collaborator.name}
+                className="group relative flex-shrink-0 w-48 h-64 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden animate-scale-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {/* Background Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10"></div>
+
+                {/* Profile Image */}
+                <div className="relative z-10 flex flex-col items-center pt-6">
+                  {collaborator.image ? (
+                    <img
+                      src={collaborator.image}
+                      alt={collaborator.name}
+                      className="w-20 h-20 object-cover rounded-full border-3 border-primary shadow-md mb-3"
+                    />
+                  ) : (
+                    <div className="w-20 h-20 rounded-full border-3 border-primary bg-gray-200 flex items-center justify-center shadow-md mb-3">
+                      <span className="font-montserrat font-bold text-gray-600 text-lg">
+                        {collaborator.name.charAt(0)}
+                      </span>
+                    </div>
+                  )}
+
+                  {/* Always Visible Info */}
+                  <h4 className="font-montserrat font-bold text-sm mb-1 text-gray-900 text-center px-3">
+                    {collaborator.name}
+                  </h4>
+                  <p className="font-open-sans text-xs text-primary mb-2 text-center px-3">
+                    {collaborator.role}
+                  </p>
+                  <p className="font-open-sans text-xs text-gray-500 text-center px-3">
+                    {collaborator.location}
+                  </p>
+                </div>
+
+                {/* Hover Overlay with Additional Info */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+                  <div className="p-4 text-white w-full">
+                    <p className="font-open-sans text-xs text-gray-200 mb-2 leading-relaxed">
+                      {collaborator.speciality}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
 
         </div>
       </section>

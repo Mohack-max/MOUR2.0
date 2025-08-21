@@ -9,14 +9,15 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo & Mission */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-3 mb-4">
+            <div className="flex items-center space-x-4 mb-4">
               <img
-                src="/images/logo hm Final1.jpeg.jpg"
-                alt="HealthMOUR"
-                className="h-12 w-auto"
+                src="/images/logo_transparent.png"
+                alt="HealthMOUR Logo"
+                className="h-20 w-auto"
               />
-              <span className="font-montserrat font-bold text-xl">
-                Healthmour
+              <span className="font-montserrat font-bold text-2xl">
+                <span style={{ color: "#0076A8" }}>Health</span>
+                <span style={{ color: "rgb(141, 198, 63)" }}>mour</span>
               </span>
             </div>
             <p className="font-open-sans text-gray-300 mb-4 max-w-md">
@@ -32,12 +33,12 @@ export const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-montserrat font-semibold text-lg mb-4">Contact</h3>
+            <h3 className="font-montserrat font-semibold text-lg mb-4">{t('footer.contact')}</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-secondary" />
                 <span className="font-open-sans text-sm text-gray-300">
-                 healthmour@healthmour.org 
+                  healthmour@healthmour.org
                 </span>
               </div>
               <div className="flex items-center space-x-3">
@@ -46,12 +47,11 @@ export const Footer = () => {
                   +223 73 06 66 06
                 </span>
               </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="h-4 w-4 text-secondary" />
+              <div className="flex items-start space-x-3">
+                <MapPin className="h-4 w-4 text-secondary mt-1" />
                 <span className="font-open-sans text-sm text-gray-300">
-                Adresse : Cité Me Filifin DEMBLE
-                Diatoula Extension - Bamako, Mali
-
+                  Adresse : Cité Me Filifin DEMBLE<br />
+                  Diatoula Extension - Bamako, Mali
                 </span>
               </div>
             </div>
@@ -59,7 +59,7 @@ export const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-montserrat font-semibold text-lg mb-4">Liens Rapides</h3>
+            <h3 className="font-montserrat font-semibold text-lg mb-4">{t('footer.quickLinks')}</h3>
             <div className="space-y-2">
               <a href="/our-work" className="block font-open-sans text-sm text-gray-300 hover:text-secondary transition-colors">
                 {t('footer.quickLinks.ourWork')}
