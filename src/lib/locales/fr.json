@@ -2,7 +2,7 @@
   "navbar": {
     "home": "Accueil",
     "ourWork": "Notre travail",
-    "founders": "Équipe technique et conseil d'administration",
+    "founders": "Notre équipe",
     "becomeMemberVolunteer": "Devenir bénévole",
     "donate": "Faire un don",
     "logout": "Déconnexion",
@@ -78,7 +78,8 @@
       "subtitle": "Surveillance-organisation-compréhension-résolution",
       "equation": "Surveillance-organisation-compréhension-résolution = bien-être",
       "becomeVolunteer": "Devenir bénévole",
-      "donate": "Faire un don"
+      "donate": "Faire un don",
+      "strategicDocsDesc": "Accédez à nos documents de planification stratégique et ressources organisationnelles"
     },
     "welcome": "Bienvenue, {{name}} !",
     "welcomeResources": "Merci de rejoindre notre mission. Voici des ressources exclusives pour nos bénévoles :",
@@ -113,7 +114,7 @@
       "washDesc": "Eau, assainissement et hygiène"
     },
     "cta": {
-      "title": "Rejoignez notre mission",
+      "title": "Rejoignez nous",
       "desc": "Ensemble, nous pouvons créer un impact positif durable sur la santé de nos communautés. Votre engagement fait la différence.",
       "becomeVolunteer": "Devenir bénévole",
       "donate": "Faire un don"

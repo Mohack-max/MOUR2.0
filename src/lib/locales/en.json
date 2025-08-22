@@ -2,7 +2,7 @@
   "navbar": {
     "home": "Home",
     "ourWork": "Our work",
-    "founders": "Technical team and board of directors",
+    "founders": "Our team",
     "becomeMemberVolunteer": "Become a volunteer",
     "donate": "Donate",
     "logout": "Logout",
@@ -78,7 +78,8 @@
       "subtitle": "Health-monitoring-organization-understanding-resolution",
       "equation": "Monitoring-organization-understanding-resolution = well-being",
       "becomeVolunteer": "Become a volunteer",
-      "donate": "Donate"
+      "donate": "Donate",
+      "strategicDocsDesc": "Access our strategic planning documents and organizational resources"
     },
     "welcome": "Welcome, {{name}}!",
     "welcomeResources": "Thank you for joining our mission. Here are exclusive resources for our volunteers:",
@@ -113,7 +114,7 @@
       "washDesc": "Water, sanitation, and hygiene"
     },
     "cta": {
-      "title": "Join our mission",
+      "title": "Join us",
       "desc": "Together, we can create a lasting positive impact on the health of our communities. Your commitment makes a difference.",
       "becomeVolunteer": "Become a volunteer",
       "donate": "Donate"

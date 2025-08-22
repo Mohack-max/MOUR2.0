@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useAuth } from "@/contexts/AuthContext";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { AuthModal } from "@/components/AuthModal";
 import { PaymentModal } from "@/components/PaymentModal";
 import { useTranslation } from 'react-i18next';
@@ -12,6 +13,7 @@ const Home = () => {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   // Removed handleVolunteerClick since buttons are now only in Navbar
 
@@ -53,10 +55,21 @@ const Home = () => {
               <img
                 src="/images/logo_transparent.png"
                 alt="HealthMOUR Logo"
-                className="h-96 w-auto mb-6 lg:h-112"
+                className="h-96 w-auto mb-8 lg:h-[500px] xl:h-[600px]"
               />
+              {/* Strategic Documents Button */}
+              <div className="flex flex-col items-center space-y-4">
+                <Button
+                  onClick={() => navigate('/private-documents')}
+                  className="bg-white hover:bg-gray-100 text-primary font-montserrat font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-white"
+                >
+                  {t('navbar.privateDocuments')}
+                </Button>
+                <p className="text-white/90 font-open-sans text-sm max-w-md">
+                  {t('home.hero.strategicDocsDesc')}
+                </p>
+              </div>
             </div>
-            {/* Removed redundant buttons - they already exist in the Navbar */}
           </div>
         </div>
       </section>

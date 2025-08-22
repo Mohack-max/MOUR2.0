@@ -21,8 +21,7 @@ export const Navbar = () => {
   const navItems = [
     { path: "/", label: t('navbar.home') },
     { path: "/founders", label: t('navbar.founders') },
-    { path: "/our-work", label: t('navbar.ourWork') },
-    { path: "/private-documents", label: t('navbar.privateDocuments') }
+    { path: "/our-work", label: t('navbar.ourWork') }
   ];
 
   const isActive = (path: string) => location.pathname === path;
