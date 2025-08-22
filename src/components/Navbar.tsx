@@ -64,17 +64,22 @@ export const Navbar = () => {
             {/* Navigation and actions (centered) */}
             <div className="hidden md:flex items-center space-x-6 flex-shrink-0">
               {navItems.map((item, idx) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className={`font-open-sans font-medium transition-colors duration-200 px-4 cursor-pointer ${isActive(item.path)
-                    ? "text-primary border-b-2 border-primary"
-                    : "text-gray-700 hover:text-primary"
-                    }`}
-                >
-                  {item.label}
-                </Link>
-              ))}
+  <Link
+    key={item.path}
+    to={item.path}
+    className={`font-open-sans font-medium transition-colors duration-200 px-4 cursor-pointer ${isActive(item.path)
+      ? "text-primary border-b-2 border-primary"
+      : "text-gray-700 hover:text-primary"
+    }`}
+    style={{
+      userSelect: 'none', // Disable text selection
+      cursor: 'pointer'    // Ensure pointer cursor
+    }}
+  >
+    {item.label}
+  </Link>
+))}
+
               {isAuthenticated ? (
                 <Button
                   onClick={handleLogout}
