@@ -67,7 +67,7 @@ export const Navbar = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`font-open-sans font-medium transition-colors duration-200 px-4 ${isActive(item.path)
+                  className={`font-open-sans font-medium transition-colors duration-200 px-4 cursor-pointer ${isActive(item.path)
                     ? "text-primary border-b-2 border-primary"
                     : "text-gray-700 hover:text-primary"
                     }`}
@@ -136,7 +136,7 @@ export const Navbar = () => {
                   <Link
                     key={item.path}
                     to={item.path}
-                    className={`font-open-sans font-medium px-4 py-2 rounded transition-colors duration-200 ${isActive(item.path)
+                    className={`font-open-sans font-medium px-4 py-2 rounded transition-colors duration-200 cursor-pointer ${isActive(item.path)
                       ? "text-primary bg-primary/10"
                       : "text-gray-700 hover:text-primary hover:bg-gray-50"
                       }`}

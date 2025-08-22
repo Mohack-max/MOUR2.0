@@ -2,9 +2,22 @@ import { Mail, Linkedin, Twitter } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from 'react-i18next';
+import { useAuth } from "@/contexts/AuthContext";
+import { useState } from "react";
+import { AuthModal } from "@/components/AuthModal";
 
 const Founders = () => {
   const { t } = useTranslation();
+  const { user, isAuthenticated } = useAuth();
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  
+  const handleVolunteerClick = () => {
+    if (isAuthenticated) {
+      alert(t('navbar.volunteerSuccess', { name: user?.firstName }));
+    } else {
+      setIsAuthModalOpen(true);
+    }
+  };
 
   const founder = {
     name: "Dr. Youssouf Keita",
@@ -135,6 +148,12 @@ const Founders = () => {
 
   return (
     <div className="min-h-screen">
+      {isAuthModalOpen && (
+        <AuthModal 
+          isOpen={isAuthModalOpen} 
+          onClose={() => setIsAuthModalOpen(false)} 
+        />
+      )}
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-accent/10 via-primary/10 to-secondary/10 py-10 sm:py-14 md:py-16">
         <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-32">
@@ -150,10 +169,10 @@ const Founders = () => {
       </section>
 
       {/* Founder Section */}
-      <section className="py-10 sm:py-14 md:py-16">
+      <section className="py-6 sm:py-8 md:py-10">
         <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-32">
-          <div className="text-center mb-8 sm:mb-12 animate-fade-in">
-            <h2 className="font-montserrat font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 mb-2 sm:mb-4">
+          <div className="text-center mb-6 sm:mb-8 animate-fade-in">
+            <h2 className="font-montserrat font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 mb-2 sm:mb-3">
               {t('founders.behindTitle')}
             </h2>
             <p className="font-open-sans text-base sm:text-lg text-gray-600 max-w-2xl sm:max-w-3xl mx-auto">
@@ -180,9 +199,12 @@ const Founders = () => {
                 {founder.experience}
               </span>
             </div>
-            <p className="font-open-sans text-xs text-gray-600 leading-relaxed mb-2 sm:mb-4 text-center max-w-xs sm:max-w-xl">
-              {founder.bio}
-            </p>
+            <div className="relative group mb-2 sm:mb-4">
+              <p className="font-open-sans text-xs text-gray-600 leading-relaxed text-center max-w-xs sm:max-w-xl line-clamp-3 group-hover:line-clamp-none transition-all duration-300">
+                {founder.bio}
+              </p>
+              <div className="absolute inset-x-0 bottom-0 h-6 bg-gradient-to-t from-white to-transparent group-hover:opacity-0 transition-opacity duration-300"></div>
+            </div>
 
             <div className="flex space-x-2 sm:space-x-4 justify-center">
               <Button size="sm" variant="outline" className="flex items-center space-x-2">
@@ -203,7 +225,7 @@ const Founders = () => {
       </section>
 
       {/* Collaborators Section */}
-      <section className="py-10 sm:py-14 md:py-16 bg-gray-50">
+      <section className="py-6 sm:py-8 md:py-10 bg-gray-50">
         <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-32">
           <div className="text-center mb-8 sm:mb-12 animate-fade-in">
             <h2 className="font-montserrat font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 mb-2 sm:mb-4">
@@ -275,19 +297,13 @@ const Founders = () => {
           <p className="font-open-sans text-base sm:text-lg lg:text-xl mb-4 sm:mb-8 max-w-2xl sm:max-w-3xl mx-auto">
             {t('founders.joinDesc')}
           </p>
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center">
+          <div className="flex justify-center">
             <Button
-              size="lg"
               variant="outline"
-              className="border-white text-primary hover:bg-white hover:text-primary font-montserrat text-base sm:text-lg px-4 sm:px-8"
+              className="font-montserrat bg-green-600 hover:bg-green-700 text-white border-none text-base sm:text-lg px-6 py-6"
+              onClick={handleVolunteerClick}
             >
-              {t('founders.joinVolunteer')}
-            </Button>
-            <Button
-              size="lg"
-              className="bg-white text-primary hover:bg-gray-100 font-montserrat text-base sm:text-lg px-4 sm:px-8"
-            >
-              {t('founders.joinApply')}
+              {t('navbar.becomeMemberVolunteer')}
             </Button>
           </div>
         </div>

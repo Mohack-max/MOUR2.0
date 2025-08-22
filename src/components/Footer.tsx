@@ -9,15 +9,14 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo & Mission */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-4 mb-4">
+            <div className="flex items-center space-x-1 mb-4">
               <img
                 src="/images/logo_transparent.png"
                 alt="HealthMOUR Logo"
-                className="h-20 w-auto"
+                className="h-24 w-auto"
               />
-              <span className="font-montserrat font-bold text-2xl">
-                <span style={{ color: "#0076A8" }}>Health</span>
-                <span style={{ color: "rgb(141, 198, 63)" }}>mour</span>
+              <span className="font-montserrat font-bold text-lg text-white">
+                Healthmour
               </span>
             </div>
             <p className="font-open-sans text-gray-300 mb-4 max-w-md">
