@@ -83,7 +83,8 @@ const PrivateDocuments = () => {
   return (
     <div className="min-h-screen py-8 sm:py-12 md:py-16 w-full max-w-4xl 2xl:max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-32">
       <h1 className="font-montserrat font-bold text-2xl sm:text-3xl mb-4 sm:mb-8 text-center">
-        {t('privateDocs.title', 'Private Documents')}
+        {t('privateDocs.title', 'Strategic Documents')}
+
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
         {documents.map(doc => {

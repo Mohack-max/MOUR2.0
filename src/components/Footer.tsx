@@ -3,10 +3,12 @@ import { useTranslation } from 'react-i18next';
 
 export const Footer = () => {
   const { t } = useTranslation();
+
   return (
     <footer className="bg-accent text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          
           {/* Logo & Mission */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-1 mb-4">
@@ -58,18 +60,20 @@ export const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-montserrat font-semibold text-lg mb-4">{t('footer.quickLinks')}</h3>
+            <h3 className="font-montserrat font-semibold text-lg mb-4">
+              {t('footer.quickLinks.title')}
+            </h3>
             <div className="space-y-2">
               <a href="/our-work" className="block font-open-sans text-sm text-gray-300 hover:text-secondary transition-colors">
                 {t('footer.quickLinks.ourWork')}
               </a>
-              <a href="/founders" className="block font-open-sans text-sm text-gray-300 hover:text-secondary transition-colors">
+              <a href="/team" className="block font-open-sans text-sm text-gray-300 hover:text-secondary transition-colors">
                 {t('footer.quickLinks.team')}
               </a>
-              <a href="#" className="block font-open-sans text-sm text-secondary hover:text-primary transition-colors">
+              <a href="/volunteer" className="block font-open-sans text-sm text-gray-300 hover:text-secondary transition-colors">
                 {t('footer.quickLinks.volunteer')}
               </a>
-              <a href="#" className="block font-open-sans text-sm text-gray-300 hover:text-secondary transition-colors">
+              <a href="/donate" className="block font-open-sans text-sm text-gray-300 hover:text-secondary transition-colors">
                 {t('footer.quickLinks.donate')}
               </a>
             </div>
@@ -78,7 +82,7 @@ export const Footer = () => {
 
         <div className="border-t border-gray-600 mt-8 pt-8 text-center">
           <p className="font-open-sans text-sm text-gray-300">
-            © 2024 Healthmour.org. Tous droits réservés. | Créé avec ❤️ pour un monde en meilleure santé.
+            © 2024 Healthmour.org. {t('footer.copyright')} | Créé avec ❤️ pour un monde en meilleure santé.
           </p>
         </div>
       </div>
