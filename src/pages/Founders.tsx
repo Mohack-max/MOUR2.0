@@ -27,8 +27,8 @@ const Founders = () => {
     education: t('founders.founderEducation'),
     experience: t('founders.founderExperience'),
     email: "youssnigga@gmail.com",
-    linkedin: "#",
-    twitter: "#"
+    linkedin: "https://www.linkedin.com/in/dr-youssouf-keita-baa808124/",
+    twitter: "https://x.com/youssniga"
   };
 
   const collaborators = [
@@ -206,20 +206,26 @@ const Founders = () => {
               <div className="absolute inset-x-0 bottom-0 h-6 bg-gradient-to-t from-white to-transparent group-hover:opacity-0 transition-opacity duration-300"></div>
             </div>
 
-            <div className="flex space-x-2 sm:space-x-4 justify-center">
-              <Button size="sm" variant="outline" className="flex items-center space-x-2">
-                <Mail className="h-4 w-4" />
-                <span>{t('navbar.contact')}</span>
-              </Button>
-              <Button size="sm" variant="outline" className="flex items-center space-x-2">
-                <Linkedin className="h-4 w-4" />
-                <span>{t('navbar.linkedin')}</span>
-              </Button>
-              <Button size="sm" variant="outline" className="flex items-center space-x-2">
-                <Twitter className="h-4 w-4" />
-                <span>{t('navbar.twitter')}</span>
-              </Button>
-            </div>
+           <div className="flex space-x-2 sm:space-x-4 justify-center">
+                <a href={`mailto:${founder.email}`} target="_blank" rel="noopener noreferrer">
+                  <Button size="sm" variant="outline" className="flex items-center space-x-2">
+                    <Mail className="h-4 w-4" />
+                    <span>{t('navbar.contact')}</span>
+                  </Button>
+                </a>
+                <a href={founder.linkedin} target="_blank" rel="noopener noreferrer">
+                  <Button size="sm" variant="outline" className="flex items-center space-x-2">
+                    <Linkedin className="h-4 w-4" />
+                    <span>{t('navbar.linkedin')}</span>
+                  </Button>
+                </a>
+                <a href={founder.twitter} target="_blank" rel="noopener noreferrer">
+                  <Button size="sm" variant="outline" className="flex items-center space-x-2">
+                    <Twitter className="h-4 w-4" />
+                    <span>{t('navbar.twitter')}</span>
+                  </Button>
+                </a>
+          </div>
           </div>
         </div>
       </section>
