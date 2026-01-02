@@ -4,6 +4,7 @@
     "ourWork": "Our work",
     "founders": "Our team",
     "becomeMemberVolunteer": "Become a volunteer",
+    "particularity": "Our particularity",
     "donate": "Donate",
     "logout": "Logout",
     "hello": "Hello, {{name}}",
@@ -78,8 +79,7 @@
       "subtitle": "Health-monitoring-organization-understanding-resolution",
       "equation": "Monitoring-organization-understanding-resolution = well-being",
       "becomeVolunteer": "Become a volunteer",
-      "donate": "Donate",
-      "strategicDocsDesc": "Access our strategic planning documents and organizational resources"
+      "donate": "Donate"
     },
     "welcome": "Welcome, {{name}}!",
     "welcomeResources": "Thank you for joining our mission. Here are exclusive resources for our volunteers:",
@@ -119,6 +119,17 @@
       "becomeVolunteer": "Become a volunteer",
       "donate": "Donate"
     }
+  },
+  "particularityPage": {
+    "title": "Our particularity",
+    "subtitle": "A visual approach that highlights our work and impact.",
+    "heading": "What makes HealthMOUR unique",
+    "desc": "HealthMOUR combines visual storytelling, evidence-based planning, and community-led action. We focus on sustainable, measurable interventions across Health, Nutrition, Education and WASH.",
+    "point1": "Evidence-based strategic planning",
+    "point2": "Community capacity building",
+    "point3": "Integrated multi-sectoral interventions",
+    "point4": "Transparent monitoring and measurable impact",
+    "footerNote": "Images above show selected projects and results from our fieldwork."
   },
   "ourWork": {
     "hero": {

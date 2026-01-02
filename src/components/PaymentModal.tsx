@@ -14,12 +14,12 @@ interface PaymentModalProps {
 export const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
     amount: '',
-    name: '',
-    email: '',
-    message: '',
-    iban: '',
-    bic: '',
-    routingNumber: ''
+    donorName: '',
+    donorEmail: '',
+    bankName: '',
+    accountNumber: '',
+    routingNumber: '',
+    message: ''
   });
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);

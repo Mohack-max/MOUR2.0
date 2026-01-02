@@ -47,30 +47,27 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary via-primary/90 to-accent text-white py-20 lg:py-32">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <section className="relative text-white min-h-screen lg:min-h-[120vh] py-24 lg:py-36 overflow-hidden">
+        {/* Single image as background (no duplication) */}
+        <div className="absolute inset-0 -z-10 overflow-hidden">
+          <img src="/images/10.jpeg" alt="Hero background" className="absolute inset-0 w-full h-full object-contain object-center hero-bg-img pointer-events-none" />
+          <div className="absolute inset-0 bg-black/10" />
+        </div>
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center animate-fade-in">
-            <div className="flex flex-col items-center mb-8">
-              <img
-                src="/images/logo_transparent.png"
-                alt="HealthMOUR Logo"
-                className="h-96 w-auto mb-8 lg:h-[500px] xl:h-[600px]"
-              />
-              {/* Strategic Documents Button */}
-              <div className="flex flex-col items-center space-y-4">
-                <Button
-                  onClick={() => navigate('/private-documents')}
-                  className="bg-white hover:bg-gray-100 text-primary font-montserrat font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-white"
-                >
-                  {t('navbar.privateDocuments')}
-                </Button>
-                <p className="text-white/90 font-open-sans text-sm max-w-md">
-                  {t('home.hero.strategicDocsDesc')}
-                </p>
-              </div>
-            </div>
+  
           </div>
+        </div>
+
+        {/* Floating CTA (non-intrusive) */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-12 z-20">
+          <Button
+            onClick={() => navigate('/private-documents')}
+            className="bg-white/95 text-primary font-montserrat font-semibold px-6 py-3 text-md rounded-full shadow-lg backdrop-blur-sm hover:scale-105 transition-transform"
+          >
+            {t('navbar.privateDocuments')}
+          </Button>
         </div>
       </section>
 
@@ -117,7 +114,7 @@ const Home = () => {
             <h2 className="font-montserrat font-bold text-3xl lg:text-4xl text-gray-900 mb-4">
               {t('home.commitment.title')}
             </h2>
-            <p className="font-open-sans text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="font-open-sans text-lg text-gray-600 max-w-3xl mx-auto sans-sherif">
               {t('home.commitment.desc')}
             </p>
           </div>

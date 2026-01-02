@@ -28,8 +28,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMo
   const { login, signup } = useAuth();
   const { t } = useTranslation();
 
-  // ✅ Debugging: Check if Supabase is initialized correctly
-  console.log('✅ Supabase instance:', supabase);
+
 
   if (!isOpen) return null;
 

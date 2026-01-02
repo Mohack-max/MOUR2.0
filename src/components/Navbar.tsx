@@ -92,11 +92,11 @@ export const Navbar = () => {
                 </Button>
               ) : (
                 <Button
-                  onClick={() => setIsAuthModalOpen(true)}
+                  onClick={() => navigate('/particularity')}
                   variant="outline"
                   className="font-montserrat bg-green-600 hover:bg-green-700 text-white"
                 >
-                  {t('navbar.becomeMemberVolunteer')}
+                  {t('navbar.particularity')}
                 </Button>
               )}
               <Button
@@ -172,13 +172,13 @@ export const Navbar = () => {
                 ) : (
                   <Button
                     onClick={() => {
-                      setIsAuthModalOpen(true);
+                      navigate('/particularity');
                       setIsMenuOpen(false);
                     }}
                     variant="outline"
                     className="mx-4 font-montserrat bg-green-600 hover:bg-green-700 text-white"
                   >
-                    {t('navbar.becomeMemberVolunteer')}
+                    {t('navbar.particularity')}
                   </Button>
                 )}
 

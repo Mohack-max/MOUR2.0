@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '@/lib/supabaseClient';
 
-const ADMIN_EMAIL = 'mohamedyoussoufkeita4@gmail.com'; // <-- Set your admin email here
+const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL ?? 'mohamedyoussoufkeita4@gmail.com'; // Prefer configuring via VITE_ADMIN_EMAIL in env
 
 const AdminLogin = () => {
   const [email, setEmail] = useState('');

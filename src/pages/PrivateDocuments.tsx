@@ -95,14 +95,14 @@ const PrivateDocuments = () => {
                 <h2 className="font-bold text-lg sm:text-xl mb-1 sm:mb-2 truncate">{doc.title}</h2>
                 <p className="text-gray-600 text-sm sm:text-base mb-2 sm:mb-4 truncate">{doc.description}</p>
                 {status === 'approved' && doc.file_url ? (
-                  <a
-                    href={`https://ihbnexfweticxyoqckrw.supabase.co/storage/v1/object/public/privatedocuments/${doc.file_url}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block mb-2 text-primary underline text-xs sm:text-sm"
-                  >
-                    {t('privateDocs.viewDocument', 'View Document')}
-                  </a>
+                  (() => {
+                    const publicUrl = doc.file_url ? supabase.storage.from('privatedocuments').getPublicUrl(doc.file_url).data?.publicUrl : null;
+                    return publicUrl ? (
+                      <a href={publicUrl} target="_blank" rel="noopener noreferrer" className="inline-block mb-2 text-primary underline text-xs sm:text-sm">
+                        {t('privateDocs.viewDocument', 'View Document')}
+                      </a>
+                    ) : null;
+                  })()
                 ) : status === 'pending' ? (
                   <div className="mb-2 text-yellow-600 font-semibold text-xs sm:text-sm">
                     {t('privateDocs.pending', 'Request Pending Approval')}

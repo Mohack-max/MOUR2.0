@@ -81,7 +81,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
     if (profileError || !profile) {
       console.warn('Profile not found or not confirmed.', profileError);
-      console.log('Session:', await supabase.auth.getSession());
       return false;
     }
 

@@ -14,6 +14,7 @@ import PrivateDocuments from "./pages/PrivateDocuments";
 import AdminDashboard from "./pages/AdminDashboard";
 import ResetPassword from './pages/ResetPassword';
 import AdminLogin from './pages/AdminLogin';
+import Particularity from './pages/Particularity';
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => (
                 <Route path="/private-documents" element={<PrivateDocuments />} />
                 <Route path="/adminlogin" element={<AdminLogin />} />
                 <Route path="/admin-dashboard" element={<AdminDashboard />} />
+                <Route path="/particularity" element={<Particularity />} />
                 <Route path="/auth/reset-password" element={<ResetPassword />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>

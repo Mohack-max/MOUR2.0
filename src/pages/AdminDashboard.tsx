@@ -21,7 +21,7 @@ interface Request {
   user_email?: string;
 }
 
-const ADMIN_EMAIL = 'mohamedyoussoufkeita4@gmail.com';
+const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL ?? 'mohamedyoussoufkeita4@gmail.com';
 
 const AdminDashboard = () => {
   const [tab, setTab] = useState<'documents' | 'requests'>('documents');
@@ -224,7 +224,10 @@ const AdminDashboard = () => {
                     <td className="px-4 py-2">{doc.title}</td>
                     <td className="px-4 py-2">{doc.description}</td>
                     <td className="px-4 py-2">
-                      <a href={`https://ihbnexfweticxyoqckrw.supabase.co/storage/v1/object/public/privatedocuments/${doc.file_url}`} target="_blank" rel="noopener noreferrer" className="text-primary underline">View</a>
+                      {(() => {
+                        const publicUrl = doc.file_url ? supabase.storage.from('privatedocuments').getPublicUrl(doc.file_url).data?.publicUrl : '#';
+                        return <a href={publicUrl} target="_blank" rel="noopener noreferrer" className="text-primary underline">View</a>;
+                      })()}
                     </td>
                     <td className="px-4 py-2">
                       <button
