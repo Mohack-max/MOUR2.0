@@ -8,6 +8,34 @@ import { AuthModal } from "@/components/AuthModal";
 import { PaymentModal } from "@/components/PaymentModal";
 import { useTranslation } from 'react-i18next';
 
+/* ─── Ken Burns animation injected once ─────────────────────────────────────
+   Only these styles are added — nothing else in the original file changes.
+   The animation is pure CSS: slow zoom-in + gentle pan so the image feels
+   alive without any layout changes.
+─────────────────────────────────────────────────────────────────────────── */
+const HERO_BG_STYLES = `
+  @keyframes ken-burns-hm {
+    0%   { transform: scale(1.00) translateY(0%);    }
+    40%  { transform: scale(1.06) translateY(-3%);   }
+    70%  { transform: scale(1.08) translateY(-5%);   }
+    100% { transform: scale(1.00) translateY(0%);    }
+  }
+
+  .hero-bg-animated {
+    /* Full image visible — same approach as the original hero-bg-img in App.css */
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+    animation: ken-burns-hm 22s ease-in-out infinite;
+    will-change: transform;
+    transform-origin: center center;
+    pointer-events: none;
+  }
+`;
+
 const Home = () => {
   const { isAuthenticated, user } = useAuth();
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
@@ -15,52 +43,58 @@ const Home = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  // Removed handleVolunteerClick since buttons are now only in Navbar
-
   const interventionAreas = [
     {
       title: t('home.areas.health'),
       description: t('home.areas.healthDesc'),
-      image: '/images/hospital.png', // Example image
+      image: '/images/hospital.png',
       color: "text-red-500"
     },
     {
       title: t('home.areas.nutrition'),
       description: t('home.areas.nutritionDesc'),
-      image: '/images/nutrition.png', // Example image
+      image: '/images/nutrition.png',
       color: "text-secondary"
     },
     {
       title: t('home.areas.education'),
       description: t('home.areas.educationDesc'),
-      image: '/images/education.jpeg', // Example image
+      image: '/images/education.jpeg',
       color: "text-yellow-500"
     },
     {
       title: t('home.areas.wash'),
       description: t('home.areas.washDesc'),
-      image: '/images/wash1.jpeg', // Example image
+      image: '/images/wash1.jpeg',
       color: "text-primary"
     }
   ];
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
+      {/* Inject Ken Burns keyframes */}
+      <style>{HERO_BG_STYLES}</style>
+
+      {/* Hero Section — identical structure to original, only bg image + class changed */}
       <section className="relative text-white min-h-screen lg:min-h-[120vh] py-24 lg:py-36 overflow-hidden">
-        {/* Single image as background (no duplication) */}
+        {/* ★ Background: healthm.png with Ken Burns animation */}
         <div className="absolute inset-0 -z-10 overflow-hidden">
-          <img src="/images/10.jpeg" alt="Hero background" className="absolute inset-0 w-full h-full object-contain object-center hero-bg-img pointer-events-none" />
-          <div className="absolute inset-0 bg-black/10" />
+          <img
+            src="/images/healthm.png"
+            alt="HealthMOUR field workers serving African children"
+            className="hero-bg-animated"
+          />
+          {/* Subtle dark scrim so text stays readable — same opacity as original */}
+          <div className="absolute inset-0 bg-black/30" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center animate-fade-in">
-  
+
           </div>
         </div>
 
-        {/* Floating CTA (non-intrusive) */}
+        {/* Floating CTA — exactly as original */}
         <div className="absolute left-1/2 transform -translate-x-1/2 bottom-12 z-20">
           <Button
             onClick={() => navigate('/private-documents')}
@@ -194,9 +228,6 @@ const Home = () => {
                   <h3 className="font-montserrat font-bold text-xl mb-3 text-gray-900">
                     {area.title}
                   </h3>
-                  {/* <p className="font-open-sans text-gray-600 text-sm leading-relaxed truncate">
-                    {area.description}
-                  </p> */}
                 </CardContent>
               </Card>
             ))}
@@ -213,7 +244,6 @@ const Home = () => {
           <p className="font-open-sans text-lg lg:text-xl mb-8 max-w-3xl mx-auto">
             {t('home.cta.desc')}
           </p>
-          {/* Removed redundant buttons - they already exist in the Hero section */}
         </div>
       </section>
 

@@ -15,19 +15,19 @@
     "linkedin": "LinkedIn",
     "twitter": "Twitter"
   },
-  "footer": {
-    "copyright": "All rights reserved.",
-    "mission": "Health monitoring, organization, understanding, and resolution of health issues in our communities.",
-    "together": "Together for better community health",
-    "contact": "Contact",
-    "quickLinks": "Quick Links",
-    "quickLinks": {
-      "ourWork": "Our work",
-      "team": "Team",
-      "volunteer": "Become a volunteer",
-      "donate": "Donate"
-    }
-  },
+"footer": {
+  "copyright": "All rights reserved.",
+  "mission": "Health monitoring, organization, understanding, and resolution of health issues in our communities.",
+  "together": "Together for better community health",
+  "contact": "Contact",
+  "quickLinks": {
+    "title": "Quick Links",
+    "ourWork": "Our work",
+    "team": "Team",
+    "volunteer": "Become a volunteer",
+    "donate": "Donate"
+  }
+},
   "modals": {
     "authTitle": "Sign in or register",
     "paymentTitle": "Make a donation"
